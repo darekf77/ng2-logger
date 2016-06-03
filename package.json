@@ -24,7 +24,7 @@
     "tslint-loader": "^2.1.4"
   },
   "description": "Logger for angular 2 apps",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -36,8 +36,7 @@
   "keywords": [
     "log",
     "logger",
-    "angular",
-    "2"
+    "angular2"
   ],
   "author": "darekf77",
   "license": "ISC",
