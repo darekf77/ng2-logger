@@ -1,29 +1,5 @@
 {
   "name": "ng2-logger",
-  "version": "0.0.5",
-  "description": "logger for angular 2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "git add --all . && git commit -m\"fix\" && git push origin master && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/darekf77/ng2-logger.git"
-  },
-  "keywords": [
-    "log",
-    "angular 2",
-    "logger"
-  ],
-  "author": {
-    "name": "Dariusz Filipiak"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/darekf77/ng2-logger/issues"
-  },
-  "homepage": "https://github.com/darekf77/ng2-rest#readme",
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
@@ -47,5 +23,26 @@
     "tslint": "^3.10.2",
     "tslint-loader": "^2.1.4"
   },
-  "readmeFilename": "README.md"
+  "description": "Logger for angular 2 apps",
+  "version": "0.0.7",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darekf77/ng2-logger.git"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "angular",
+    "2"
+  ],
+  "author": "darekf77",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darekf77/ng2-logger/issues"
+  },
+  "homepage": "https://github.com/darekf77/ng2-logger#readme"
 }
