@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "logger for angular 2",
   "main": "index.js",
   "scripts": {
@@ -47,9 +47,5 @@
     "tslint": "^3.10.2",
     "tslint-loader": "^2.1.4"
   },
-  "readmeFilename": "README.md",
-  "gitHead": "03201bb70d036d4d999c12f93b423bcbcac8d96a",
-  "_id": "ng2-rest@1.0.2",
-  "_shasum": "21857955e9ba3baa97075bdb6ca4d5ee216e2dd2",
-  "_from": "ng2-rest@latest"
+  "readmeFilename": "README.md"
 }
