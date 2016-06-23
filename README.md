@@ -28,6 +28,7 @@ After inited **log** you are able to start debugging:
     log.w('object',obj) // console.warn
 
 
+
 **Production mode**
 -------------------
 
