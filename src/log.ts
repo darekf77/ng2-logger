@@ -1,5 +1,6 @@
 import { Logger } from './logger';
 import { Level } from './level';
+import { Display } from './display';
 
 export class Log {
 
@@ -14,6 +15,7 @@ export class Log {
         if (Log.instances[name] === undefined) {
             i = new Logger<TA>(
                 name,
+                Log.getRandomColor(),
                 Log.levels.length > 0 ? Log.display : undefined,
                 Log.isDevelopmentMode,
                 level
@@ -22,16 +24,35 @@ export class Log {
         else {
             i = Log.instances[name];
         }
-        Log.instances = Logger.instances;
         return i;
     }
 
+    private static getRandomColor() {
+        var letters = '012345'.split('');
+        var color = '#';
+        color += letters[Math.round(Math.random() * 5)];
+        letters = '0123456789ABCDEF'.split('');
+        for (var i = 0; i < 5; i++) {
+            color += letters[Math.round(Math.random() * 15)];
+        }
+        if (color === undefined) return this.getRandomColor()
+        console.log(color);
+        return color;
+    }
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
         if (!Log.levels.includes(incomming)) return;
-        if (incomming === Level.DATA) console.log(name, data);
-        if (incomming === Level.ERROR) console.error(name, data);
-        if (incomming === Level.INFO) console.info(name, data);
-        if (incomming === Level.WARN) console.warn(name, data);
+        if (incomming === Level.DATA) {
+            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.DATA);
+        }
+        if (incomming === Level.ERROR) {
+            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.ERROR);
+        }
+        if (incomming === Level.INFO) {
+            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.INFO);
+        }
+        if (incomming === Level.WARN) {
+            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.WARN);
+        }
     }
 
     private static _logOnly = false;

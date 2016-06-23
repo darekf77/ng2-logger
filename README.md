@@ -1,4 +1,4 @@
-## ng2-logger (EARLY ALPHA) ##
+## ng2-logger ##
 
 
 

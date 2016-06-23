@@ -1,21 +1,21 @@
 import { Level } from './level';
+import { Display } from './display';
 
 export class Logger<T> {
 
-    static instances = {};
     constructor(
         private name: string,
+        public color: string,
         private display: (name: string, data: any, leve: Level, moduleName: string) => void,
         private developmentMode: boolean,
         private allowed: Level[]) {
-        Logger.instances[name] = this;
     }
 
     d(name: string, ...data: any[]) {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.DATA)) {
-            console.log(name, data);
+            Display.msg(name, data, this.name, this.color, Level.DATA);
         }
         return this;
     }
@@ -24,7 +24,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.ERROR)) {
-            console.error(name, data);
+            Display.msg(name, data, this.name, this.color, Level.ERROR);
         }
         return this;
     }
@@ -33,7 +33,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.INFO)) {
-            console.info(name, data);
+            Display.msg(name, data, this.name, this.color, Level.INFO);
         }
         return this;
     }
@@ -42,23 +42,10 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.WARN)) {
-            console.warn(name, data);
+            Display.msg(name, data, this.name, this.color, Level.WARN);
         }
         return this;
     }
-
-    debugger(o: Object, stateName: string = 'debugger') {
-        if (Logger.isProductionMode) return this;
-        console.groupCollapsed(name)
-        for (let p in o) {
-            if (o.hasOwnProperty(p)) {
-                console.debug(p, o[p]);
-            }
-        }
-        console.groupEnd();
-        return this;
-    }
-
 
     private _level: Level = undefined;
     private level(l: Level) {
