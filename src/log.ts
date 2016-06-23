@@ -62,11 +62,18 @@ export class Log {
 
     private static isDevelopmentMode = true;
     private static modeIsSet: boolean = false;
-    static setMode(mode: boolean) {
+    static setProductionMode() {
         if (Log.modeIsSet) {
             console.error('Mode is already set');
             return;
         }
-        Log.isDevelopmentMode = mode;
+        if (console !== undefined && console.clear !== undefined) {
+            setTimeout(() => {
+
+                console.clear()
+            });
+        }
+        Logger.isProductionMode = true;
+        Log.isDevelopmentMode = false;
     }
 }
