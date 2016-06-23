@@ -6,9 +6,10 @@ import { Level } from '../level';
 @Injectable()
 export class AppService {
 
-    constructor(  ) {
+    constructor() {
         Log.onlyModules('books');
-        Log.onlyLevel(Level.INFO,Level.INFO);
+        Log.onlyLevel(Level.INFO, Level.INFO);
+        Log.setProductionMode();
     }
 
 }

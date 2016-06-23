@@ -1,14 +1,13 @@
-import { Log } from '../log';
-import { Level } from '../level';
+import { Log, Level } from '../';
 
-const log = Log.create('books',Level.DATA);
+const log = Log.create('books', Level.DATA);
 
 
 export class Book {
 
-    contructor() {        
-        log.d('asdasd').er('asdasd','asdasd');
-        log.er('asd','asd');
+    contructor() {
+        log.d('asdasd').er('asdasd', 'asdasd');
+        log.er('asd', 'asd');
     }
 
     getSomething() {

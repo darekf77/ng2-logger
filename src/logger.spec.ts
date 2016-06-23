@@ -15,7 +15,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { Book } from './test/test-class';
 
 
-describe('ng2-logger', () => {
+// describe('ng2-logger', () => {
     // provide our implementations or mocks to the dependency injector
     // beforeEachProviders(() => [
     //     Http, HTTP_PROVIDERS,
@@ -31,4 +31,4 @@ describe('ng2-logger', () => {
 
 
 
-});
+// });

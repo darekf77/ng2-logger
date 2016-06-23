@@ -13,8 +13,8 @@ export class Logger<T> {
 
     d(name: string, ...data: any[]) {
         if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name,data,Level.DATA,this.name);
-        else if( this.allowed.length == 0 || this.allowed.includes(Level.DATA) ) {
+        if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
+        else if (this.allowed.length === 0 || this.allowed.includes(Level.DATA)) {
             console.log(name, data);
         }
         return this;
@@ -22,8 +22,8 @@ export class Logger<T> {
 
     er(name: string, ...data: any[]) {
         if (Logger.isProductionMode) return this;
-        if (this.display !== undefined)  this.display(name,data,Level.ERROR,this.name);
-        else if( this.allowed.length == 0 || this.allowed.includes(Level.ERROR)) {
+        if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
+        else if (this.allowed.length === 0 || this.allowed.includes(Level.ERROR)) {
             console.error(name, data);
         }
         return this;
@@ -31,8 +31,8 @@ export class Logger<T> {
 
     i(name: string, ...data: any[]) {
         if (Logger.isProductionMode) return this;
-        if (this.display !== undefined)  this.display(name,data,Level.INFO,this.name);
-       else if( this.allowed.length == 0 || this.allowed.includes(Level.INFO)) {
+        if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
+        else if (this.allowed.length === 0 || this.allowed.includes(Level.INFO)) {
             console.info(name, data);
         }
         return this;
@@ -40,20 +40,20 @@ export class Logger<T> {
 
     w(name: string, ...data: any[]) {
         if (Logger.isProductionMode) return this;
-        if (this.display !== undefined)  this.display(name,data,Level.WARN,this.name);
-        else if( this.allowed.length == 0 || this.allowed.includes(Level.WARN)) {
+        if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
+        else if (this.allowed.length === 0 || this.allowed.includes(Level.WARN)) {
             console.warn(name, data);
         }
         return this;
     }
 
-    debugger(o: Object, stateName: string = 'debugger' ) {
+    debugger(o: Object, stateName: string = 'debugger') {
         if (Logger.isProductionMode) return this;
         console.groupCollapsed(name)
-        for(let p in o ) {
-            if(o.hasOwnProperty(p)) {
-                console.debug(p,o[p])
-            }            
+        for (let p in o) {
+            if (o.hasOwnProperty(p)) {
+                console.debug(p, o[p]);
+            }
         }
         console.groupEnd();
         return this;
