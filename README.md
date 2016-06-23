@@ -4,7 +4,8 @@
 
 Logger for angular 2 apps. Now logger become part of your application.
 
-See what is going on in your app !
+See what is going on in your app!
+Now chrome console logs are full of colors!
 
 ![Modules marked](screen.png)
 
@@ -22,7 +23,11 @@ or if you wanna just log errors and warnings :
 
     const log = Log.create('books', Level.ERROR, Level.WARN); 
     
-'books' is current class or anything inside *.ts file. 
+'books' is current class or anything inside *.ts file.
+
+You can also assign static color to specific module in application:
+
+    log.color = 'red'; 
 
 After inited **log** you are able to start debugging: 
 
