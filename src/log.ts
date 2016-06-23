@@ -28,15 +28,14 @@ export class Log {
     }
 
     private static getRandomColor() {
-        var letters = '012345'.split('');
-        var color = '#';
+        let letters = '012345'.split('');
+        let color = '#';
         color += letters[Math.round(Math.random() * 5)];
         letters = '0123456789ABCDEF'.split('');
-        for (var i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
             color += letters[Math.round(Math.random() * 15)];
         }
-        if (color === undefined) return this.getRandomColor()
-        console.log(color);
+        if (color === undefined) return this.getRandomColor();
         return color;
     }
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
