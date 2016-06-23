@@ -9,6 +9,10 @@ Now chrome console logs are full of colors!
 
 ![Modules marked](screen.png)
 
+To install package run:
+
+    npm install ng2-logger --save
+
 First import it:
 
     import { Log, Level } from 'ng2-logger/ng2-logger'
