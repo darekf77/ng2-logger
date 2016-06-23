@@ -22,8 +22,6 @@ export class Log {
         else {
             i = Log.instances[name];
         }
-        console.groupEnd();
-        console.group(name);
         Log.instances = Logger.instances;
         return i;
     }
