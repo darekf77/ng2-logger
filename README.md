@@ -4,6 +4,10 @@
 
 Logger for angular 2 apps. Now logger become part of your application.
 
+See what is going on in your app !
+
+![Modules marked](screen.png)
+
 First import it:
 
     import { Log, Level } from 'ng2-logger/ng2-logger'

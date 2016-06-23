@@ -88,8 +88,11 @@ export class Log {
         }
         if (console !== undefined && console.clear !== undefined) {
             setTimeout(() => {
-
-                console.clear()
+                console.clear();
+                console.log = () => { };
+                console.error = () => { };
+                console.warn = () => { };
+                console.info = () => { };
             });
         }
         Logger.isProductionMode = true;
