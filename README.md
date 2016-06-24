@@ -2,7 +2,7 @@
 
 
 
-Logger for angular 2 apps. Now logger become part of your application.
+Logger for angular 2 apps.
 
 See what is going on in your app!
 Now chrome console logs are full of colors!
@@ -54,11 +54,12 @@ You will not see anyting in prduction mode:
 -------------------
 
 Optional specify what you wanna see in yours debug console.
+This settings will override settings fomr files.
 
     export class AppComponent {   
         constructor(  ) {
             Log.onlyModules('books');
-            Log.onlyLevel(Level.ERROR,Level.INFO); // it will override conf. from files
+            Log.onlyLevel(Level.ERROR,Level.INFO);
         }    
     }
 
