@@ -50,11 +50,11 @@ You will not see anyting in prduction mode:
     Log.setProductionMode();
 
 
-**Selective debug**
+**Selective debug - global settings**
 -------------------
 
 Optional specify what you wanna see in yours debug console.
-This settings will override settings fomr files.
+This settings will override settings from files.
 
     export class AppComponent {   
         constructor(  ) {
