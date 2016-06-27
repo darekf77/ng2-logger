@@ -9,9 +9,7 @@ export class Log {
     private static instances = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
-        // if (Log.instances[name] !== undefined) return Log.instances[name];
         if (Log.modules.length > 0 && !Log.modules.includes(name)) return;
-        if (level.length === 1 && level[0] === Level.__NOTHING) return;
         let i: Logger<TA>;
         if (Log.instances[name] === undefined) {
             i = new Logger<TA>(
