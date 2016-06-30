@@ -12,7 +12,8 @@ export class Logger<T> {
     }
 
     d(name: string, ...data: any[]) {
-        if (this.allowed.length === 1 && this.allowed[0] === Level.__NOTHING) return this;
+        if (this.allowed.length === 1 && this.allowed.includes(Level.__NOTHING)
+            && !this.allowed.includes(Level.DATA)) return this;
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.DATA)) {
@@ -22,7 +23,8 @@ export class Logger<T> {
     }
 
     er(name: string, ...data: any[]) {
-        if (this.allowed.length === 1 && this.allowed[0] === Level.__NOTHING) return this;
+        if (this.allowed.length === 1 && this.allowed.includes(Level.__NOTHING)
+            && !this.allowed.includes(Level.ERROR)) return this;
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.ERROR)) {
@@ -32,7 +34,8 @@ export class Logger<T> {
     }
 
     i(name: string, ...data: any[]) {
-        if (this.allowed.length === 1 && this.allowed[0] === Level.__NOTHING) return this;
+        if (this.allowed.length === 1 && this.allowed.includes(Level.__NOTHING)
+            && !this.allowed.includes(Level.INFO)) return this;
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.INFO)) {
@@ -42,7 +45,8 @@ export class Logger<T> {
     }
 
     w(name: string, ...data: any[]) {
-        if (this.allowed.length === 1 && this.allowed[0] === Level.__NOTHING) return this;
+        if (this.allowed.length === 1 && this.allowed.includes(Level.__NOTHING)
+            && !this.allowed.includes(Level.WARN)) return this;
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
         else if (this.allowed.length === 0 || this.allowed.includes(Level.WARN)) {
