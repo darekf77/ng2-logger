@@ -2,6 +2,8 @@ import { Logger } from './logger';
 import { Level } from './level';
 import { Display } from './display';
 
+import { contain } from './include';
+
 export class Log {
 
 
@@ -9,7 +11,7 @@ export class Log {
     private static instances = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
-        if (Log.modules.length > 0 && !Log.modules.includes(name)) return;
+        if (Log.modules.length > 0 && ! contain(Log.modules, name)) return;
         let i: Logger<TA>;
         if (Log.instances[name] === undefined) {
             i = new Logger<TA>(
@@ -19,8 +21,7 @@ export class Log {
                 Log.isDevelopmentMode,
                 level
             );
-        }
-        else {
+        } else {
             i = Log.instances[name];
         }
         return i;
@@ -38,7 +39,7 @@ export class Log {
         return color;
     }
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
-        if (!Log.levels.includes(incomming)) return;
+        if (!contain(Log.levels, incomming)) return;
         if (incomming === Level.DATA) {
             Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.DATA);
         }
