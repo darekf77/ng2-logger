@@ -11,7 +11,7 @@ export class Log {
     private static instances = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
-        if (Log.modules.length > 0 && ! contain(Log.modules, name)) return;
+        if (Log.modules.length > 0 && !contain(Log.modules, name)) return;
         let i: Logger<TA>;
         if (Log.instances[name] === undefined) {
             i = new Logger<TA>(
@@ -41,16 +41,16 @@ export class Log {
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
         if (!contain(Log.levels, incomming)) return;
         if (incomming === Level.DATA) {
-            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.DATA);
+            Display.msg(name, data, name, Log.instances[moduleName].color, Level.DATA);
         }
         if (incomming === Level.ERROR) {
-            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.ERROR);
+            Display.msg(name, data, name, Log.instances[moduleName].color, Level.ERROR);
         }
         if (incomming === Level.INFO) {
-            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.INFO);
+            Display.msg(name, data, name, Log.instances[moduleName].color, Level.INFO);
         }
         if (incomming === Level.WARN) {
-            Display.msg(name, data, this.name, Log.instances[moduleName].color, Level.WARN);
+            Display.msg(name, data, name, Log.instances[moduleName].color, Level.WARN);
         }
     }
 
