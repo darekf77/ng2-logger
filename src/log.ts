@@ -6,8 +6,6 @@ import { contain } from './include';
 
 export class Log {
 
-
-
     private static instances = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
@@ -38,6 +36,7 @@ export class Log {
         if (color === undefined) return this.getRandomColor();
         return color;
     }
+
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
         if (!contain(Log.levels, incomming)) return;
         if (incomming === Level.DATA) {
@@ -76,7 +75,6 @@ export class Log {
         if (modules.length === 0) return;
         Log.modules = modules;
     }
-
 
     private static isDevelopmentMode = true;
     private static modeIsSet: boolean = false;

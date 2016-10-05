@@ -65,5 +65,4 @@ export class Logger<T> {
 
     public static isProductionMode: boolean = false;
 
-
 }
