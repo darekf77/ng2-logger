@@ -19,6 +19,7 @@ export class Log {
                 Log.isDevelopmentMode,
                 level
             );
+            Log.instances[name] = i;
         } else {
             i = Log.instances[name];
         }
