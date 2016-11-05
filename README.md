@@ -49,7 +49,18 @@ After inited **log** you are able to start debugging:
 
 You will not see anyting in prduction mode:
 
+    enableProdMode()
+    ...
     Log.setProductionMode();
+    ...
+     @NgModule(...)
+    
+
+    
+It is important to set production mode before any log messages are executed. It may be prudent
+to set production mode in your App.Module prior to `@NgModule` (and ultimately prior to your Angular 2
+app bootstraping just as as you would `enableProdMode()`). This will ensure that log messages that
+should not be seen are leaked out.
 
 
 **Selective debug - global settings**
@@ -57,12 +68,27 @@ You will not see anyting in prduction mode:
 
 Optional specify what you wanna see in yours debug console.
 This settings will override settings from files.
+
 ```ts
-    export class AppComponent {   
-        constructor(  ) {
-            Log.onlyModules('books');
-            Log.onlyLevel(Level.ERROR,Level.INFO);
-        }    
-    }
+    Log.setProductionMode();
+    Log.onlyModules('src:books', 'src:records', 'src:page:login');
+    Log.onlyLevel(Level.ERROR,Level.INFO);
 ```
+
+It is important to note that the placement of global settings are important. It is suggested that placement
+of debug settings is prior to `@NgModule`.
+
+**Specifying `onlyModules` as regular expression(s)**
+-------------------
+
+In the above example you'll notice `module:books` and `module:records` were specified.
+you might be using such syntax for namespace hierarchy etc. You may also pass in one or more regular
+expression string(s) to the `onlyModule` function to specify a selection of modules you wish
+to show, for instances those whose name begins with `src`:
+
+```ts
+
+    Log.onlyModules('^src');
+```
+
 

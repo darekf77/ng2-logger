@@ -9,7 +9,6 @@ export class Log {
     private static instances = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
-        if (Log.modules.length > 0 && !contain(Log.modules, name)) return;
         let i: Logger<TA>;
         if (Log.instances[name] === undefined) {
             i = new Logger<TA>(
@@ -17,7 +16,8 @@ export class Log {
                 Log.getRandomColor(),
                 Log.levels.length > 0 ? Log.display : undefined,
                 Log.isDevelopmentMode,
-                level
+                level,
+                Log.isMutedModule(name)
             );
             Log.instances[name] = i;
         } else {
@@ -58,7 +58,7 @@ export class Log {
     private static levels: Level[] = [];
     static onlyLevel(...level: Level[]) {
         if (Log._logOnly) {
-            console.error('You should use funcion onlyLevel only onec');
+            console.error('You should use funcion onlyLevel only once');
             return;
         }
         if (Log._logOnly) Log._logOnly = true;
@@ -70,11 +70,23 @@ export class Log {
     private static modules: string[] = [];
     static onlyModules(...modules: string[]) {
         if (Log._logModules) {
-            console.error('You should use funcion onlyModules only onec');
+            console.error('You should use funcion onlyModules only once');
             return;
         }
         if (modules.length === 0) return;
         Log.modules = modules;
+        Log.muteAllOtherModules();
+    }
+    private static isMutedModule(moduleName:string):boolean {
+        if(Log.modules.length == 0) return false;
+        if(!contain(Log.modules, moduleName)) return true;
+        return false;
+    }
+    private static muteAllOtherModules() {
+        for (var moduleName in Log.instances) {
+            if(!contain(Log.modules, moduleName))
+                Log.instances[moduleName].mute()
+        }
     }
 
     private static isDevelopmentMode = true;
