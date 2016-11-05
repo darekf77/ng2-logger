@@ -2,7 +2,14 @@
 
 
 
-Logger for angular 2 apps.
+Logger for TypeScript and JavaScript apps.
+
+You can use this logger in your apps with almost **any**
+TS/JS framework including: 
+
+ - Angular2 (https://github.com/AngularClass/angular2-webpack-starter)
+ - React Redux (https://github.com/davezuko/react-redux-starter-kit)
+ - React Redux TS (https://github.com/jaysoo/todomvc-redux-react-typescript)
 
 See what is going on in your app!
 Now chrome console logs are full of colors!
@@ -49,18 +56,16 @@ After inited **log** you are able to start debugging:
 
 You will not see anyting in prduction mode:
 
-    enableProdMode()
+    // enable production mode in your app
     ...
     Log.setProductionMode();
     ...
-     @NgModule(...)
+    // your app code with console and ng2-logger logs
     
 
     
-It is important to set production mode before any log messages are executed. It may be prudent
-to set production mode in your App.Module prior to `@NgModule` (and ultimately prior to your Angular 2
-app bootstraping just as as you would `enableProdMode()`). This will ensure that log messages that
-should not be seen are leaked out.
+It is important to set production mode before any log messages are executed.
+This will ensure that log messages that should not be seen are leaked out.
 
 
 **Selective debug - global settings**

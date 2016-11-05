@@ -11,11 +11,9 @@ var Log = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             level[_i - 1] = arguments[_i];
         }
-        if (Log.modules.length > 0 && !include_1.contain(Log.modules, name))
-            return;
         var i;
         if (Log.instances[name] === undefined) {
-            i = new logger_1.Logger(name, Log.getRandomColor(), Log.levels.length > 0 ? Log.display : undefined, Log.isDevelopmentMode, level);
+            i = new logger_1.Logger(name, Log.getRandomColor(), Log.levels.length > 0 ? Log.display : undefined, Log.isDevelopmentMode, level, Log.isMutedModule(name));
             Log.instances[name] = i;
         }
         else {
@@ -57,7 +55,7 @@ var Log = (function () {
             level[_i - 0] = arguments[_i];
         }
         if (Log._logOnly) {
-            console.error('You should use funcion onlyLevel only onec');
+            console.error('You should use funcion onlyLevel only once');
             return;
         }
         if (Log._logOnly)
@@ -72,12 +70,26 @@ var Log = (function () {
             modules[_i - 0] = arguments[_i];
         }
         if (Log._logModules) {
-            console.error('You should use funcion onlyModules only onec');
+            console.error('You should use funcion onlyModules only once');
             return;
         }
         if (modules.length === 0)
             return;
         Log.modules = modules;
+        Log.muteAllOtherModules();
+    };
+    Log.isMutedModule = function (moduleName) {
+        if (Log.modules.length == 0)
+            return false;
+        if (!include_1.contain(Log.modules, moduleName))
+            return true;
+        return false;
+    };
+    Log.muteAllOtherModules = function () {
+        for (var moduleName in Log.instances) {
+            if (!include_1.contain(Log.modules, moduleName))
+                Log.instances[moduleName].mute();
+        }
     };
     Log.setProductionMode = function () {
         if (Log.modeIsSet) {
