@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "logger for angular 2",
   "main": "index.js",
   "scripts": {
