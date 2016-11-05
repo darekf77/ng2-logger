@@ -80,9 +80,6 @@ This settings will override settings from files.
     Log.onlyLevel(Level.ERROR,Level.INFO);
 ```
 
-It is important to note that the placement of global settings are important. It is suggested that placement
-of debug settings is prior to `@NgModule`.
-
 **Specifying `onlyModules` as regular expression(s)**
 -------------------
 
