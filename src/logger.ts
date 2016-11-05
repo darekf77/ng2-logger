@@ -10,49 +10,35 @@ export class Logger<T> {
         public color: string,
         private display: (name: string, data: any, leve: Level, moduleName: string) => void,
         private developmentMode: boolean,
-        private allowed: Level[]) {
+        private allowed: Level[],
+        private isMuted) {
     }
 
     d(name: string, ...data: any[]) {
-        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-            && !contain(this.allowed, Level.DATA)) return this;
-        if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
-        else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
-            Display.msg(name, data, this.name, this.color, Level.DATA);
-        }
-        return this;
+        return this._logMessage(name, Level.DATA, data);
     }
 
     er(name: string, ...data: any[]) {
-        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-            && !contain(this.allowed, Level.ERROR)) return this;
-        if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
-        else if (this.allowed.length === 0 || contain(this.allowed, Level.ERROR)) {
-            Display.msg(name, data, this.name, this.color, Level.ERROR);
-        }
-        return this;
+        return this._logMessage(name, Level.INFO, data);
     }
 
     i(name: string, ...data: any[]) {
-        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-            && !contain(this.allowed, Level.INFO)) return this;
-        if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
-        else if (this.allowed.length === 0 || contain(this.allowed, Level.INFO)) {
-            Display.msg(name, data, this.name, this.color, Level.INFO);
-        }
-        return this;
+        return this._logMessage(name, Level.ERROR, data);
     }
 
     w(name: string, ...data: any[]) {
-        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-            && !contain(this.allowed, Level.WARN)) return this;
+        return this._logMessage(name, Level.WARN, data);
+    }
+
+    private _logMessage(name:string, level:Level, ...data:any[])
+    {
+        if (this.isMuted) return this;
+        if (this.allowed.length >= 1 && contain(this.allowed, level)
+            && !contain(this.allowed, level)) return this;
         if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
-        else if (this.allowed.length === 0 || contain(this.allowed, Level.WARN)) {
-            Display.msg(name, data, this.name, this.color, Level.WARN);
+        if (this.display !== undefined) this.display(name, data, level, this.name);
+        else if (this.allowed.length === 0 || contain(this.allowed, level)) {
+            Display.msg(name, data, this.name, this.color, level);
         }
         return this;
     }
@@ -64,5 +50,9 @@ export class Logger<T> {
     }
 
     public static isProductionMode: boolean = false;
+
+    public mute() {
+        this.isMuted = true;
+    }
 
 }
