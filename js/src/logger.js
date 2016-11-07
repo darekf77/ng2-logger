@@ -17,28 +17,28 @@ var Logger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             data[_i - 1] = arguments[_i];
         }
-        return this._logMessage(name, level_1.Level.DATA, data);
+        return this._logMessage.apply(this, [name, level_1.Level.DATA].concat(data));
     };
     Logger.prototype.er = function (name) {
         var data = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             data[_i - 1] = arguments[_i];
         }
-        return this._logMessage(name, level_1.Level.INFO, data);
+        return this._logMessage.apply(this, [name, level_1.Level.INFO].concat(data));
     };
     Logger.prototype.i = function (name) {
         var data = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             data[_i - 1] = arguments[_i];
         }
-        return this._logMessage(name, level_1.Level.ERROR, data);
+        return this._logMessage.apply(this, [name, level_1.Level.ERROR].concat(data));
     };
     Logger.prototype.w = function (name) {
         var data = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             data[_i - 1] = arguments[_i];
         }
-        return this._logMessage(name, level_1.Level.WARN, data);
+        return this._logMessage.apply(this, [name, level_1.Level.WARN].concat(data));
     };
     Logger.prototype._logMessage = function (name, level) {
         var data = [];
