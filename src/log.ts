@@ -14,10 +14,10 @@ export class Log {
             i = new Logger<TA>(
                 name,
                 Log.getRandomColor(),
-                Log.levels.length > 0 ? Log.display : undefined,
                 Log.isDevelopmentMode,
                 level,
-                Log.isMutedModule(name)
+                Log.isMutedModule(name),
+                Log.levels.length > 0 ? Log.display : undefined,
             );
             Log.instances[name] = i;
         } else {
@@ -26,7 +26,7 @@ export class Log {
         return i;
     }
 
-    private static getRandomColor() {
+    private static getRandomColor(): string {
         let letters = '012345'.split('');
         let color = '#';
         color += letters[Math.round(Math.random() * 5)];

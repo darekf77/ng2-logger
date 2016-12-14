@@ -8,10 +8,10 @@ export class Logger<T> {
     constructor(
         private name: string,
         public color: string,
-        private display: (name: string, data: any, leve: Level, moduleName: string) => void,
         private developmentMode: boolean,
         private allowed: Level[],
-        private isMuted) {
+        private isMuted: boolean,
+        private display?: (name: string, data: any, leve: Level, moduleName: string) => void) {
     }
 
     d(name: string, ...data: any[]) {
@@ -71,7 +71,7 @@ export class Logger<T> {
         return this;
     }
 
-    private _level: Level = undefined;
+    private _level: Level;
     private level(l: Level) {
         this._level = l;
         return this;

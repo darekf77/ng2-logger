@@ -2,7 +2,7 @@
   "name": "ng2-logger",
   "version": "0.1.21",
   "description": "logger for angular 2",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "git add --all . && git commit -m\"fix\" && git push origin master && npm publish"
@@ -37,9 +37,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.7.0",
     "source-map-loader": "^0.1.5",
-    "ts-helpers": "1.1.1",
-    "tslint": "^3.10.2",
-    "tslint-loader": "^2.1.4"
+    "ts-helpers": "1.1.1"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {}
 }

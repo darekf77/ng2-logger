@@ -77,7 +77,6 @@ module.exports = {
 
     alias: {
       'angular2/core': helpers.root('node_modules/@angular/core/index.js'),
-      'angular2/testing': helpers.root('node_modules/@angular/core/testing.js'),
       '@angular/testing': helpers.root('node_modules/@angular/core/testing.js'),
       'angular2/platform/browser': helpers.root('node_modules/@angular/platform-browser/index.js'),
       'angular2/testing': helpers.root('node_modules/@angular/testing/index.js'),
@@ -180,21 +179,21 @@ module.exports = {
         loader: 'raw-loader',
         exclude: [helpers.root('src/index.html')]
       },
-      
-      { 
-        test: /\.scss$/, 
+
+      {
+        test: /\.scss$/,
         loaders: ['raw-loader','sass-loader']
       },
-      
-      
+
+
       // { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass',] },
         { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
         // Bootstrap 4
         { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' }
-      
-      
-      // , { 
-      //   test: /\.scss$/, 
+
+
+      // , {
+      //   test: /\.scss$/,
       //   loaders: ['raw-loader','sass-loader']
       // }
 
@@ -208,13 +207,13 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
-    
+
     new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
             jquery: 'jquery'
         }),
-    
+
     /*
      * Plugin: ForkCheckerPlugin
      * Description: Do type checking in a separate process, so webpack don't need to wait.

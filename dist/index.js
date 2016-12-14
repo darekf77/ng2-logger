@@ -2,6 +2,5 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require('./log'));
-__export(require('./level'));
+__export(require("./src"));
 //# sourceMappingURL=index.js.map
