@@ -1,7 +1,7 @@
 "use strict";
-const level_1 = require("./level");
-const display_1 = require("./display");
-const include_1 = require("./include");
+const level_1 = require('./level');
+const display_1 = require('./display');
+const include_1 = require('./include');
 class Logger {
     constructor(name, color, developmentMode, allowed, isMuted, display) {
         this.name = name;
@@ -86,6 +86,6 @@ class Logger {
         this.isMuted = true;
     }
 }
-exports.Logger = Logger;
 Logger.isProductionMode = false;
+exports.Logger = Logger;
 //# sourceMappingURL=logger.js.map

@@ -1,44 +1,43 @@
 {
-  "name": "ng2-logger",
-  "version": "0.1.21",
-  "description": "logger for angular 2",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "git add --all . && git commit -m\"fix\" && git push origin master && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/darekf77/ng2-logger.git"
-  },
-  "keywords": [
-    "angular2",
-    "logger",
-    "log"
-  ],
-  "author": {
-    "name": "Dariusz Filipiak"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/darekf77/ng2-logger/issues"
-  },
-  "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "devDependencies": {
-    "awesome-typescript-loader": "~0.17.0",
-    "core-js": "^2.2.2",
-    "istanbul-instrumenter-loader": "^0.2.0",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^0.5.5",
-    "karma-jasmine": "^0.3.8",
-    "karma-mocha-reporter": "^2.0.0",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "1.7.0",
-    "source-map-loader": "^0.1.5",
-    "ts-helpers": "1.1.1"
-  },
-  "readmeFilename": "README.md",
-  "dependencies": {}
+    "name": "ng2-logger",
+    "version": "0.1.21",
+    "description": "logger for angular 2",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "git add --all . && git commit -m\"fix\" && git push origin master && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/darekf77/ng2-logger.git"
+    },
+    "keywords": [
+        "angular2",
+        "logger",
+        "log"
+    ],
+    "author": {
+        "name": "Dariusz Filipiak"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/darekf77/ng2-logger/issues"
+    },
+    "homepage": "https://github.com/darekf77/ng2-logger#readme",
+    "devDependencies": {
+        "awesome-typescript-loader": "~0.17.0",
+        "core-js": "^2.2.2",
+        "istanbul-instrumenter-loader": "^0.2.0",
+        "karma": "^0.13.22",
+        "karma-chrome-launcher": "^1.0.1",
+        "karma-coverage": "^0.5.5",
+        "karma-jasmine": "^0.3.8",
+        "karma-mocha-reporter": "^2.0.0",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-webpack": "1.7.0",
+        "source-map-loader": "^0.1.5",
+        "ts-helpers": "1.1.1"
+    },
+    "readmeFilename": "README.md",
+    "dependencies": {}
 }

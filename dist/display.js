@@ -1,5 +1,5 @@
 "use strict";
-const level_1 = require("./level");
+const level_1 = require('./level');
 class Display {
     static msg(message, params, moduleName, moduleColor, level) {
         let color = 'gray';

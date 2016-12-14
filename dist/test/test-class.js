@@ -1,5 +1,5 @@
 "use strict";
-const _1 = require("../");
+const _1 = require('../');
 const log = _1.Log.create('books', _1.Level.DATA);
 class Book {
     contructor() {

@@ -6,7 +6,7 @@ import { contain } from './include';
 
 export class Log {
 
-    private static instances = {};
+    private static instances: any = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
         let i: Logger<TA>;

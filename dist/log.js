@@ -1,8 +1,8 @@
 "use strict";
-const logger_1 = require("./logger");
-const level_1 = require("./level");
-const display_1 = require("./display");
-const include_1 = require("./include");
+const logger_1 = require('./logger');
+const level_1 = require('./level');
+const display_1 = require('./display');
+const include_1 = require('./include');
 class Log {
     static create(name, ...level) {
         let i;
@@ -95,7 +95,6 @@ class Log {
         Log.isDevelopmentMode = false;
     }
 }
-exports.Log = Log;
 Log.instances = {};
 Log._logOnly = false;
 Log.levels = [];
@@ -103,4 +102,5 @@ Log._logModules = false;
 Log.modules = [];
 Log.isDevelopmentMode = true;
 Log.modeIsSet = false;
+exports.Log = Log;
 //# sourceMappingURL=log.js.map

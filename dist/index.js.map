@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../index.ts"],"names":[],"mappings":";;;;AAAA,2BAAsB"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,OAAO,CAAC,EAAA;AACtB,iBAAc,SAAS,CAAC,EAAA","sourcesContent":["export * from './log';\r\nexport * from './level';\r\n"]}
