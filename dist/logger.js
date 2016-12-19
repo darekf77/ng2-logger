@@ -24,6 +24,19 @@ class Logger {
         }
         return this;
     }
+    dir(name, ...data) {
+        if (this.allowed.length >= 1 && include_1.contain(this.allowed, level_1.Level.__NOTHING)
+            && !include_1.contain(this.allowed, level_1.Level.DATA))
+            return this;
+        if (Logger.isProductionMode)
+            return this;
+        if (this.display !== undefined)
+            this.display(name, data, level_1.Level.DATA, this.name);
+        else if (this.allowed.length === 0 || include_1.contain(this.allowed, level_1.Level.DATA)) {
+            display_1.Display.dir(name, data, this.name, this.color, level_1.Level.DATA);
+        }
+        return this;
+    }
     er(name, ...data) {
         if (this.allowed.length >= 1 && include_1.contain(this.allowed, level_1.Level.__NOTHING)
             && !include_1.contain(this.allowed, level_1.Level.ERROR))
