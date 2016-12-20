@@ -1,5 +1,6 @@
 "use strict";
-const level_1 = require('./level');
+const level_1 = require("./level");
+const _ = require("lodash");
 class Display {
     static msg(message, params, moduleName, moduleColor, level) {
         let color = 'gray';
@@ -31,7 +32,13 @@ class Display {
         params.unshift(a3);
         params.unshift(a2);
         params.unshift(a1);
-        console.dir.apply(console, params);
+        params = _.map(params, (object) => {
+            if (typeof object === "object") {
+                return _.cloneDeep(object);
+            }
+            return object;
+        });
+        console.log.apply(console, params);
     }
 }
 exports.Display = Display;

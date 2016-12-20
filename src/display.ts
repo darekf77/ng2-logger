@@ -1,4 +1,5 @@
 import { Level } from './level';
+import * as _ from 'lodash';
 
 export class Display {
 
@@ -34,7 +35,13 @@ export class Display {
         params.unshift(a3);
         params.unshift(a2);
         params.unshift(a1);
-        console.dir.apply(console, params);
+        params = _.map(params, (object: any) => {
+            if (typeof object === "object") {
+                return _.cloneDeep(object);
+            }
+            return object;
+        });
+        console.log.apply(console, params);
     }
 
 
