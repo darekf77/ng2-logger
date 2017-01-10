@@ -17,7 +17,16 @@ export class Display {
         params.unshift(a3);
         params.unshift(a2);
         params.unshift(a1);
-        console.log.apply(console, params);
+        
+        if(level === Level.INFO && console.info) {
+            console.info.apply(console, params);
+        } else if(level === Level.ERROR && console.error) {
+            console.error.apply(console, params);
+        } else if(level === Level.WARN && console.warn) {
+            console.warn.apply(console, params);
+        } else {
+            console.log.apply(console, params);
+        }
     }
 
 
