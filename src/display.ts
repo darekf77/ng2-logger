@@ -3,13 +3,27 @@ import { Level } from './level';
 export class Display {
 
 
-    static msg(message: string, params: any[],
-        moduleName: string, moduleColor: string, level: Level) {
-
+    static msg(
+        message: string,
+        params: any[],
+        moduleName: string,
+        moduleColor: string,
+        level: Level,
+        moduleWidth: number
+    ) {
         let color = 'gray';
         if (level === Level.INFO) color = 'deepskyblue';
         if (level === Level.ERROR) color = 'red';
         if (level === Level.WARN) color = 'orange';
+
+        if (moduleWidth) {
+            const diff = moduleWidth - moduleName.length;
+            if (diff > 0) {
+                for (let i = 0; i < diff; i++) {
+                    moduleName += ' ';
+                }
+            }
+        }
 
         let a1 = '%c ' + moduleName + '  %c ' + message + ' ';
         let a2 = 'background: ' + moduleColor + ';color:white; ';
@@ -17,18 +31,6 @@ export class Display {
         params.unshift(a3);
         params.unshift(a2);
         params.unshift(a1);
-        
-        if(level === Level.INFO && console.info) {
-            console.info.apply(console, params);
-        } else if(level === Level.ERROR && console.error) {
-            console.error.apply(console, params);
-        } else if(level === Level.WARN && console.warn) {
-            console.warn.apply(console, params);
-        } else {
-            console.log.apply(console, params);
-        }
+        console.log.apply(console, params);
     }
-
-
-
 }
