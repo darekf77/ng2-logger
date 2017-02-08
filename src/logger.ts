@@ -11,7 +11,8 @@ export class Logger<T> {
         private display: (name: string, data: any, leve: Level, moduleName: string) => void,
         private developmentMode: boolean,
         private allowed: Level[],
-        private isMuted) {
+        private isMuted,
+        public fixedWidth: number) {
     }
 
     d(name: string, ...data: any[]) {
@@ -20,7 +21,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
-            Display.msg(name, data, this.name, this.color, Level.DATA);
+            Display.msg(name, data, this.name, this.color, Level.DATA, this.fixedWidth);
         }
         return this;
     }
@@ -31,7 +32,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.ERROR)) {
-            Display.msg(name, data, this.name, this.color, Level.ERROR);
+            Display.msg(name, data, this.name, this.color, Level.ERROR, this.fixedWidth);
         }
         return this;
     }
@@ -42,7 +43,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.INFO)) {
-            Display.msg(name, data, this.name, this.color, Level.INFO);
+            Display.msg(name, data, this.name, this.color, Level.INFO, this.fixedWidth);
         }
         return this;
     }
@@ -53,7 +54,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.WARN)) {
-            Display.msg(name, data, this.name, this.color, Level.WARN);
+            Display.msg(name, data, this.name, this.color, Level.WARN, this.fixedWidth);
         }
         return this;
     }
@@ -66,7 +67,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, level, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, level)) {
-            Display.msg(name, data, this.name, this.color, level);
+            Display.msg(name, data, this.name, this.color, level, this.fixedWidth);
         }
         return this;
     }
