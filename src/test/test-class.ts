@@ -8,6 +8,8 @@ export class Book {
     contructor() {
         log.d('asdasd').er('asdasd', 'asdasd');
         log.er('asd', 'asd');
+        log.data('asdasd').error('asdasd', 'asdasd');
+        log.error('asd', 'asd');
     }
 
     getSomething() {
