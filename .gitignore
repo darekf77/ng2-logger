@@ -20,4 +20,11 @@ npm-debug.log*
 /typings/
 /tsd_typings/
 
+/src/**/*.js
+ng2-logger.js
 
+/src/**/*.js.map
+ng2-logger.js.map
+
+/src/**/*.d.ts
+ng2-logger.d.ts

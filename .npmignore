@@ -1,0 +1,5 @@
+
+/src/**/*.ts
+ng2-logger.ts
+!/src/**/*.d.ts
+!ng2-logger.d.ts
