@@ -26,7 +26,7 @@ export class Display {
         }
 
         let a1 = '%c ' + moduleName + '  %c ' + message + ' ';
-        let a2 = 'background: ' + moduleColor + ';color:white; ';
+        let a2 = 'background: ' + moduleColor + ';color:white; border: 1px solid ' + moduleColor + '; ';
         let a3 = 'border: 1px solid ' + color + '; ';
         params.unshift(a3);
         params.unshift(a2);
