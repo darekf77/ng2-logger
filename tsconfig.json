@@ -10,16 +10,9 @@
   },
   "exclude": [
     "node_modules",
-    "typings/main.d.ts",
-    "typings/main"
-  ],
-  "filesGlob": [
-    "./ng2-rest.ts",
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-    "!./node_modules/**/*.ts",
-    "src/custom-typings.d.ts",
-    "typings/browser.d.ts"    
+    "preview",
+    "docs",
+    "dist"
   ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
@@ -27,5 +20,7 @@
   },
   "compileOnSave": true,
   "buildOnSave": true,
-  "atom": { "rewriteTsconfig": false }
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }
