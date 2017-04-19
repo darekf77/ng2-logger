@@ -16,7 +16,7 @@ export class Logger<T> {
     ) {
     }
 
-    d(name: string, ...data: any[]) {
+    private _data(name: string, ...data: any[]) {
         if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
             && !contain(this.allowed, Level.DATA)) return this;
         if (Logger.isProductionMode) return this;
@@ -28,7 +28,8 @@ export class Logger<T> {
     }
 
 
-    er(name: string, ...data: any[]) {
+    private _error(name: string, ...data: any[]) {
+
         if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
             && !contain(this.allowed, Level.ERROR)) return this;
         if (Logger.isProductionMode) return this;
@@ -39,7 +40,7 @@ export class Logger<T> {
         return this;
     }
 
-    i(name: string, ...data: any[]) {
+    private _info(name: string, ...data: any[]) {
         if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
             && !contain(this.allowed, Level.INFO)) return this;
         if (Logger.isProductionMode) return this;
@@ -50,7 +51,7 @@ export class Logger<T> {
         return this;
     }
 
-    w(name: string, ...data: any[]) {
+    private _warn(name: string, ...data: any[]) {
         if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
             && !contain(this.allowed, Level.WARN)) return this;
         if (Logger.isProductionMode) return this;
@@ -60,6 +61,56 @@ export class Logger<T> {
         }
         return this;
     }
+
+
+    /** @deprecated Use data(...)
+     * @see data
+    */
+    d = (name: string, ...data: any[]) => this._data(name, data);
+
+    /** @deprecated Use error(...)
+     * @see error
+    */
+
+    er = (name: string, ...data: any[]) => this._error(name, data);
+
+    /** @deprecated Use info(...)
+     * @see info
+    */
+    i = (name: string, ...data: any[]) => this._info(name, data);
+
+    /** @deprecated Use warn(...)
+     * @see warn
+    */
+    w = (name: string, ...data: any[]) => this._warn(name, data);
+
+    /**
+     * Logs message and data with the level=data
+     * @param message The message
+     * @param otherParams Additional parameters
+     */
+    data = (message: string, ...otherParams: any[]): Logger<T> => { return this._data(message, otherParams); };
+
+    /**
+     * Logs message and data with the level=error
+     * @param message The message
+     * @param otherParams Additional parameters
+     */
+    error = (message: string, ...otherParams: any[]) => this._error(message, otherParams);
+
+    /**
+     * Logs message and data with the level=info
+     * @param message The message
+     * @param otherParams Additional parameters
+     */
+    info = (message: string, ...otherParams: any[]) => this._info(message, otherParams);
+
+    /**
+     * Logs message and data with the level=warn
+     * @param message The message
+     * @param otherParams Additional parameters
+     */
+    warn = (message: string, ...otherParams: any[]) => this._warn(message, otherParams);
 
     private _logMessage(name: string, level: Level, ...data: any[]) {
         if (this.isMuted) return this;
