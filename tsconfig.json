@@ -20,7 +20,10 @@
     "./test/**/*.ts",
     "!./node_modules/**/*.ts",
     "src/custom-typings.d.ts",
-    "typings/browser.d.ts"    
+    "typings/browser.d.ts",
+    "preview",
+    "docs",
+    "dist"
   ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
@@ -28,5 +31,7 @@
   },
   "compileOnSave": true,
   "buildOnSave": true,
-  "atom": { "rewriteTsconfig": false }
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }

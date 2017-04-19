@@ -22,10 +22,10 @@ npm-debug.log*
 /tsd_typings/
 
 /src/**/*.js
-ng2-logger.js
+index.js
 
 /src/**/*.js.map
-ng2-logger.js.map
+index.js.map
 
 /src/**/*.d.ts
-ng2-logger.d.ts
+index.d.ts
