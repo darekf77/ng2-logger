@@ -13,6 +13,7 @@ Thumbs.db
 npm-debug.log*
 
 /coverage
+/preview
 
 
 # Typing #
