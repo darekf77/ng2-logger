@@ -23,7 +23,7 @@ To install package run:
 First import it:
 
 ```ts
-    import { Log, Level } from 'ng2-logger/ng2-logger'
+    import { Log, Level } from 'ng2-logger'
 ```
 
 Simple use:
