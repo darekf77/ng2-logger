@@ -52,6 +52,8 @@ export class AppComponent implements OnInit {
     log2.i('info', document.location)
     log2.w('warn')
 
+    log.dir('asdasd', this.appState)
+
     let d = {
       dupa: 'asdasdasd',
       'asdasd': 'asdasd'
