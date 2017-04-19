@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
     console.log('Initial App State', this.appState.state);
     log.fixedWidth = 50;
 
-    return log.d.bind(console)
     log.d('important  debug')
     log.er('important  error')
     log.i('important  info')
