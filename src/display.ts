@@ -12,6 +12,7 @@ export class Display {
         level: Level,
         moduleWidth: number | undefined
     ) {
+        if (typeof window != 'undefined' && window.document) {
         let color = 'gray';
         if (level === Level.INFO) color = 'deepskyblue';
         if (level === Level.ERROR) color = 'red';
@@ -32,6 +33,9 @@ export class Display {
         params.unshift(a3);
         params.unshift(a2);
         params.unshift(a1);
+        } else {
+            params.unshift('[' + moduleName + '] ' + message);
+        }
         console.log.apply(console, params);
     }
 
