@@ -158,8 +158,5 @@
   "engines": {
     "node": ">= 4.2.1",
     "npm": ">= 3"
-  },
-  "dependencies": {
-    "ng2-logger": "file:///Users/darek/ProjectsMac/npm/ng2-logger"
   }
 }

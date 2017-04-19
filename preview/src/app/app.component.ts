@@ -39,17 +39,26 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
-    // log.fixedWidth = 20;
-    log.d('debug')
-    log.er('error')
-    log.i('info')
-    log.w('warn')
+    log.fixedWidth = 50;
 
+    return log.d.bind(console)
+    log.d('important  debug')
+    log.er('important  error')
+    log.i('important  info')
+    log.w('important  warn')
 
+    log.fixedWidth = undefined;
     log2.d('debug')
     log2.er('error')
-    log2.i('info')
+    log2.i('info', document.location)
     log2.w('warn')
+
+    let d = {
+      dupa: 'asdasdasd',
+      'asdasd': 'asdasd'
+    }
+    log.dir('document.location1', document.location, document.location)
+    console.dir('document.location1', document.location, document.location)
   }
 
 }
