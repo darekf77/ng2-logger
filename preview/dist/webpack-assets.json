@@ -1,0 +1,11 @@
+{
+  "main": {
+    "js": "main.bundle.js"
+  },
+  "vendor": {
+    "js": "vendor.bundle.js"
+  },
+  "polyfills": {
+    "js": "polyfills.bundle.js"
+  }
+}

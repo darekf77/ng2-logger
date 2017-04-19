@@ -8,11 +8,12 @@ export class Logger<T> {
     constructor(
         private name: string,
         public color: string,
-        private display: (name: string, data: any, leve: Level, moduleName: string) => void,
         private developmentMode: boolean,
         private allowed: Level[],
-        private isMuted,
-        public fixedWidth: number) {
+        private isMuted: boolean,
+        public fixedWidth: number | undefined,
+        private display?: (name: string, data: any, leve: Level, moduleName: string) => void
+    ) {
     }
 
     d(name: string, ...data: any[]) {
@@ -22,6 +23,17 @@ export class Logger<T> {
         if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
             Display.msg(name, data, this.name, this.color, Level.DATA, this.fixedWidth);
+        }
+        return this;
+    }
+
+    dir(name: string, ...data: any[]) {
+        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
+            && !contain(this.allowed, Level.DATA)) return this;
+        if (Logger.isProductionMode) return this;
+        if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
+        else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
+            Display.dir(name, data, this.name, this.color, Level.DATA);
         }
         return this;
     }
@@ -59,8 +71,7 @@ export class Logger<T> {
         return this;
     }
 
-    private _logMessage(name:string, level:Level, ...data:any[])
-    {
+    private _logMessage(name: string, level: Level, ...data: any[]) {
         if (this.isMuted) return this;
         if (this.allowed.length >= 1 && contain(this.allowed, level)
             && !contain(this.allowed, level)) return this;
@@ -72,7 +83,7 @@ export class Logger<T> {
         return this;
     }
 
-    private _level: Level = undefined;
+    private _level: Level;
     private level(l: Level) {
         this._level = l;
         return this;

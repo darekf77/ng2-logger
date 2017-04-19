@@ -6,7 +6,7 @@ import { contain } from './include';
 
 export class Log {
 
-    private static instances = {};
+    private static instances: any = {};
 
     static create<TA>(name: string, ...level: Level[]): Logger<TA> {
         let i: Logger<TA>;
@@ -14,11 +14,11 @@ export class Log {
             i = new Logger<TA>(
                 name,
                 Log.getRandomColor(),
-                Log.levels.length > 0 ? Log.display : undefined,
                 Log.isDevelopmentMode,
                 level,
                 Log.isMutedModule(name),
-                Log.levels.length > 0 ? Log.fixedWidth : undefined
+                Log.levels.length > 0 ? Log.fixedWidth : undefined,
+                Log.levels.length > 0 ? Log.display : undefined,
             );
             Log.instances[name] = i;
         } else {
@@ -27,7 +27,7 @@ export class Log {
         return i;
     }
 
-    private static getRandomColor() {
+    private static getRandomColor(): string {
         let letters = '012345'.split('');
         let color = '#';
         color += letters[Math.round(Math.random() * 5)];
@@ -79,14 +79,14 @@ export class Log {
         Log.modules = modules;
         Log.muteAllOtherModules();
     }
-    private static isMutedModule(moduleName:string):boolean {
-        if(Log.modules.length == 0) return false;
-        if(!contain(Log.modules, moduleName)) return true;
+    private static isMutedModule(moduleName: string): boolean {
+        if (Log.modules.length == 0) return false;
+        if (!contain(Log.modules, moduleName)) return true;
         return false;
     }
     private static muteAllOtherModules() {
         for (var moduleName in Log.instances) {
-            if(!contain(Log.modules, moduleName))
+            if (!contain(Log.modules, moduleName))
                 Log.instances[moduleName].mute()
         }
     }
