@@ -22,7 +22,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
-            Display.msg(name, data, this.name, this.color, Level.DATA, this.fixedWidth);
+            Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.DATA, this.fixedWidth])
         }
         return this;
     }
@@ -35,7 +35,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.ERROR, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.ERROR)) {
-            Display.msg(name, data, this.name, this.color, Level.ERROR, this.fixedWidth);
+            Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.ERROR, this.fixedWidth])
         }
         return this;
     }
@@ -46,7 +46,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.INFO, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.INFO)) {
-            Display.msg(name, data, this.name, this.color, Level.INFO, this.fixedWidth);
+            Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.INFO, this.fixedWidth])
         }
         return this;
     }
@@ -57,7 +57,7 @@ export class Logger<T> {
         if (Logger.isProductionMode) return this;
         if (this.display !== undefined) this.display(name, data, Level.WARN, this.name);
         else if (this.allowed.length === 0 || contain(this.allowed, Level.WARN)) {
-            Display.msg(name, data, this.name, this.color, Level.WARN, this.fixedWidth);
+            Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.WARN, this.fixedWidth])
         }
         return this;
     }

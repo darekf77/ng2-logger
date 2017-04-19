@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     console.log('Initial App State', this.appState.state);
     log.fixedWidth = 50;
 
-    log.d('important  debug')
+    log.d('important  debug', this.appState)
     log.er('important  error')
     log.i('important  info')
     log.w('important  warn')
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     log2.i('info', document.location)
     log2.w('warn')
 
-
+    log.data('aaaaaa')
 
     let d = {
       dupa: 'asdasdasd',
