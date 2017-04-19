@@ -4,3 +4,6 @@
 index.ts
 
 /preview
+
+karma.conf.js
+webpack-bundle.config
