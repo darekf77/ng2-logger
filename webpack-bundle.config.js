@@ -20,7 +20,7 @@ module.exports = {
     output: {
         // path: __dirname + '/bin',
         libraryTarget: "umd",
-        filename: 'bundle.js'
+        filename: 'bundle.umd.js'
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -30,12 +30,6 @@ module.exports = {
             { test: /\.ts$/, loaders: ['ts-loader'] }
             // { test: /\.json$/, loaders: ['json-loader'] }
         ]
-    },
-    externals: {
-        // 'rxjs/Observable': 'rxjs/Observable',
-        // 'rxjs/Subject': 'rxjs/Subject',
-        // 'rxjs/add/operator/map': 'rxjs/add/operator/map',
-        // '@angular/core': '@angular/core'
     },
     // node: {
     //     fs: "empty",
@@ -53,6 +47,4 @@ module.exports = {
         // }),
     ]
 }
-
-
 

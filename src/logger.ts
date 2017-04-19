@@ -27,16 +27,6 @@ export class Logger<T> {
         return this;
     }
 
-    dir(name: string, ...data: any[]) {
-        if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-            && !contain(this.allowed, Level.DATA)) return this;
-        if (Logger.isProductionMode) return this;
-        if (this.display !== undefined) this.display(name, data, Level.DATA, this.name);
-        else if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
-            Display.dir(name, data, this.name, this.color, Level.DATA);
-        }
-        return this;
-    }
 
     er(name: string, ...data: any[]) {
         if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
