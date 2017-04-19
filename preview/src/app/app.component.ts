@@ -52,13 +52,13 @@ export class AppComponent implements OnInit {
     log2.i('info', document.location)
     log2.w('warn')
 
-    log.dir('asdasd', this.appState)
+
 
     let d = {
       dupa: 'asdasdasd',
       'asdasd': 'asdasd'
     }
-    log.dir('document.location1', document.location, document.location)
+
     console.dir('document.location1', document.location, document.location)
   }
 
