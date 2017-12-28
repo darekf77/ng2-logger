@@ -3,7 +3,12 @@
   "version": "1.0.3",
   "description": "logger for angular 2",
   "scripts": {
-    "release": "git add --all . && git commit -m\"fix\" && git push origin master && npm publish"
+    "pre:publish": "cp screen.png /dist && cp README.md dist/"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
   },
   "repository": {
     "type": "git",
@@ -23,10 +28,8 @@
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "devDependencies": {
-    "strip-loader": "^0.1.2",
-    "typescript": "^2.2.2",
-    "webpack": "^2.4.1",
-    "ts-loader": "^3.2.0"
+    "ng-packagr": "^1.6.0",
+    "typescript": "^2.2.2"
   },
   "readmeFilename": "README.md"
 }
