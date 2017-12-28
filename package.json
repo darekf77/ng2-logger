@@ -1,9 +1,11 @@
 {
   "name": "ng2-logger",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "logger for angular 2",
   "scripts": {
-    "pre:publish": "cp screen.png /dist && cp README.md dist/"
+    "build": "npm-run ng-packagr -p package.json",
+    "release": "cd dist && release-it",
+    "pre:publish": "cp screen.png /dist && cp README.md dist/ && cp package.json dist/"
   },
   "ngPackage": {
     "lib": {
