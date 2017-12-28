@@ -1,6 +1,6 @@
 {
-    "buildCommand": "npm-run ng-packagr -p package.json",
-    "dist": {
-      "baseDir": "dist"
-    }
+  "buildCommand": "npm-run ng-packagr -p package.json",
+  "dist": {
+    "baseDir": "dist"
   }
+}

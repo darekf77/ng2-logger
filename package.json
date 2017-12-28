@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "logger for angular 2",
   "scripts": {
     "build": "npm-run ng-packagr -p package.json",
