@@ -1,10 +1,10 @@
 {
   "name": "ng2-logger",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "logger for angular 2",
   "scripts": {
     "build": "npm-run ng-packagr -p package.json",
-    "release": "cd dist && release-it",
+    "release": "release-it -c release-it.json",
     "pre:publish": "cp screen.png /dist && cp README.md dist/ && cp package.json dist/"
   },
   "ngPackage": {
