@@ -1,8 +1,6 @@
 import { Level } from './level';
 
-
 export class Display {
-
 
     static msg(
         message: string | any,
@@ -42,13 +40,10 @@ export class Display {
                 params.unshift(a1);
             }
 
-
         } else {
             params.unshift('[' + moduleName + '] ' + message);
         }
         console.log.apply(console, params);
     }
-
-
 
 }

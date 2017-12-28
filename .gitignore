@@ -1,31 +1,4 @@
-# Node Files #
 /node_modules
-/bower_components
-npm-debug.log
-
-# OS generated files #
-.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
-
-*.log
 npm-debug.log*
 
-/coverage
-/preview
-
-
-# Typing #
-/src/typings/tsd/
-/typings/
-/tsd_typings/
-
-/src/**/*.js
-index.js
-
-/src/**/*.js.map
-index.js.map
-
-/src/**/*.d.ts
-index.d.ts
+/dist

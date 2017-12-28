@@ -1,9 +1,10 @@
+/node_modules
+npm-debug.log*
 
-/src/**/*.ts
-!/src/**/*.d.ts
-index.ts
-
+/.vscode
+/scripts
+/docs
 /preview
+/tests
 
-karma.conf.js
-webpack-bundle.config
+tsconfig.json

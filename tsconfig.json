@@ -2,36 +2,32 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "watch": true,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "noEmitHelpers": true,
-    "declaration": true
+    "noEmitHelpers": false,
+    "strictNullChecks": false,
+    "declaration": true,
+    "baseUrl": "./src",
+    "outDir": "dist",
+    "lib": [
+      "dom",
+      "es7"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "exclude": [
     "node_modules",
-    "typings/main.d.ts",
-    "typings/main",
-    "preview"
-  ],
-  "filesGlob": [
-    "./ng2-rest.ts",
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-    "!./node_modules/**/*.ts",
-    "src/custom-typings.d.ts",
-    "typings/browser.d.ts",
     "preview",
     "docs",
-    "dist"
+    "dist",
+    "tests"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "resolveGlobs": true,
-    "forkChecker": true
-  },
-  "compileOnSave": true,
-  "buildOnSave": true,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+  "compileOnSave": false,
+  "buildOnSave": false
 }
