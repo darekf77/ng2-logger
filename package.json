@@ -1,17 +1,7 @@
 {
   "name": "ng2-logger",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "logger for angular 2",
-  "scripts": {
-    "build": "npm-run ng-packagr -p package.json",
-    "release": "release-it -c release-it.json",
-    "pre:publish": "cp screen.png /dist && cp README.md dist/ && cp package.json dist/"
-  },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "src/index.ts"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
@@ -30,7 +20,6 @@
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "devDependencies": {
-    "ng-packagr": "^1.6.0",
     "typescript": "^2.2.2"
   },
   "readmeFilename": "README.md"
