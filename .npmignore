@@ -6,5 +6,6 @@ npm-debug.log*
 /docs
 /preview
 /tests
+/src
 
 tsconfig.json
