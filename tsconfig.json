@@ -6,7 +6,6 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
     "declaration": true,
     "baseUrl": "./src",
     "outDir": "dist",
