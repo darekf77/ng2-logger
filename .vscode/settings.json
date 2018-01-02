@@ -1,0 +1,21 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "index.*": true,
+        "dist": true,
+        "node_modules": true
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#c2d137"
+    },
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "html.format.wrapAttributes": "force-aligned",
+}
