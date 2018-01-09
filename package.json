@@ -1,13 +1,18 @@
 {
   "name": "ng2-logger",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
   "tnp": {
-    "type": "isomorphic-lib"
+    "type": "isomorphic-lib",
+    "resources": [
+      "README.md",
+      "screen.png",
+      "server.png"
+    ]
   },
   "keywords": [
     "isomorphic",
@@ -27,6 +32,7 @@
     "@ngtools/webpack": "^1.9.3",
     "@types/node": "^9.3.0",
     "isomorphic-region-loader": "0.0.1",
+    "tslib": "^1.8.1",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0"
   },
