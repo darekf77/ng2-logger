@@ -21,15 +21,22 @@ To install package run:
 
     npm install ng2-logger --save
 
-First import it:
+First import proper version for your environment:
+
+Nodejs server:
 
 ```ts
     import { Log, Level } from 'ng2-logger'
 ```
+or Browser:
+
+```ts
+    import { Log, Level } from 'ng2-logger/client'
+```
 
 Simple use:
 
-Init your log :
+In your file with log:
 ```ts
     const log = Log.create('books'); 
 ```
@@ -37,9 +44,9 @@ or if you wanna just log errors and warnings :
 ```ts
     const log = Log.create('books', Level.ERROR, Level.WARN); 
 ```
-'books' is current class or anything inside *.ts file.
+'books' is current class or anything inside *.ts/*.js file.
 
-You can also assign static color to specific module in application:
+You can also assign static color to specific module in application (browser for now only):
 ```ts
     log.color = 'red'; 
 ```
