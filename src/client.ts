@@ -1,2 +1,2 @@
 // File empty for purpose
-export * from '..';
+export * from './index';
