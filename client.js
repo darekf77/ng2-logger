@@ -102,7 +102,6 @@ const level_1 = __webpack_require__(0);
 const helper_1 = __webpack_require__(1);
 const backend_logging_1 = __webpack_require__(8);
 if (helper_1.isNode) {
-
 }
 class Display {
     static msg(message, params, moduleName, moduleColor, level, moduleWidth) {
