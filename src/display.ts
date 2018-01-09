@@ -53,6 +53,7 @@ export class Display {
             }
             console.log.apply(console, params);
         } if (isNode) {
+            //#region backend
             let a1 = chalk.bgHex(moduleColor)(chalk.black(moduleName));
             let p = params;
             if (typeof message === 'string') {
@@ -62,6 +63,7 @@ export class Display {
             }
             consoleLog(a1, level);
             displayParams(p, level);
+            //#endregion
         }
 
     }

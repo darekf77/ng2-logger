@@ -6,7 +6,9 @@ import { isNode } from './helper';
 declare var require: any;
 
 if (isNode) {
+    //#region backend
     var randomcolor = require('randomcolor');
+    //#endregion
 }
 
 export class Log {
