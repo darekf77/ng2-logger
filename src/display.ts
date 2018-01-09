@@ -6,8 +6,10 @@ import { isNode, isBrowser } from "./helper";
 import { consoleLog, displayParams, istartedInVscode } from "./backend-logging";
 
 if (isNode) {
+    //#region backend
     var chalk = require('chalk');
     var path = require('path');
+    //#endregion
 }
 
 export class Display {

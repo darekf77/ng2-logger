@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
+  "tnp": {
+    "type": "isomorphic-lib"
+  },
   "keywords": [
     "isomorphic",
     "logger",
@@ -21,7 +24,11 @@
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "devDependencies": {
-    "@types/node": "^9.3.0"
+    "@ngtools/webpack": "^1.9.3",
+    "@types/node": "^9.3.0",
+    "isomorphic-region-loader": "0.0.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   },
   "readmeFilename": "README.md",
   "dependencies": {
