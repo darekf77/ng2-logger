@@ -1,15 +1,16 @@
 {
   "name": "ng2-logger",
   "version": "2.0.13",
-  "description": "logger for angular 2",
+  "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
   "keywords": [
-    "angular2",
+    "isomorphic",
     "logger",
-    "log"
+    "log",
+    "typescript"
   ],
   "author": {
     "name": "Dariusz Filipiak"
@@ -20,7 +21,13 @@
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "devDependencies": {
-    "tsc-npm-project": "file:../tsc-npm-project"
+    "@types/node": "^9.3.0"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "json-stringify-safe": "^5.0.1",
+    "json5": "^0.5.1",
+    "randomcolor": "^0.5.3"
+  }
 }

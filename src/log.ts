@@ -1,8 +1,13 @@
 import { Logger } from './logger';
 import { Level } from './level';
 import { Display } from './display';
-
 import { contain } from './include';
+import { isNode } from './helper';
+declare var require: any;
+
+if (isNode) {
+    var randomcolor = require('randomcolor');
+}
 
 export class Log {
 
@@ -28,6 +33,10 @@ export class Log {
     }
 
     private static getRandomColor(): string {
+        if (isNode) {
+            return randomcolor({ luminosity: 'light', count: 10 });
+        }
+
         let letters = '012345'.split('');
         let color = '#';
         color += letters[Math.round(Math.random() * 5)];

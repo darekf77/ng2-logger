@@ -1,29 +1,29 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "watch": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "declaration": true,
-    "baseUrl": "./src",
-    "outDir": "dist",
-    "lib": [
-      "dom",
-      "es7"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+      "declaration": true,
+      "watch": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "module": "commonjs",
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "target": "es2016",
+      "lib": [
+        "dom",
+        "es7"
+      ],
+      "typeRoots": [
+          "node_modules/@types"
+      ],
+      "outDir": "dist",
+      "rootDir": "./src"
   },
   "exclude": [
-    "node_modules",
+    // "node_modules",
     "preview",
     "docs",
     "dist",
     "tests"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false
+  ]
 }
