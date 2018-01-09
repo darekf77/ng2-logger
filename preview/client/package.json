@@ -10,6 +10,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "tnp": {
+    "type": "angular-lib",
+    "resources": [
+      "README.md"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",

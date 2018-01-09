@@ -12,13 +12,13 @@ var log = ng2_logger_1.Log.create('main application');
 var log2 = ng2_logger_1.Log.create('auth module');
 var log3 = ng2_logger_1.Log.create('books module');
 var log4 = ng2_logger_1.Log.create("/Users/test/Projects/testProject/index.ts");
-var User = /** @class */ (function () {
+var User = (function () {
     function User() {
     }
     return User;
 }());
 exports.User = User;
-var UserController = /** @class */ (function () {
+var UserController = (function () {
     function UserController() {
     }
     UserController.prototype.hello = function () {
