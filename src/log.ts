@@ -36,7 +36,9 @@ export class Log {
 
     private static getRandomColor(): string {
         if (isNode) {
+            //#region backend
             return randomcolor({ luminosity: 'light', count: 10 });
+            //#endregion
         }
 
         let letters = '012345'.split('');
