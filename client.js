@@ -102,7 +102,6 @@ const level_1 = __webpack_require__(0);
 const helper_1 = __webpack_require__(1);
 const backend_logging_1 = __webpack_require__(7);
 if (helper_1.isNode) {
-
 }
 class Display {
     static msg(message, params, moduleName, moduleColor, level, moduleWidth) {
@@ -140,7 +139,6 @@ class Display {
             console.log.apply(console, params);
         }
         if (helper_1.isNode) {
-
         }
     }
 }
@@ -189,7 +187,6 @@ const display_1 = __webpack_require__(2);
 const include_1 = __webpack_require__(3);
 const helper_1 = __webpack_require__(1);
 if (helper_1.isNode) {
-
 }
 class Log {
     static create(name, ...level) {
@@ -205,7 +202,6 @@ class Log {
     }
     static getRandomColor() {
         if (helper_1.isNode) {
-            return randomcolor({ luminosity: 'light', count: 10 });
         }
         let letters = '012345'.split('');
         let color = '#';
@@ -446,28 +442,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const level_1 = __webpack_require__(0);
 const helper_1 = __webpack_require__(1);
 if (helper_1.isNode) {
-
 }
 function consoleLog(data, level) {
-
 }
 exports.consoleLog = consoleLog;
 function displayParams(params = [], level) {
-
 }
 exports.displayParams = displayParams;
 function replace(out, match, char, color) {
-
 }
 function handleObjectData(param, level) {
-
 }
 function istartedInVscode() {
-
 }
 exports.istartedInVscode = istartedInVscode;
 function isObjectAfterStringify(s) {
-
 }
 
 
