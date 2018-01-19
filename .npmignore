@@ -1,11 +1,10 @@
-/node_modules
-npm-debug.log*
-
-/.vscode
+.vscode
+dist/
+src/
 /scripts
 /docs
 /preview
 /tests
-/src
 
 tsconfig.json
+npm-debug.log*

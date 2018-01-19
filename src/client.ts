@@ -1,2 +1,1 @@
-// File empty for purpose
-export * from './index';
+/* File empty for purpose */ export * from './index';
