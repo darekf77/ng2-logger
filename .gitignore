@@ -4,12 +4,9 @@
 /tmp
 /out-tsc
 bundle.umd.js
-index.js
-index.d.ts
-index.js.map
-client.js
-client.d.ts
-client.js.map
+/index.*
+/client.*
+
 
 
 # dependencies
