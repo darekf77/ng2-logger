@@ -9,7 +9,7 @@
         "index.*": true,
         "client.*": true,
         "dist": true,
-        "bundle": true,
+        // "bundle": true,
         "node_modules": true
     },
     "workbench.colorCustomizations": {
