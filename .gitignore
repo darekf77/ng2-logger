@@ -1,8 +1,29 @@
-/node_modules
-npm-debug.log*
-
+# compiled output
 /bundle
 /dist
+/tmp
+/out-tsc
 bundle.umd.js
-client.js
+/client.*
+/index.*
 
+# dependencies
+/node_modules
+
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
