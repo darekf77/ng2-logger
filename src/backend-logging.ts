@@ -1,6 +1,8 @@
 
 declare var require: any;
 
+declare var process: any;
+
 import { Level } from './level';
 
 import { isNode, isBrowser } from "./helper";

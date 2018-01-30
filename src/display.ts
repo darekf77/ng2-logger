@@ -37,21 +37,44 @@ export class Display {
         }
 
         if (isBrowser) {
-            if (typeof message === 'string') {
-                let a1 = '%c ' + moduleName + '  %c ' + message + ' ';
-                let a2 = 'background: ' + moduleColor + ';color:white; border: 1px solid ' + moduleColor + '; ';
-                let a3 = 'border: 1px solid ' + color + '; ';
-                params.unshift(a3);
-                params.unshift(a2);
-                params.unshift(a1);
+            const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));
+
+            if (isEdgeOrIe8orAbove) {
+                if (typeof message === 'string') {
+                    let a1 = '[[ ' + moduleName + ' ]] ' + message + ' ';
+                    params.unshift(a1);
+                } else {
+                    let a1 = '[[ ' + moduleName + ']] ';
+                    params.push(message);
+                    params.unshift(a1);
+                }
+                if (level === Level.INFO) {
+                    console.info.apply(console, params);
+                } else if (level === Level.ERROR) {
+                    console.error.apply(console, params);
+                } else if (level === Level.WARN) {
+                    console.warn.apply(console, params);
+                } else {
+                    console.log.apply(console, params);
+                }
             } else {
-                let a1 = '%c ' + moduleName + ' ';
-                let a2 = 'background: ' + moduleColor + ';color:white; border: 1px solid ' + color + '; ';
-                params.push(message);
-                params.unshift(a2);
-                params.unshift(a1);
+                if (typeof message === 'string') {
+                    let a1 = '%c ' + moduleName + '  %c ' + message + ' ';
+                    let a2 = 'background: ' + moduleColor + ';color:white; border: 1px solid ' + moduleColor + '; ';
+                    let a3 = 'border: 1px solid ' + color + '; ';
+                    params.unshift(a3);
+                    params.unshift(a2);
+                    params.unshift(a1);
+                } else {
+                    let a1 = '%c ' + moduleName + ' ';
+                    let a2 = 'background: ' + moduleColor + ';color:white; border: 1px solid ' + color + '; ';
+                    params.push(message);
+                    params.unshift(a2);
+                    params.unshift(a1);
+                }
+                console.log.apply(console, params);
             }
-            console.log.apply(console, params);
+
         } if (isNode) {
             //#region backend
             let a1 = chalk.bgHex(moduleColor)(chalk.black(moduleName));

@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User, UserController } from '../../../server/client';
 
-// import { Log, Level } from 'ng2-logger';
+import { Log, Level } from 'ng2-logger';
 
 
-// const log = Log.create('app module');
+const log = Log.create('app module');
 
 @Component({
   selector: 'app-root',
@@ -14,31 +13,33 @@ import { User, UserController } from '../../../server/client';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    console.log(User, UserController);
-    // log.i('asdasd');
+    log.d('ddd');
+    log.w('waasdasdasd');
+    log.er('asdasd');
+    log.i('asdasd');
 
-    // log.i('asdasd', {
-    //   'glossary': {
-    //     'title': 'example glossary',
-    //     'GlossDiv': {
-    //       'title': 'S',
-    //       'GlossList': {
-    //         'GlossEntry': {
-    //           'ID': 'SGML',
-    //           'SortAs': 'SGML',
-    //           'GlossTerm': 'Standard Generalized Markup Language',
-    //           'Acronym': 'SGML',
-    //           'Abbrev': 'ISO 8879:1986',
-    //           'GlossDef': {
-    //             'para': 'A meta-markup language, used to create markup languages such as DocBook.',
-    //             'GlossSeeAlso': ['GML', 'XML']
-    //           },
-    //           'GlossSee': 'markup'
-    //         }
-    //       }
-    //     }
-    //   }
-    // })
+    log.i('aaa', {
+      'glossary': {
+        'title': 'example glossary',
+        'GlossDiv': {
+          'title': 'S',
+          'GlossList': {
+            'GlossEntry': {
+              'ID': 'SGML',
+              'SortAs': 'SGML',
+              'GlossTerm': 'Standard Generalized Markup Language',
+              'Acronym': 'SGML',
+              'Abbrev': 'ISO 8879:1986',
+              'GlossDef': {
+                'para': 'A meta-markup language, used to create markup languages such as DocBook.',
+                'GlossSeeAlso': ['GML', 'XML']
+              },
+              'GlossSee': 'markup'
+            }
+          }
+        }
+      }
+    })
   }
   title = 'app';
 

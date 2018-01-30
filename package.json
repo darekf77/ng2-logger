@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "2.0.30",
+  "version": "2.0.31",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -13,6 +13,9 @@
       "screen.png",
       "server.png"
     ]
+  },
+  "browser": {
+    "process": false
   },
   "keywords": [
     "isomorphic",
