@@ -6,9 +6,9 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "index.*": true,
-        "client.*": true,
-        "dist": true,
+        // "index.*": true,
+        // "client.*": true,
+        // "dist": true,
         // "bundle": true,
         "node_modules": true
     },
