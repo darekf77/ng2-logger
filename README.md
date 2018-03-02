@@ -52,10 +52,10 @@ You can also assign static color to specific module in application (browser for 
 ```
 After inited **log** you are able to start debugging: 
 ```ts
-    log.d('object',obj) // console.log
-    log.er('object',obj) // console.error
-    log.i('object',obj) // console.info
-    log.w('object',obj) // console.warn
+    log.data('object',obj) // console.log
+    log.error('object',obj) // console.error
+    log.info('object',obj) // console.info
+    log.warning('object',obj) // console.warn
 ```
 
 
@@ -96,7 +96,6 @@ expression string(s) to the `onlyModule` function to specify a selection of modu
 to show, for instances those whose name begins with `src`:
 
 ```ts
-
     Log.onlyModules('^src');
 ```
 
