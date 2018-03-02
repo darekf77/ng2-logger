@@ -31,19 +31,20 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "devDependencies": {
-    "@ngtools/webpack": "^1.9.3",
-    "@types/node": "^9.3.0",
-    "isomorphic-region-loader": "0.0.1",
-    "tslib": "^1.8.1",
-    "typescript": "^2.6.2",
-    "webpack": "^3.10.0"
+  "scripts": {
+    "build": "tsc"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "readmeFilename": "README.md",
   "dependencies": {
     "chalk": "^2.3.0",
     "json-stringify-safe": "^5.0.1",
     "json5": "^0.5.1",
     "randomcolor": "^0.5.3"
+  },
+  "devDependencies": {
+    "tslib": "^1.9.0",
+    "typescript": "^2.6.2"
   }
 }
