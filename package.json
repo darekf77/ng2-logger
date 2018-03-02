@@ -32,7 +32,8 @@
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "tsc -p ./ --outDir dist/"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

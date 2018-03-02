@@ -1,5 +1,4 @@
-export * from './log';
-export * from './level';
-export * from './helper';
-export * from './logger';
-export * from './display';
+export { Log } from './log';
+export { Level } from './level';
+export { Logger } from './logger';
+export { Display } from './display';
