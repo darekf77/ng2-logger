@@ -38,24 +38,24 @@ Simple use:
 
 In your file with log:
 ```ts
-    const log = Log.create('books'); 
+    const log = Log.create('books');
 ```
 or if you wanna just log errors and warnings :
 ```ts
-    const log = Log.create('books', Level.ERROR, Level.WARN); 
+    const log = Log.create('books', Level.ERROR, Level.WARN);
 ```
 'books' is current class or anything inside *.ts/*.js file.
 
 You can also assign static color to specific module in application (browser for now only):
 ```ts
-    log.color = 'red'; 
+    log.color = 'red';
 ```
-After inited **log** you are able to start debugging: 
+After inited **log** you are able to start debugging:
 ```ts
-    log.d('object',obj) // console.log
-    log.er('object',obj) // console.error
-    log.i('object',obj) // console.info
-    log.w('object',obj) // console.warn
+    log.data('object',obj) // console.log
+    log.error('object',obj) // console.error
+    log.info('object',obj) // console.info
+    log.warning('object',obj) // console.warn
 ```
 
 
