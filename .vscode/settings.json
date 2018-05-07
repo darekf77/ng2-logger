@@ -1,24 +1,36 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        // "index.*": true,
-        // "client.*": true,
-        // "dist": true,
-        // "bundle": true,
-        "node_modules": true
-    },
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#c2d137"
-    },
-    "editor.rulers": [
-        100,
-        120
-    ],
-    "html.format.wrapAttributes": "force-aligned",
-    "workbench.colorTheme": "Default Light+"
+  "files.exclude": {
+    "node_modules": true,
+    "tmp*": true,
+    "dist*": true,
+    "bundle*": true,
+    "browser": true,
+    "module": true,
+    "www": true,
+    "Thumbs.db": true,
+    ".DS_Store": true,
+    "npm-debug.log*": true,
+    ".sass-cache": true,
+    ".sourcemaps": true,
+    "tslint.json": true,
+    ".editorconfig": true,
+    "index.js": true,
+    "index.d.ts": true,
+    "index.js.map": true,
+    "tsconfig.json": true,
+    "tsconfig.browser.json": true,
+    ".gitignore": true,
+    ".npmignore": true,
+    ".npmrc": true,
+    ".babelrc": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#c2d137"
+  },
+  "editor.rulers": [
+    100,
+    120
+  ],
+  "html.format.wrapAttributes": "force-aligned",
+  "workbench.colorTheme": "Default Light+"
 }
