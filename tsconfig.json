@@ -1,37 +1,49 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "declaration": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "allowSyntheticDefaultImports": true,
-        "importHelpers": true,
-        "module": "commonjs",
-        "skipLibCheck": true,
-        "sourceMap": true,
-        "target": "es5",
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "lib": [
-            "dom",
-            "es2015"
-        ],
-        "types": [
-            "node"
-        ],
-        "rootDir": "./src"
-    },
-    "include": [
-        "src/**/*"
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "exclude": [
-        "node_modules",
-        "preview",
-        "docs",
-        "dist",
-        "bundle",
-        "tests",
-        "tmp-src"
-    ]
+    "lib": [
+      "es2015",
+      "es2015.promise",
+      "es2015.generator",
+      "es2015.collection",
+      "es2015.core",
+      "es2015.reflect",
+      "es2016",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ],
+    "rootDir": "./src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "preview",
+    "docs",
+    "dist",
+    "bundle",
+    "example",
+    "examples",
+    "browser",
+    "module",
+    "tests",
+    "tmp-src",
+    "tmp-site-src"
+  ]
 }
