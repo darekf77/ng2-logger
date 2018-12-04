@@ -39,5 +39,15 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "reflect-metadata": "^0.1.10",
+    "tslib": "^1.8.1"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "json-stringify-safe": "^5.0.1",
+    "json5": "^0.5.1",
+    "randomcolor": "^0.5.3"
+  }
 }
