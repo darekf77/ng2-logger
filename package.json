@@ -41,6 +41,7 @@
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "@types/node": "9.3.0",
     "reflect-metadata": "^0.1.10",
     "tslib": "^1.8.1"
   },
