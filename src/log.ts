@@ -55,19 +55,19 @@ export class Log {
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
         if (!contain(Log.levels, incomming)) return;
         if (incomming === Level.DATA) {
-            Display.msg(name, data, name, Log.instances[moduleName].color,
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color,
                 Level.DATA, Log.instances[moduleName].fixedWidth);
         }
         if (incomming === Level.ERROR) {
-            Display.msg(name, data, name, Log.instances[moduleName].color,
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color,
                 Level.ERROR, Log.instances[moduleName].fixedWidth);
         }
         if (incomming === Level.INFO) {
-            Display.msg(name, data, name, Log.instances[moduleName].color,
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color,
                 Level.INFO, Log.instances[moduleName].fixedWidth);
         }
         if (incomming === Level.WARN) {
-            Display.msg(name, data, name, Log.instances[moduleName].color,
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color,
                 Level.WARN, Log.instances[moduleName].fixedWidth);
         }
     }
