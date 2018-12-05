@@ -6,7 +6,7 @@ import { isNode, isBrowser } from "./helper";
 import { consoleLog, displayParams, istartedInVscode } from "./backend-logging";
 
 if (isNode) {
-    //#region backend
+    //#region @backend
     var chalk = require('chalk');
     var path = require('path');
     //#endregion
@@ -76,7 +76,7 @@ export class Display {
             }
 
         } if (isNode) {
-            //#region backend
+            //#region @backend
             let a1 = chalk.bgHex(moduleColor)(chalk.black(moduleName));
             let p = params;
             if (typeof message === 'string') {

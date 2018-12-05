@@ -6,7 +6,7 @@ import { isNode } from './helper';
 declare var require: any;
 
 if (isNode) {
-    //#region backend
+    //#region @backend
     var randomcolor = require('randomcolor');
     //#endregion
 }
@@ -36,7 +36,7 @@ export class Log {
 
     private static getRandomColor(): string {
         if (isNode) {
-            //#region backend
+            //#region @backend
             return randomcolor({ luminosity: 'light', count: 10 });
             //#endregion
         }

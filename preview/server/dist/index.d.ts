@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { Response } from 'isomorphic-rest';
+import { Response } from 'morphi';
 export declare class User {
     name: string;
     id: number;

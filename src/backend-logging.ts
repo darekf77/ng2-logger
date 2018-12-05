@@ -8,7 +8,7 @@ import { Level } from './level';
 import { isNode, isBrowser } from "./helper";
 
 if (isNode) {
-    //#region backend
+    //#region @backend
     var chalk = require('chalk');
     var path = require('path');
     var fs = require('fs');
@@ -19,7 +19,7 @@ if (isNode) {
 
 
 export function consoleLog(data, level: Level) {
-    //#region backend
+    //#region @backend
     if (level === Level.INFO) console.info(data);
     else if (level === Level.ERROR) console.error(data);
     else if (level === Level.WARN) console.warn(data);
@@ -29,7 +29,7 @@ export function consoleLog(data, level: Level) {
 
 
 export function displayParams(params: any[] = [], level: Level) {
-    //#region backend
+    //#region @backend
     params.forEach(param => {
         if (typeof param === 'object') {
             handleObjectData(param, level)
@@ -43,7 +43,7 @@ export function displayParams(params: any[] = [], level: Level) {
 }
 
 function replace(out: string, match: RegExp, char: RegExp, color) {
-    //#region backend
+    //#region @backend
     let m = out.match(match);
     let outer = out;
     if (m) m.forEach(p => {
@@ -58,7 +58,7 @@ function replace(out: string, match: RegExp, char: RegExp, color) {
 
 
 function handleObjectData(param, level: Level) {
-    //#region backend
+    //#region @backend
     if (istartedInVscode()) {
         consoleLog(param, level);
         return;
@@ -89,7 +89,7 @@ function handleObjectData(param, level: Level) {
 
 
 export function istartedInVscode() {
-    //#region backend
+    //#region @backend
     let args = process.execArgv;
     if (args) {
         return args.some((arg) =>
@@ -104,7 +104,7 @@ export function istartedInVscode() {
 }
 
 function isObjectAfterStringify(s: string) {
-    //#region backend
+    //#region @backend
     try {
         const json = JSON5.parse(s);
         return true;

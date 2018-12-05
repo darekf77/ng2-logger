@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
-//#region backend
+//#region @backend
 console.log('heeloa');
 var _ = require("lodash");
 require("reflect-metadata");
 //#endregion
-var isomorphic_rest_1 = require("isomorphic-rest");
+var morphi_1 = require("morphi");
 var ng2_logger_1 = require("ng2-logger");
 var log = ng2_logger_1.Log.create('main application');
 var log2 = ng2_logger_1.Log.create('auth module');
 var log3 = ng2_logger_1.Log.create('books module');
 var log4 = ng2_logger_1.Log.create("/Users/test/Projects/testProject/index.ts");
-var User = (function () {
+var User = /** @class */ (function () {
     function User() {
     }
     return User;
 }());
 exports.User = User;
-var UserController = (function () {
+var UserController = /** @class */ (function () {
     function UserController() {
     }
     UserController.prototype.hello = function () {
@@ -26,22 +26,23 @@ var UserController = (function () {
         return { send: user };
     };
     tslib_1.__decorate([
-        isomorphic_rest_1.GET('/'),
+        morphi_1.GET('/'),
         tslib_1.__metadata("design:type", Function),
         tslib_1.__metadata("design:paramtypes", []),
         tslib_1.__metadata("design:returntype", Object)
     ], UserController.prototype, "hello", null);
     UserController = tslib_1.__decorate([
-        isomorphic_rest_1.ENDPOINT('/hello')
+        morphi_1.ENDPOINT({ path: '/hello' })
     ], UserController);
     return UserController;
 }());
 exports.UserController = UserController;
 var Controllers = [UserController];
 var Entities = [User];
-//#region backend
+//#region @backend
 function start() {
-    isomorphic_rest_1.init('http://localhost:4000').expressApp({
+    morphi_1.init({
+        host: 'http://localhost:4000',
         controllers: _.values(Controllers),
         entities: _.values(Entities)
     });
@@ -50,7 +51,7 @@ exports.start = start;
 start();
 //#endregion
 var randomJSON = {
-    //#region backend
+    //#region @backend
     "_id": "5a53ce64f67745e7b894ac84",
     "index": 5,
     "guid": "c99745b8-a806-448c-a25a-ca119ce231e5",
