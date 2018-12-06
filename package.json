@@ -20,7 +20,10 @@
         "json5",
         "randomcolor",
         "enum-values"
-      ]
+      ],
+      "dependencies": {
+        "enum-values": "^1.2.1"
+      }
     }
   },
   "browser": {
@@ -41,8 +44,5 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "readmeFilename": "README.md",
-  "dependencies": {
-    "enum-values": "^1.2.1"
-  }
+  "readmeFilename": "README.md"
 }
