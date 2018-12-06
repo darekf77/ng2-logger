@@ -18,7 +18,8 @@
         "chalk",
         "json-stringify-safe",
         "json5",
-        "randomcolor"
+        "randomcolor",
+        "enum-values"
       ]
     }
   },
@@ -40,5 +41,8 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "enum-values": "^1.2.1"
+  }
 }
