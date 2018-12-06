@@ -124,19 +124,24 @@ export class Log {
   private static modeIsSet: boolean = false;
   static setProductionMode() {
     if (Log.modeIsSet) {
-      console.error('Mode is already set');
-      return;
-    }
-    if (console !== undefined && console.clear !== undefined) {
+      Log.modeIsSet = false
+      throw '[ng2-logger] Production mode is already set';
+    } else {
+      Log.modeIsSet = true;
       setTimeout(() => {
-        console.clear();
-        console.log = () => { };
-        console.error = () => { };
-        console.warn = () => { };
-        console.info = () => { };
+
+        if (Log.modeIsSet && console !== undefined && console.clear !== undefined) {
+
+          console.clear();
+          console.log = () => { };
+          console.error = () => { };
+          console.warn = () => { };
+          console.info = () => { };
+        }
       });
+
+      Logger.isProductionMode = true;
+      Log.isDevelopmentMode = false;
     }
-    Logger.isProductionMode = true;
-    Log.isDevelopmentMode = false;
   }
 }

@@ -31,7 +31,7 @@ Nodejs server:
 or Browser:
 
 ```ts
-    import { Log, Level } from 'ng2-logger/client'
+    import { Log, Level } from 'ng2-logger/browser'
 ```
 
 Simple use:
@@ -56,6 +56,13 @@ After inited **log** you are able to start debugging:
     log.er('object',obj) // console.error
     log.i('object',obj) // console.info
     log.w('object',obj) // console.warn
+```
+or
+```ts
+    log.debug('object',obj) // console.log
+    log.error('object',obj) // console.error
+    log.info('object',obj) // console.info
+    log.warn('object',obj) // console.warn
 ```
 
 
@@ -97,7 +104,7 @@ to show, for instances those whose name begins with `src`:
 
 ```ts
 
-    Log.onlyModules('^src');
+    Log.onlyModules( new RegEx('^.src') );
 ```
 
 
