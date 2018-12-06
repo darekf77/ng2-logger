@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { Log, Level } from 'ng2-logger/browser';
 const log = Log.create('app module');
-// Log.setProductionMode()
+Log.setProductionMode()
 // Log.setProductionMode()
 // Log.onlyLevel(Level.ERROR)
 // Log.onlyLevel(Level.WARN)

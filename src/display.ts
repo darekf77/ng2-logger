@@ -4,6 +4,7 @@ declare var process: any;
 import { Level } from './level';
 import { isNode, isBrowser } from "./helper";
 import { consoleLog, displayParams, istartedInVscode } from "./backend-logging";
+import { Logger } from './logger';
 
 if (isNode) {
     //#region @backend
@@ -35,6 +36,7 @@ export class Display {
                 }
             }
         }
+        if (Logger.isProductionMode) return this;
 
         if (isBrowser) {
             const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));

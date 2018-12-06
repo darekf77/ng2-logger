@@ -23,7 +23,6 @@ export class Logger<T> {
     if (this.isMuted) return this;
     if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
       && !contain(this.allowed, Level.DATA)) return this;
-    if (Logger.isProductionMode) return this;
 
     if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
       Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.DATA, this.fixedWidth])
@@ -36,7 +35,6 @@ export class Logger<T> {
     if (this.isMuted) return this;
     if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
       && !contain(this.allowed, Level.ERROR)) return this;
-    if (Logger.isProductionMode) return this;
 
     if (this.allowed.length === 0 || contain(this.allowed, Level.ERROR)) {
       Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.ERROR, this.fixedWidth])
@@ -48,7 +46,6 @@ export class Logger<T> {
     if (this.isMuted) return this;
     if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
       && !contain(this.allowed, Level.INFO)) return this;
-    if (Logger.isProductionMode) return this;
 
     if (this.allowed.length === 0 || contain(this.allowed, Level.INFO)) {
       Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.INFO, this.fixedWidth])
@@ -60,7 +57,6 @@ export class Logger<T> {
     if (this.isMuted) return this;
     if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
       && !contain(this.allowed, Level.WARN)) return this;
-    if (Logger.isProductionMode) return this;
 
     if (this.allowed.length === 0 || contain(this.allowed, Level.WARN)) {
       Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.WARN, this.fixedWidth])
