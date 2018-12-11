@@ -4,6 +4,7 @@ import { Display } from './display';
 import { contain } from './include';
 import { Log } from './log';
 
+
 export class Logger<T> {
 
   constructor(
@@ -16,6 +17,15 @@ export class Logger<T> {
   ) {
     if (Array.isArray(Log.levels) && Log.levels.length > 0) {
       this.allowed = Log.levels;
+    }
+  }
+
+
+  onlyWhen(expression: (() => boolean) | boolean) {
+    if (typeof expression === 'function') {
+      this.isMuted = !expression()
+    } else if (typeof expression === 'boolean') {
+      this.isMuted = !expression;
     }
   }
 
