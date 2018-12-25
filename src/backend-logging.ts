@@ -5,9 +5,9 @@ declare var process: any;
 
 import { Level } from './level';
 
-import { isNode, isBrowser } from "./helper";
+import { Helpers } from "./helper";
 
-if (isNode) {
+if (Helpers.isNode) {
     //#region @backend
     var chalk = require('chalk');
     var path = require('path');

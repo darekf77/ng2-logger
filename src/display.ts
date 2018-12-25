@@ -2,11 +2,11 @@ declare var require: any;
 declare var process: any;
 
 import { Level } from './level';
-import { isNode, isBrowser } from "./helper";
+import { Helpers } from "./helper";
 import { consoleLog, displayParams, istartedInVscode } from "./backend-logging";
 import { Logger } from './logger';
 
-if (isNode) {
+if (Helpers.isNode) {
     //#region @backend
     var chalk = require('chalk');
     var path = require('path');
@@ -38,7 +38,7 @@ export class Display {
         }
         if (Logger.isProductionMode) return this;
 
-        if (isBrowser) {
+        if (Helpers.isBrowser) {
             const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));
 
             if (isEdgeOrIe8orAbove) {
@@ -77,7 +77,7 @@ export class Display {
                 console.log.apply(console, params);
             }
 
-        } if (isNode) {
+        } if (Helpers.isNode) {
             //#region @backend
             let a1 = chalk.bgHex(moduleColor)(chalk.black(moduleName));
             let p = params;

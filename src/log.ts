@@ -2,10 +2,10 @@ import { Logger } from './logger';
 import { Level } from './level';
 import { Display } from './display';
 import { contain } from './include';
-import { isNode } from './helper';
+import { Helpers } from './helper';
 declare var require: any;
 
-if (isNode) {
+if (Helpers.isNode) {
   //#region @backend
   var randomcolor = require('randomcolor');
   //#endregion
@@ -35,7 +35,7 @@ export class Log {
   }
 
   private static getRandomColor(): string {
-    if (isNode) {
+    if (Helpers.isNode) {
       //#region @backend
       return randomcolor({ luminosity: 'light', count: 10 });
       //#endregion

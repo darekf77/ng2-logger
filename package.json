@@ -14,6 +14,19 @@
       "server.png"
     ],
     "overrided": {
+      "includeAsDev": [
+        "morphi",
+        "@angular.*",
+        "webpack",
+        "webpack-dev-server",
+        "html-webpack-plugin",
+        "ts-loader",
+        "babel.*",
+        "mocha",
+        "@types/mocha",
+        "chai",
+        "ts-sinon"
+      ],
       "includeOnly": [
         "chalk",
         "json-stringify-safe",
