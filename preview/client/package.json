@@ -1,4 +1,10 @@
 {
+  "tnp": {
+    "resources": [
+      "README.md"
+    ],
+    "type": "angular-lib"
+  },
   "name": "preview",
   "version": "0.0.0",
   "license": "MIT",
@@ -10,12 +16,6 @@
     "lint": "npm-run ng lint",
     "e2e": "npm-run ng e2e",
     "postinstall": ""
-  },
-  "tnp": {
-    "type": "angular-lib",
-    "resources": [
-      "README.md"
-    ]
   },
   "private": true,
   "dependencies": {
@@ -54,5 +54,10 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "tnp deps:show:if:standalone"
+    }
   }
 }

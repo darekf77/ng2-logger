@@ -1,4 +1,8 @@
 {
+  "tnp": {
+    "resources": [],
+    "type": "isomorphic-lib"
+  },
   "name": "preview-server",
   "version": "0.0.0",
   "license": "UNLICENSED",
@@ -9,7 +13,9 @@
   "dependencies": {
     "morphi": "^1.0.75"
   },
-  "tnp": {
-    "type": "isomorphic-lib"
+  "husky": {
+    "hooks": {
+      "pre-push": "tnp deps:show:if:standalone"
+    }
   }
 }
