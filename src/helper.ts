@@ -2,10 +2,10 @@
 export class Helpers {
 
   static simulateBrowser = false;
-  static isBrowser = !!(typeof window !== 'undefined' && window.document);
-  static isNode = (function () {
-    Helpers.isNode = !Helpers.isBrowser;
-    return Helpers.isNode;
-  })() as boolean;
-
+  static get isBrowser() {
+    return Helpers.simulateBrowser || !!(typeof window !== 'undefined' && window.document);
+  }
+  static get isNode() {
+    return Helpers.simulateBrowser || !Helpers.isBrowser;
+  }
 }
