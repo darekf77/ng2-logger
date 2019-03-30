@@ -1,18 +1,11 @@
 {
-  "name": "ng2-logger",
-  "version": "2.0.46",
-  "description": "isomorphic logger for browser/server in typescript",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/darekf77/ng2-logger.git"
-  },
   "tnp": {
-    "type": "isomorphic-lib",
     "resources": [
       "README.md",
       "screen.png",
       "server.png"
     ],
+    "type": "isomorphic-lib",
     "overrided": {
       "includeAsDev": [
         "morphi",
@@ -39,6 +32,13 @@
       }
     }
   },
+  "name": "ng2-logger",
+  "version": "2.0.46",
+  "description": "isomorphic logger for browser/server in typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darekf77/ng2-logger.git"
+  },
   "browser": {
     "process": false
   },
@@ -57,5 +57,10 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "husky": {
+    "hooks": {
+      "pre-push": "tnp deps:show:if:standalone"
+    }
+  }
 }

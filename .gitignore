@@ -1,4 +1,5 @@
 /node_modules
+/tnp-system-path.txt
 /tmp*
 /dist*
 /bundle*
