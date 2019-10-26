@@ -29,7 +29,8 @@
       ],
       "dependencies": {
         "enum-values": "^1.2.1"
-      }
+      },
+      "ignoreDepsPattern": []
     }
   },
   "name": "ng2-logger",
@@ -62,5 +63,7 @@
     "hooks": {
       "pre-push": "tnp deps:show:if:standalone"
     }
-  }
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
