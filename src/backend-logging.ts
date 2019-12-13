@@ -1,17 +1,14 @@
-
 declare var require: any;
 
 declare var process: any;
 
 import { Level } from './level';
 
-import { Helpers } from "./helper";
+import { Helpers } from './helper';
 
 if (Helpers.isNode) {
     //#region @backend
     var chalk = require('chalk');
-    var path = require('path');
-    var fs = require('fs');
     var JSON5 = require('json5');
     var stringify = require('json-stringify-safe');
     //#endregion
@@ -113,5 +110,3 @@ function isObjectAfterStringify(s: string) {
     }
     //#endregion
 }
-
-

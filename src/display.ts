@@ -2,8 +2,8 @@ declare var require: any;
 declare var process: any;
 
 import { Level } from './level';
-import { Helpers } from "./helper";
-import { consoleLog, displayParams, istartedInVscode } from "./backend-logging";
+import { Helpers } from './helper';
+import { consoleLog, displayParams, istartedInVscode } from './backend-logging';
 import { Logger } from './logger';
 
 if (Helpers.isNode) {

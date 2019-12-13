@@ -1,3 +1,20 @@
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
 /node_modules
 /tnp-system-path.txt
 /tmp*
@@ -15,13 +32,15 @@
 /npm-debug.log*
 /.sass-cache
 /.sourcemaps
+/tsconfig.json
+/.npmrc
 /tslint.json
 /.editorconfig
 /index.js
 /index.d.ts
 /index.js.map
 /.vscode/launch.json
-/tsconfig.json
 /tsconfig.browser.json
 /webpack.config.js
 /run.js
+/tsconfig.json.filetemplate
