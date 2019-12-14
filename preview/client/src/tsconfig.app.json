@@ -1,10 +1,18 @@
 {
   "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "paths": {
+      "components": [ "../tmp-src-dist-browser-for-undefined/public_api.ts" ]
+    }
+  },
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "baseUrl": "./",
     "module": "es2015",
-    "types": []
+    "baseUrl": "",
+    "types": [],
+    "paths": {
+      "components": [ "../tmp-src-dist-browser-for-undefined/public_api.ts" ]
+    }
   },
   "exclude": [
     "test.ts",
