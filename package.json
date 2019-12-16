@@ -21,7 +21,7 @@
     }
   },
   "name": "ng2-logger",
-  "version": "3.0.9",
+  "version": "3.0.8",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -122,6 +122,8 @@
     "@types/watch": "^1.0.0",
     "accepts": "^1.3.4",
     "angular-tree-component": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "bcrypt": "3.0.6",
     "body-parser": "^1.18.2",
     "bootstrap": "4.3.1",
