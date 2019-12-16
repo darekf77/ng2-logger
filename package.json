@@ -21,7 +21,7 @@
     }
   },
   "name": "ng2-logger",
-  "version": "3.0.11",
+  "version": "3.0.10",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
