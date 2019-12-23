@@ -44,3 +44,6 @@ Thumbs.db
 /webpack.config.js
 /run.js
 /tsconfig.json.filetemplate
+
+!*.filetemplate
+
