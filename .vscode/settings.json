@@ -1,29 +1,5 @@
 {
-  "files.exclude": {
-    // "node_modules": true,
-    // "tmp*": true,
-    // "dist*": true,
-    // "bundle*": true,
-    // "browser": true,
-    // "module": true,
-    // "www": true,
-    // "Thumbs.db": true,
-    // ".DS_Store": true,
-    // "npm-debug.log*": true,
-    // ".sass-cache": true,
-    // ".sourcemaps": true,
-    // "tslint.json": true,
-    // ".editorconfig": true,
-    // "index.js": true,
-    // "index.d.ts": true,
-    // "index.js.map": true,
-    // "tsconfig.json": true,
-    // "tsconfig.browser.json": true,
-    // ".gitignore": true,
-    // ".npmignore": true,
-    // ".npmrc": true,
-    // ".babelrc": true
-  },
+  "files.exclude": {},
   "workbench.colorCustomizations": {
     "activityBar.background": "#c2d137"
   },
