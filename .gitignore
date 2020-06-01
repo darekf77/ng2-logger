@@ -32,21 +32,25 @@ Thumbs.db
 /npm-debug.log*
 /.sass-cache
 /.sourcemaps
-/tsconfig.json
 /tsconfig.isomorphic.json
 /tsconfig.browser.json
+/.vscode/launch.json
+/.vscode/tasks.json
+/tsconfig.json
 /.npmrc
 /tslint.json
 /.editorconfig
 /index.js
 /index.d.ts
 /index.js.map
-/.vscode/launch.json
 /webpack.config.js
+/webpack.backend-bundle-build.js
 /run.js
-/tsconfig.json.filetemplate
 /tsconfig.isomorphic.json.filetemplate
 /tsconfig.browser.json.filetemplate
+/.vscode/launch.json.filetemplate
+/.vscode/tasks.json.filetemplate
+/tsconfig.json.filetemplate
 
 
 
