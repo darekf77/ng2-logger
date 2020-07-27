@@ -19,7 +19,12 @@
       "dependencies": {},
       "ignoreDepsPattern": []
     },
-    "linkedProjects": []
+    "linkedProjects": [],
+    "libReleaseOptions": {
+      "nodts": false,
+      "obscure": false,
+      "ugly": false
+    }
   },
   "name": "ng2-logger",
   "version": "3.0.12",
