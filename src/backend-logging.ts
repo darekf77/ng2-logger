@@ -1,6 +1,8 @@
+//#region @backend
 declare var require: any;
 
 declare var process: any;
+//#endregion
 
 import { Level } from './level';
 

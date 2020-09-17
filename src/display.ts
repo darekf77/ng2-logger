@@ -1,7 +1,7 @@
+//#region @backend
 declare var require: any;
-declare var process: any;
 declare const global: any;
-
+//#endregion
 import { Level } from './level';
 import { Helpers } from './helper';
 import { consoleLog, displayParams, istartedInVscode } from './backend-logging';
@@ -39,8 +39,11 @@ export class Display {
     }
     if (Logger.isProductionMode) return this;
 
-    if (Helpers.isBrowser && !global) {
-
+    if (Helpers.isBrowser
+      //#region @backend
+      && !global
+      //#endregion
+    ) {
       const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));
 
       if (isEdgeOrIe8orAbove) {

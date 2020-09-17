@@ -3,7 +3,9 @@ import { Level } from './level';
 import { Display } from './display';
 import { contain } from './include';
 import { Helpers } from './helper';
+//#region @backend
 declare var require: any;
+//#endregion
 
 if (Helpers.isNode) {
   //#region @backend
