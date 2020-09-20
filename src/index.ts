@@ -1,5 +1,5 @@
 export * from './log';
 export * from './level';
-export * from './helper';
+export * from './helpers';
 export * from './logger';
 export * from './display';

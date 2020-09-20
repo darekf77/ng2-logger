@@ -5,16 +5,15 @@ declare var process: any;
 //#endregion
 
 import { Level } from './level';
+import { Helpers } from './helpers';
 
-import { Helpers } from './helper';
-
+//#region @backend
 if (Helpers.isNode) {
-    //#region @backend
     var chalk = require('chalk');
     var JSON5 = require('json5');
     var stringify = require('json-stringify-safe');
-    //#endregion
 }
+//#endregion
 
 
 export function consoleLog(data, level: Level) {

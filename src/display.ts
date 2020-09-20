@@ -3,9 +3,8 @@ declare var require: any;
 declare const global: any;
 //#endregion
 import { Level } from './level';
-import { Helpers } from './helper';
-import { consoleLog, displayParams, istartedInVscode } from './backend-logging';
-import { Logger } from './logger';
+import { Helpers } from './helpers';
+import { consoleLog, displayParams } from './backend-logging';
 
 if (Helpers.isNode) {
   //#region @backend
@@ -22,8 +21,12 @@ export class Display {
     moduleName: string,
     moduleColor: string,
     level: Level,
-    moduleWidth: number | undefined
+    moduleWidth: number | undefined,
+    isProductionMode: boolean
   ) {
+    if (isProductionMode) {
+      return;
+    };
     let color = 'gray';
     if (level === Level.INFO) color = 'deepskyblue';
     if (level === Level.ERROR) color = 'red';
@@ -37,7 +40,6 @@ export class Display {
         }
       }
     }
-    if (Logger.isProductionMode) return this;
 
     if (Helpers.isBrowser
       //#region @backend

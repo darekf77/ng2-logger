@@ -1,11 +1,29 @@
 import { Level } from './level';
 import { Display } from './display';
+import { Helpers } from './helpers';
 
-import { contain } from './include';
-import { Log } from './log';
+export class Logger {
 
 
-export class Logger<T> {
+  private _level: Level;
+  public setLevel(l: Level) {
+    this._level = l;
+    return this;
+  }
+
+  public get isProductionMode() {
+    return !this.developmentMode;
+  }
+
+  public setProductionMode(productionMode: boolean) {
+    this.developmentMode = !productionMode;
+    return this;
+  }
+
+  public mute() {
+    this.isMuted = true;
+    return this;
+  }
 
   constructor(
     private name: string,
@@ -14,12 +32,7 @@ export class Logger<T> {
     private allowed: Level[],
     private isMuted: boolean,
     public fixedWidth: number | undefined
-  ) {
-    if (Array.isArray(Log.levels) && Log.levels.length > 0) {
-      this.allowed = Log.levels;
-    }
-  }
-
+  ) { }
 
   onlyWhen(expression: (() => boolean) | boolean) {
     if (typeof expression === 'function') {
@@ -31,11 +44,19 @@ export class Logger<T> {
 
   private _data(name: string, ...data: any[]) {
     if (this.isMuted) return this;
-    if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-      && !contain(this.allowed, Level.DATA)) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.DATA)) return this;
 
-    if (this.allowed.length === 0 || contain(this.allowed, Level.DATA)) {
-      Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.DATA, this.fixedWidth])
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.DATA)) {
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.DATA,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
     }
     return this;
   }
@@ -43,33 +64,57 @@ export class Logger<T> {
 
   private _error(name: string, ...data: any[]) {
     if (this.isMuted) return this;
-    if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-      && !contain(this.allowed, Level.ERROR)) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.ERROR)) return this;
 
-    if (this.allowed.length === 0 || contain(this.allowed, Level.ERROR)) {
-      Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.ERROR, this.fixedWidth])
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.ERROR)) {
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.ERROR,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
     }
     return this;
   }
 
   private _info(name: string, ...data: any[]) {
     if (this.isMuted) return this;
-    if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-      && !contain(this.allowed, Level.INFO)) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.INFO)) return this;
 
-    if (this.allowed.length === 0 || contain(this.allowed, Level.INFO)) {
-      Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.INFO, this.fixedWidth])
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.INFO)) {
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.INFO,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
     }
     return this;
   }
 
   private _warn(name: string, ...data: any[]) {
     if (this.isMuted) return this;
-    if (this.allowed.length >= 1 && contain(this.allowed, Level.__NOTHING)
-      && !contain(this.allowed, Level.WARN)) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.WARN)) return this;
 
-    if (this.allowed.length === 0 || contain(this.allowed, Level.WARN)) {
-      Display.msg.apply(undefined, [name, ...data, this.name, this.color, Level.WARN, this.fixedWidth])
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.WARN)) {
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.WARN,
+        this.fixedWidth,
+        this.isProductionMode,
+      ])
     }
     return this;
   }
@@ -101,7 +146,7 @@ export class Logger<T> {
    * @param message The message
    * @param otherParams Additional parameters
    */
-  data = (message: string, ...otherParams: any[]): Logger<T> => { return this._data(message, otherParams); };
+  data = (message: string, ...otherParams: any[]) => { return this._data(message, otherParams); };
 
   /**
    * Logs message and data with the level=error
@@ -123,17 +168,5 @@ export class Logger<T> {
    * @param otherParams Additional parameters
    */
   warn = (message: string, ...otherParams: any[]) => this._warn(message, otherParams);
-
-  private _level: Level;
-  private level(l: Level) {
-    this._level = l;
-    return this;
-  }
-
-  public static isProductionMode: boolean = false;
-
-  public mute() {
-    this.isMuted = true;
-  }
 
 }
