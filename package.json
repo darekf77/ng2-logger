@@ -14,7 +14,8 @@
         "json-stringify-safe",
         "json5",
         "randomcolor",
-        "enum-values"
+        "enum-values",
+        "tnp-config"
       ],
       "dependencies": {},
       "ignoreDepsPattern": [],
