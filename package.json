@@ -243,7 +243,7 @@
     "sqlite3": "4.0.9",
     "static-columns": "1.0.4",
     "svg-png-converter": "0.0.9",
-    "systeminformation": "^3.45.7",
+    "systeminformation": "^4.27.11",
     "task.js": "^0.1.5",
     "tnp-db": "0.0.11",
     "tnp-helpers": "0.0.9",
