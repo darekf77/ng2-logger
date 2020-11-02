@@ -31,7 +31,7 @@
     }
   },
   "name": "ng2-logger",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -200,10 +200,11 @@
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
     "morphi": "4.0.3",
+    "ng-modal-lib": "0.0.6",
     "ng-packagr": "^5.7.1",
     "ng2-file-upload": "^1.3.0",
     "ng2-logger": "3.0.13",
-    "ng2-rest": "11.0.3",
+    "ng2-rest": "11.0.4",
     "ngx-bootstrap": "^5.2.0",
     "ngx-breadcrumbs": "0.0.3",
     "ngx-editor": "^4.1.0",

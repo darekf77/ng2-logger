@@ -28,9 +28,9 @@ export class Display {
       return;
     };
     let color = 'gray';
-    if (level === Level.INFO) color = 'deepskyblue';
-    if (level === Level.ERROR) color = 'red';
-    if (level === Level.WARN) color = 'orange';
+    if (level === Level.INFO) { color = 'deepskyblue'; }
+    if (level === Level.ERROR) { color = 'red'; }
+    if (level === Level.WARN) { color = 'orange'; }
 
     if (moduleWidth) {
       const diff = moduleWidth - moduleName.length;
