@@ -1,0 +1,31 @@
+{
+  "resources": [
+    "README.md",
+    "screen.png",
+    "server.png"
+  ],
+  "type": "isomorphic-lib",
+  "version": "v2",
+  "overrided": {
+    "includeAsDev": "*",
+    "includeOnly": [
+      "chalk",
+      "json-stringify-safe",
+      "json5",
+      "randomcolor",
+      "enum-values",
+      "tnp-config"
+    ],
+    "dependencies": {
+      "typescript": "3.8"
+    },
+    "ignoreDepsPattern": [],
+    "linkedFolders": []
+  },
+  "linkedProjects": [],
+  "libReleaseOptions": {
+    "nodts": false,
+    "obscure": false,
+    "ugly": false
+  }
+}
