@@ -1,5 +1,5 @@
 //#region @backend
-console.log('heeloa')
+// console.log('heeloa')
 import * as path from 'path';
 import * as _ from "lodash";
 import "reflect-metadata";
