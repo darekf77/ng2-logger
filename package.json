@@ -35,7 +35,15 @@
     "author": {
       "name": "Dariusz Filipiak"
     },
-    "homepage": "https://github.com/darekf77/ng2-logger#readme"
+    "homepage": "https://github.com/darekf77/ng2-logger#readme",
+    "keywords": [
+      "isomorphic",
+      "logger",
+      "logging",
+      "logowanie",
+      "log",
+      "typescript"
+    ]
   },
   "name": "ng2-logger",
   "version": "4.0.7",

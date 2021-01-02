@@ -15,7 +15,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/*.vsix
+
 
 /node_modules
 /tmp*
