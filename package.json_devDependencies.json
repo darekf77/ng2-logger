@@ -172,6 +172,7 @@
   "ps-list": "6.1.0",
   "ps-node": "^0.1.6",
   "q": "^1.5.1",
+  "record-replay-req-res-scenario": "~0.0.3",
   "redbird": "^0.7.0",
   "reflect-metadata": "^0.1.10",
   "rimraf": "^2.6.2",
