@@ -46,7 +46,7 @@
     ]
   },
   "name": "ng2-logger",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -82,7 +82,7 @@
     "json-stringify-safe": "^5.0.1",
     "json5": "~2.1.3",
     "randomcolor": "^0.5.3",
-    "tnp-config": "~0.0.25"
+    "tnp-config": "~0.0.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.3",
@@ -199,6 +199,7 @@
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "hammerjs": "^2.0.8",
+    "hostile": "~1.3.3",
     "html-webpack-plugin": "4.3.0",
     "http-proxy": "^1.16.2",
     "http-proxy-middleware": "0.19.1",
@@ -206,6 +207,7 @@
     "incremental-compiler": "~1.1.19",
     "inquirer": "~7.3.3",
     "inquirer-autocomplete-prompt": "~1.3.0",
+    "is-elevated": "~3.0.0",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -276,6 +278,7 @@
     "sqlite3": "4.0.9",
     "static-columns": "~1.0.9",
     "string-similarity": "~4.0.2",
+    "sudo-block": "~3.0.0",
     "svg-png-converter": "0.0.9",
     "systeminformation": "^3.45.7",
     "task.js": "^0.1.5",
@@ -290,7 +293,7 @@
     "tslint": "~6.1.0",
     "typeorm": "~0.2.7",
     "typescript": "~3.8.3",
-    "typescript-class-helpers": "~1.0.8",
+    "typescript-class-helpers": "~1.0.9",
     "typescript-formatter": "7.2.2",
     "uglifyjs-webpack-plugin": "2.2.0",
     "underscore": "^1.9.1",
