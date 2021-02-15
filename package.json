@@ -233,7 +233,7 @@
     "ng-packagr": "^5.7.1",
     "ng-talkback": "2.4.4",
     "ng2-file-upload": "^1.3.0",
-    "ng2-logger": "~4.0.9",
+    "ng2-logger": "~4.0.12",
     "ng2-rest": "~11.0.10",
     "ng4-icons": "~0.0.9",
     "ng4-modal": "~0.0.13",
@@ -305,5 +305,6 @@
     "zone.js": "~0.10.2"
   },
   "license": "MIT",
-  "private": false
+  "private": false,
+  "lastBuildTagHash": "6e0431d9f341e42813c10365ae4f67dc2a84a6b2"
 }
