@@ -1,5 +1,5 @@
 import { Logger } from './logger';
-import { Level } from './level';
+import { Level, LevelOrder, LevelKey } from './level';
 import { Helpers } from './helpers';
 //#region @backend
 declare var require: any;
@@ -8,6 +8,8 @@ declare var require: any;
 if (Helpers.isNode) {
   //#region @backend
   var randomcolor = require('randomcolor');
+  var PROCESS_STDOUT_WRITE = 'process.stdout.write';
+  var PROCESS_STDER_WRITE = 'process.stder.write';
   //#endregion
 }
 
@@ -26,6 +28,38 @@ export class Log {
   static Logger: (typeof Logger) = Logger;
   static create(name: string, ...level: Level[]): Logger {
     return Log.instance.create(name, ...level);
+  }
+
+  private static readonly consolelogfn = {};
+  static disableLogs(level = Level.__NOTHING) {
+    //#region @backend
+    // if (Helpers.isNode && (level === Level.__NOTHING)) {
+    //   if (!this.consolelogfn[PROCESS_STDOUT_WRITE]) {
+    //     this.consolelogfn[PROCESS_STDOUT_WRITE] = process.stdout.write; // TOOD not working
+    //   }
+    //   process.stdout.write = (() => { }) as any;
+    // }
+    //#endregion
+    LevelOrder.reverse().find(a => {
+      if (!this.consolelogfn[a]) {
+        this.consolelogfn[a] = console[a];
+      }
+      console[a] = () => { };
+      if (a === LevelKey[level]) {
+        return true;
+      }
+    });
+  }
+
+  static enableLogs() {
+    //#region @backend
+    // if (Helpers.isNode) {
+    //   process.stdout.write = this.consolelogfn[PROCESS_STDOUT_WRITE];
+    // }
+    //#endregion
+    LevelOrder.forEach(a => {
+      console[a] = this.consolelogfn[a]
+    });
   }
 
   private _logOnly = false;
