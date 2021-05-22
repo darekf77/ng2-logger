@@ -1,5 +1,5 @@
 
-import * as _ from 'lodash';
+import { _ } from 'tnp-core';
 import { describe } from 'mocha'
 import { expect } from 'chai';
 // import { BrowserDB } from '../browser-db/browser-db';

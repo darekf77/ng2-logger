@@ -4,7 +4,6 @@ import { Helpers } from './helpers';
 
 export class Logger {
 
-
   private _level: Level;
   public setLevel(l: Level) {
     this._level = l;

@@ -5,13 +5,13 @@ import { Helpers } from './helpers';
 declare var require: any;
 //#endregion
 
-if (Helpers.isNode) {
-  //#region @backend
-  var randomcolor = require('randomcolor');
-  var PROCESS_STDOUT_WRITE = 'process.stdout.write';
-  var PROCESS_STDER_WRITE = 'process.stder.write';
-  //#endregion
-}
+
+//#region @backend
+import * as randomcolor from 'randomcolor';
+const PROCESS_STDOUT_WRITE = 'process.stdout.write';
+const PROCESS_STDER_WRITE = 'process.stder.write';
+//#endregion
+
 
 export class Log {
   //#region singleton

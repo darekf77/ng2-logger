@@ -1,17 +1,13 @@
 //#region @backend
-declare var require: any;
 declare const global: any;
 //#endregion
 import { Level } from './level';
 import { Helpers } from './helpers';
 import { consoleLog, displayParams } from './backend-logging';
 
-if (Helpers.isNode) {
-  //#region @backend
-  var chalk = require('chalk');
-  var path = require('path');
-  //#endregion
-}
+//#region @backend
+import chalk from 'chalk';
+//#endregion
 
 export class Display {
 

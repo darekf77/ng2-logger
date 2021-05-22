@@ -13,8 +13,7 @@
       "json-stringify-safe",
       "json5",
       "randomcolor",
-      "enum-values",
-      "tnp-config"
+      "tnp-cli"
     ],
     "dependencies": {
       "typescript": "3.8"
