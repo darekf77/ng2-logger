@@ -16,9 +16,7 @@
         "randomcolor",
         "tnp-cli"
       ],
-      "dependencies": {
-        "typescript": "3.8"
-      },
+      "dependencies": {},
       "ignoreDepsPattern": [],
       "linkedFolders": []
     },
@@ -45,7 +43,7 @@
     ]
   },
   "name": "ng2-logger",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
