@@ -15,9 +15,7 @@
       "randomcolor",
       "tnp-cli"
     ],
-    "dependencies": {
-      "typescript": "3.8"
-    },
+    "dependencies": {},
     "ignoreDepsPattern": [],
     "linkedFolders": []
   },
