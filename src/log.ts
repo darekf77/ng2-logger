@@ -1,6 +1,6 @@
 import { Logger } from './logger';
 import { Level, LevelOrder, LevelKey } from './level';
-import { Helpers } from './helpers';
+import { Helpers } from 'tnp-core';
 //#region @backend
 declare var require: any;
 //#endregion

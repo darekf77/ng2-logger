@@ -2,7 +2,7 @@
 declare const global: any;
 //#endregion
 import { Level } from './level';
-import { Helpers } from './helpers';
+import { Helpers } from 'tnp-core';
 import { consoleLog, displayParams } from './backend-logging';
 
 //#region @backend
