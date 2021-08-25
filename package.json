@@ -277,7 +277,7 @@
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
     "task.js": "0.1.5",
-    "tnp-config": "~0.0.86",
+    "tnp-config": "~0.0.89",
     "tnp-core": "~0.0.60",
     "tnp-db": "~0.0.31",
     "tnp-helpers": "~0.0.59",
