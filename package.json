@@ -43,7 +43,7 @@
     ]
   },
   "name": "ng2-logger",
-  "version": "7.0.6",
+  "version": "7.0.7",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
