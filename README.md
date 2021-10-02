@@ -1,15 +1,13 @@
-
 ## ng2-logger ##
 
-  
 
-**IMPORTANT** From version 3.x I am using new javascript ***"esnext" + "es2015"*** instead of *"commonjs + es5"*
+**IMPORTANT** 
 
-for browser version ( old version is available in es5 folder.. see example of import below ).
+- from version 3.x I am using new javascript ***"esnext" + "es2015"*** instead of *"commonjs + es5"*
+- from version 8.x I am using angular compiler (ngcc)
 
-With new javascript you can get much smaller bundle with [webpack three shaking](https://webpack.js.org/guides/tree-shaking/). 
+for browser version.
 
-  
   
 
 ## Description ##
@@ -23,10 +21,7 @@ Isomorphic Logger for TypeScript and JavaScript apps.
 You can use this logger in your apps with **any**
 
 TS/JS framework.
-
-  
-  
-  
+ 
 
 See what is going on in your app!
 
@@ -75,8 +70,7 @@ or Browser:
 
 ```ts
 
-import { Log, Level } from  'ng2-logger/browser'  // new javascript module: es2015 + esnext
-import { Log, Level } from  'ng2-logger/browser/es5'  // old javascript module: es5 + commonjs
+import { Log, Level } from  'ng2-logger/browser'  // new javascript module: es2015 + esnext + angular ivy support
 
 ```
 
