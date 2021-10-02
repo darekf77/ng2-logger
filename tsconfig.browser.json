@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.isomorphic.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "esnext",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "preview",
+    "docs",
+    "dist",
+    "bundle",
+    "tests"
+  ]
+}

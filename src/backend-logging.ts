@@ -10,7 +10,6 @@ import * as json5 from 'json5';
 import * as stringify from 'json-stringify-safe';
 //#endregion
 
-
 export function consoleLog(data, level: Level) {
   //#region @backend
   if (level === Level.INFO) console.info(data);

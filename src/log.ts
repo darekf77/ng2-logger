@@ -16,12 +16,13 @@ const PROCESS_STDER_WRITE = 'process.stder.write';
 export class Log {
   //#region singleton
   private constructor() { }
-  private static _instance: Log;
-  private static get instance() {
-    if (!this._instance) {
-      this._instance = new Log();
+  // @ts-ignore
+  private static get instance(): any {
+
+    if (!Log['_instance']) {
+      Log['_instance'] = new Log();
     }
-    return this._instance;
+    return Log['_instance'];
   }
   //#endregion
 
@@ -48,6 +49,7 @@ export class Log {
       if (a === LevelKey[level]) {
         return true;
       }
+      return false;
     });
   }
 
