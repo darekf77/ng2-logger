@@ -291,7 +291,7 @@
     "systeminformation": "3.45.7",
     "task.js": "0.1.5",
     "tnp-config": "~1.0.2",
-    "tnp-core": "~1.0.3",
+    "tnp-core": "~1.0.17",
     "tnp-db": "~0.0.31",
     "tnp-helpers": "~0.0.59",
     "tnp-models": "~0.0.30",
