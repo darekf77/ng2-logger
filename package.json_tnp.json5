@@ -4,8 +4,10 @@
     "screen.png",
     "server.png"
   ],
+
   "type": "isomorphic-lib",
   "version": 'v3',
+
   "overrided": {
     "includeAsDev": "*",
     "includeOnly": [
@@ -19,19 +21,25 @@
     "ignoreDepsPattern": [],
     "linkedFolders": []
   },
+
   "linkedProjects": [],
+
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
     "ugly": false
   },
+
   "description": "isomorphic logger for browser/server in typescript",
   "license": "MIT",
   "private": false,
+
   "author": {
     "name": "Dariusz Filipiak"
   },
+
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
+
   "keywords": [
     "isomorphic",
     "logger",
@@ -39,5 +47,7 @@
     "logowanie",
     "log",
     "typescript"
-  ]
+  ],
+
+  'main': 'esm2015/ng2-logger.js',
 }
