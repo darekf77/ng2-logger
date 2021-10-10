@@ -244,7 +244,7 @@
     "ng-packagr": "5.7.1",
     "ng-talkback": "~2.4.20",
     "ng2-file-upload": "1.3.0",
-    "ng2-logger": "~8.0.12",
+    "ng2-logger": "~8.0.13",
     "ng2-rest": "~11.0.36",
     "ng4-icons": "~0.0.25",
     "ng4-modal": "~0.0.26",
@@ -318,7 +318,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "e0bd8a3b09de9e0bed3247ee5c181d118b4da975",
+  "lastBuildTagHash": "3e046ab227892e6d731c85c7350f6ee72d952b76",
   "peerDependencies": {},
   "main": "esm2015/ng2-logger.js"
 }
