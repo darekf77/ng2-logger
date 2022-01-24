@@ -71,10 +71,10 @@
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
   "readmeFilename": "README.md",
   "dependencies": {
-    "chalk": "~2.3.2",
-    "json-stringify-safe": "~5.0.1",
-    "json5": "~2.1.3",
-    "randomcolor": "~0.5.3",
+    "chalk": "2.3.2",
+    "json-stringify-safe": "5.0.1",
+    "json5": "2.1.3",
+    "randomcolor": "0.5.3",
     "tnp-cli": "~2.0.20"
   },
   "devDependencies": {
@@ -306,7 +306,6 @@
     "validator": "9.2.0",
     "vpn-split": "~0.0.18",
     "watch": "1.0.2",
-    "webpack-dev-server": "~3.11.3",
     "zone.js": "~0.11.3"
   },
   "license": "MIT",
