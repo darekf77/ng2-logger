@@ -4,8 +4,6 @@
     "screen.png",
     "server.png"
   ],
-  "type": "isomorphic-lib",
-  "version": "v3",
   "overrided": {
     "includeAsDev": "*",
     "includeOnly": [
@@ -25,6 +23,8 @@
     "obscure": false,
     "ugly": false
   },
+  "type": "isomorphic-lib",
+  "version": "v3",
   "description": "isomorphic logger for browser/server in typescript",
   "license": "MIT",
   "private": false,
