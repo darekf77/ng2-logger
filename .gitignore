@@ -34,8 +34,11 @@ Thumbs.db
 /npm-debug.log*
 /.sass-cache
 /.sourcemaps
-/angular.json
-/tsconfig.ng.json
+/tsconfig.isomorphic.json
+/tsconfig.browser.json
+/.vscode/launch.json
+/.vscode/tasks.json
+/tsconfig.json
 /.npmrc
 /tslint.json
 /.editorconfig
@@ -45,8 +48,11 @@ Thumbs.db
 /webpack.config.js
 /webpack.backend-bundle-build.js
 /run.js
-/angular.json.filetemplate
-/tsconfig.ng.json.filetemplate
+/tsconfig.isomorphic.json.filetemplate
+/tsconfig.browser.json.filetemplate
+/.vscode/launch.json.filetemplate
+/.vscode/tasks.json.filetemplate
+/tsconfig.json.filetemplate
 
 
 

@@ -10,7 +10,7 @@ import * as json5 from 'json5';
 import * as stringify from 'json-stringify-safe';
 //#endregion
 
-export function consoleLog(data, level: Level) {
+export function consoleLog(data: string, level: Level) {
   //#region @backend
   if (level === Level.INFO) console.info(data);
   else if (level === Level.ERROR) console.error(data);
@@ -34,7 +34,7 @@ export function displayParams(params: any[] = [], level: Level) {
   //#endregion
 }
 
-function replace(out: string, match: RegExp, char: RegExp, color) {
+function replace(out: string, match: RegExp, char: RegExp, color: any) {
   //#region @backend
   let m = out.match(match);
   let outer = out;
@@ -49,7 +49,7 @@ function replace(out: string, match: RegExp, char: RegExp, color) {
 }
 
 
-function handleObjectData(param, level: Level) {
+function handleObjectData(param: string, level: Level) {
   //#region @backend
   if (istartedInVscode()) {
     consoleLog(param, level);

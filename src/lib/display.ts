@@ -42,6 +42,7 @@ export class Display {
       && !global
       //#endregion
     ) {
+      // @ts-ignore
       const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));
 
       if (isEdgeOrIe8orAbove) {

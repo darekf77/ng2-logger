@@ -47,6 +47,7 @@ export class Logger {
       && !Helpers.contain(this.allowed, Level.DATA)) return this;
 
     if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.DATA)) {
+      // @ts-ignore
       Display.msg.apply(void 0, [
         name,
         ...data,
@@ -67,6 +68,7 @@ export class Logger {
       && !Helpers.contain(this.allowed, Level.ERROR)) return this;
 
     if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.ERROR)) {
+      // @ts-ignore
       Display.msg.apply(void 0, [
         name,
         ...data,
@@ -86,6 +88,7 @@ export class Logger {
       && !Helpers.contain(this.allowed, Level.INFO)) return this;
 
     if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.INFO)) {
+      // @ts-ignore
       Display.msg.apply(void 0, [
         name,
         ...data,
@@ -105,6 +108,7 @@ export class Logger {
       && !Helpers.contain(this.allowed, Level.WARN)) return this;
 
     if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.WARN)) {
+      // @ts-ignore
       Display.msg.apply(void 0, [
         name,
         ...data,

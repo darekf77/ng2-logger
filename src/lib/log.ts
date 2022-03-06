@@ -18,10 +18,12 @@ export class Log {
   private constructor() { }
   // @ts-ignore
   private static get instance(): any {
-
+    // @ts-ignore
     if (!Log['_instance']) {
+      // @ts-ignore
       Log['_instance'] = new Log();
     }
+    // @ts-ignore
     return Log['_instance'];
   }
   //#endregion
@@ -42,9 +44,12 @@ export class Log {
     // }
     //#endregion
     LevelOrder.reverse().find(a => {
+      // @ts-ignore
       if (!this.consolelogfn[a]) {
+        // @ts-ignore
         this.consolelogfn[a] = console[a];
       }
+      // @ts-ignore
       console[a] = () => { };
       if (a === LevelKey[level]) {
         return true;
@@ -60,6 +65,7 @@ export class Log {
     // }
     //#endregion
     LevelOrder.forEach(a => {
+      // @ts-ignore
       console[a] = this.consolelogfn[a]
     });
   }
