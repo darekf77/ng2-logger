@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "8.0.22",
+  "version": "8.0.23",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -32,6 +32,11 @@
     "randomcolor": "0.5.3",
     "tnp-cli": "~2.0.22"
   },
+  "license": "MIT",
+  "private": false,
+  "lastBuildTagHash": "eda46c1c042e660c91f8001428e737f17477b5ac",
+  "peerDependencies": {},
+  "main": "esm2015/ng2-logger.js",
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",
     "@angular/animations": "~13.2.0",
@@ -161,7 +166,7 @@
     "morphi": "~4.0.54",
     "ng-packagr": "13.0.0",
     "ng-talkback": "~2.4.25",
-    "ng2-logger": "~8.0.20",
+    "ng2-logger": "~8.0.23",
     "ng2-rest": "~11.0.42",
     "node-cli-test": "0.0.2",
     "node-cli-tester": "~0.0.22",
@@ -212,10 +217,5 @@
     "vpn-split": "~0.0.18",
     "watch": "1.0.2",
     "zone.js": "~0.11.4"
-  },
-  "license": "MIT",
-  "private": false,
-  "lastBuildTagHash": "eda46c1c042e660c91f8001428e737f17477b5ac",
-  "peerDependencies": {},
-  "main": "esm2015/ng2-logger.js"
+  }
 }

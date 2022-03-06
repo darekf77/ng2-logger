@@ -1,0 +1,64 @@
+{
+  "configVersion": 1,
+  "timestamp": 1646525486762,
+  "index": "ng2-logger/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "ng2-logger/favicon.ico",
+        "ng2-logger/index.html",
+        "ng2-logger/main.bf0cd19eb8fae7f3.js",
+        "ng2-logger/manifest.webmanifest",
+        "ng2-logger/polyfills.52cee2a7190b3c9a.js",
+        "ng2-logger/runtime.5b3e6a35bf1c02ae.js",
+        "ng2-logger/styles.ef46db3751d8e999.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "ng2-logger/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "ng2-logger/index.html": "8ad3b531015135db78c95ddbc10fc1f7b382476a",
+    "ng2-logger/main.bf0cd19eb8fae7f3.js": "3330ecdff17279769e47a94101162b7a18c6ea73",
+    "ng2-logger/manifest.webmanifest": "a57db394720bc698498931335f592b4db6972177",
+    "ng2-logger/polyfills.52cee2a7190b3c9a.js": "669fe9791fa2e8fc6b8042e2c19525baceda0b65",
+    "ng2-logger/runtime.5b3e6a35bf1c02ae.js": "40cfffa4b8ed92f87be11e916107b1d6811b0048",
+    "ng2-logger/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

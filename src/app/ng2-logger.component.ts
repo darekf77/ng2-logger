@@ -1,7 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Helpers } from 'tnp-core';
-import { Log } from './lib';
+import { Log } from '../lib';
 
 const log = Log.create('my logger!')
 
@@ -17,24 +15,3 @@ export class AppComponent {
     // this.processes = processes;
   }
 }
-
-@NgModule({
-  imports: [
-    BrowserModule,
-  ],
-  declarations: [
-    AppComponent,
-  ],
-  providers: [],
-  exports: [AppComponent]
-})
-export class Ng2LoggerModule { }
-
-//#region @backend
-
-async function startBackend() {
-
-}
-
-export default startBackend;
-//#endregion
