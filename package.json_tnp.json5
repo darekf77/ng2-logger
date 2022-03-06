@@ -1,54 +1,42 @@
 {
-  "resources": [
-    "README.md",
-    "screen.png",
-    "server.png"
-  ],
-
-  "overrided": {
-    "includeAsDev": "*",
-    "includeOnly": [
+  resources: ["README.md", "screen.png", "server.png"],
+  overrided: {
+    includeAsDev: "*",
+    includeOnly: [
       "chalk",
       "json-stringify-safe",
       "json5",
       "randomcolor",
-      "tnp-cli"
+      "tnp-cli",
     ],
-    "dependencies": {},
-    "ignoreDepsPattern": [],
-    "linkedFolders": []
+    dependencies: {},
+    ignoreDepsPattern: [],
+    linkedFolders: [],
   },
-  "linkedProjects": [],
-
-  "libReleaseOptions": {
-    "nodts": false,
-    "obscure": false,
-    "ugly": false
+  linkedProjects: [],
+  libReleaseOptions: {
+    nodts: false,
+    obscure: false,
+    ugly: false,
   },
-
-  "type": "isomorphic-lib",
-
-  "version": 'v3',
-
-  "description": "isomorphic logger for browser/server in typescript",
-  "license": "MIT",
-  "private": false,
-
-  "author": {
-    "name": "Dariusz Filipiak"
+  type: "isomorphic-lib",
+  version: "v3",
+  additionalNpmNames: ["firedev-logger"],
+  description: "isomorphic logger for browser/server in typescript",
+  license: "MIT",
+  private: false,
+  author: {
+    name: "Dariusz Filipiak",
   },
-
-  "homepage": "https://github.com/darekf77/ng2-logger#readme",
-
-  "keywords": [
+  homepage: "https://github.com/darekf77/ng2-logger#readme",
+  keywords: [
     "isomorphic",
     "logger",
     "logging",
     "logowanie",
     "log",
-    "typescript"
+    "typescript",
   ],
-
-  'main': 'esm2015/ng2-logger.js',
-  'workerPlugins': {},
+  main: "esm2015/ng2-logger.js",
+  workerPlugins: {},
 }
