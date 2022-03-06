@@ -7,7 +7,7 @@ const log = Log.create('my logger!')
   selector: 'app-ng2-logger', // <my-app></my-app>
   template: '    <h1> Hello from component! </h1>  ',
 })
-export class AppComponent {
+export class Ng2LoggerComponent {
   processes = [];
   async ngOnInit() {
     // const processes = await PROCESS.getAll();

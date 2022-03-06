@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './ng2-logger.component';
+import { Ng2LoggerComponent } from './ng2-logger.component';
 
 
 @NgModule({
@@ -9,9 +9,10 @@ import { AppComponent } from './ng2-logger.component';
     BrowserModule,
   ],
   declarations: [
-    AppComponent,
+    Ng2LoggerComponent,
   ],
-  providers: [],
-  exports: [AppComponent]
+  exports: [
+    Ng2LoggerComponent
+  ]
 })
 export class Ng2LoggerModule { }
