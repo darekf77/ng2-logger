@@ -36,5 +36,6 @@
   "private": false,
   "lastBuildTagHash": "eda46c1c042e660c91f8001428e737f17477b5ac",
   "peerDependencies": {},
-  "main": "esm2015/ng2-logger.js"
+  "main": "esm2015/ng2-logger.js",
+  "devDependencies": {}
 }
