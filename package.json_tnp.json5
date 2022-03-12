@@ -36,7 +36,5 @@
     "logowanie",
     "log",
     "typescript",
-  ],
-  main: "esm2015/ng2-logger.js",
-  workerPlugins: {},
+  ]
 }
