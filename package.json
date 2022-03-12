@@ -35,5 +35,6 @@
   "license": "MIT",
   "private": false,
   "lastBuildTagHash": "eda46c1c042e660c91f8001428e737f17477b5ac",
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "devDependencies": {}
 }
