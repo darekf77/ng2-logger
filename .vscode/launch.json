@@ -9,6 +9,9 @@
       "args": [
         "--ENVoverride=%7B%0A%20%20%20%20%22clientProjectName%22%3A%20%22ng2-logger%22%0A%7D"
       ],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
       "runtimeArgs": [
         "--nolazy",
         "-r",
@@ -39,6 +42,9 @@
       "port": 9229,
       "skipFiles": [
         "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
       ]
     }
   ],
