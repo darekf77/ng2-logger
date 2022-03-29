@@ -1,7 +1,7 @@
 {
   resources: ["README.md", "screen.png", "server.png"],
   overrided: {
-    includeAsDev: "*",
+    includeAsDev: [],
     includeOnly: [
       "chalk",
       "json-stringify-safe",
