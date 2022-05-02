@@ -1,18 +1,6 @@
 ## ng2-logger ##
 
 
-**IMPORTANT** 
-
-- from version 3.x I am using new javascript ***"esnext" + "es2015"*** instead of *"commonjs + es5"*
-- from version 8.x I am using angular compiler (ngcc)
-
-for browser version.
-
-  
-
-## Description ##
-
-  
 
 Isomorphic Logger for TypeScript and JavaScript apps.
 
