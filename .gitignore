@@ -39,6 +39,8 @@ Thumbs.db
 /.vscode/launch.json
 /.vscode/tasks.json
 /tsconfig.json
+/tsconfig.backend.dist.json
+/tsconfig.backend.bundle.json
 /.npmrc
 /tslint.json
 /.editorconfig
@@ -53,6 +55,11 @@ Thumbs.db
 /.vscode/launch.json.filetemplate
 /.vscode/tasks.json.filetemplate
 /tsconfig.json.filetemplate
+/tsconfig.backend.dist.json.filetemplate
+/tsconfig.backend.bundle.json.filetemplate
+/webpack.backend-dist-build.js
+/tsconfig.backend.dist.json
+/tsconfig.backend.bundle.json
 
 
 

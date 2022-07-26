@@ -1,5 +1,9 @@
 {
   "files.exclude": {
+    "tsconfig.backend.dist.json": true,
+    "tsconfig.backend.bundle.json": true,
+    "tsconfig.backend.dist.json.filetemplate": true,
+    "tsconfig.backend.bundle.json.filetemplate": true,
     "webpack.backend-bundle-build.js": true,
     "node_modules": true,
     "tmp*": true,
@@ -35,6 +39,7 @@
     ".vscode/launch.json.filetemplate": true,
     ".vscode/tasks.json.filetemplate": true,
     "tsconfig.json.filetemplate": true,
+    "webpack.backend-dist-build.js": true,
     ".gitignore": true,
     ".npmignore": true,
     ".babelrc": true,
