@@ -7,7 +7,7 @@ export * from './ng2-logger.component';
 //#region @backend
 
 async function startBackend() {
-
+  console.log('backend stated... ')
 }
 
 export default startBackend;

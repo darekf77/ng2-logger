@@ -1,4 +1,5 @@
 import { Component, NgModule } from '@angular/core';
+import { config } from 'tnp-config';
 import { Log } from '../lib';
 
 const log = Log.create('my logger!')
@@ -14,4 +15,9 @@ export class Ng2LoggerComponent {
     log.d(`hello from loger`);
     // this.processes = processes;
   }
+
+  constructor() {
+    console.log('tnp-config', config)
+  }
+
 }
