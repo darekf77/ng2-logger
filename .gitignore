@@ -24,6 +24,8 @@ Thumbs.db
 /bundle*
 /browser
 /browser*
+/websql
+/websql*
 /module*
 /backup
 /module
