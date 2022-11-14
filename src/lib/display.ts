@@ -37,11 +37,14 @@ export class Display {
       }
     }
 
+    //#region @browser
     if (Helpers.isBrowser
       //#region @backend
       && !global
       //#endregion
     ) {
+
+
       // @ts-ignore
       const isEdgeOrIe8orAbove = (document['documentMode'] || /Edge/.test(navigator.userAgent));
 
@@ -81,19 +84,24 @@ export class Display {
         console.log.apply(console, params);
       }
 
-    } if (Helpers.isNode) {
-      //#region @backend
-      let a1 = chalk.bgHex(moduleColor)(chalk.black(moduleName));
+    }
+    //#endregion
+
+    //#region @backend
+    if (Helpers.isNode) {
+
+      let a1 = chalk.bgHex(moduleColor)(global.hideLog ? '' : `${chalk.black(moduleName)}`);
       let p = params;
       if (typeof message === 'string') {
-        a1 = a1 + chalk.keyword(color)(' [') + chalk.dim(message) + chalk.keyword(color)('] ');
+        a1 = a1 + chalk.keyword(color)(global.hideLog ? '' : ' [') + chalk.dim(message)
+          + chalk.keyword(color)(global.hideLog ? '' : '] ');
       } else {
         p = [message].concat(params);
       }
       consoleLog(a1, level);
       displayParams(p, level);
-      //#endregion
     }
+    //#endregion
 
   }
 

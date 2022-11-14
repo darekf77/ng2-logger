@@ -8,14 +8,18 @@ import { Level } from './level';
 import { CLI } from 'tnp-cli';
 import * as json5 from 'json5';
 import * as stringify from 'json-stringify-safe';
+import { Helpers } from 'tnp-core';
 //#endregion
 
 export function consoleLog(data: string, level: Level) {
   //#region @backend
-  if (level === Level.INFO) console.info(data);
-  else if (level === Level.ERROR) console.error(data);
-  else if (level === Level.WARN) console.warn(data);
-  else console.log(data)
+  if (level === Level.INFO) Helpers.info(data);
+  else if (level === Level.ERROR) Helpers.error(data);
+  else if (level === Level.WARN) Helpers.warn(data);
+  else if (level === Level.SUCCESS) Helpers.success(data);
+  else if (level === Level.TASK_STARTED) Helpers.taskStarted(data);
+  else if (level === Level.TASK_DONE) Helpers.taskDone(data);
+  else Helpers.log(data)
   //#endregion
 }
 
@@ -98,7 +102,7 @@ export function istartedInVscode() {
 function isObjectAfterStringify(s: string) {
   //#region @backend
   try {
-    const json = json5.parse(s);
+    json5.parse(s);
     return true;
   } catch (error) {
     return false;

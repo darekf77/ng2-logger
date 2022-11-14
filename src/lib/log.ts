@@ -2,14 +2,13 @@ import { Logger } from './logger';
 import { Level, LevelOrder, LevelKey } from './level';
 import { Helpers } from 'tnp-core';
 //#region @backend
+import { path } from 'tnp-core';
 declare var require: any;
 //#endregion
 
 
 //#region @backend
 import * as randomcolor from 'randomcolor';
-const PROCESS_STDOUT_WRITE = 'process.stdout.write';
-const PROCESS_STDER_WRITE = 'process.stder.write';
 //#endregion
 
 

@@ -11,6 +11,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/linked-repos
+
 /tests-environments
 
 # System Files

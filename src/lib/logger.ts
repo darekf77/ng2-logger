@@ -102,6 +102,66 @@ export class Logger {
     return this;
   }
 
+  private _success(name: string, ...data: any[]) {
+    if (this.isMuted) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.SUCCESS)) return this;
+
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.SUCCESS)) {
+      // @ts-ignore
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.SUCCESS,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
+    }
+    return this;
+  }
+
+  private _taskStarted(name: string, ...data: any[]) {
+    if (this.isMuted) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.TASK_STARTED)) return this;
+
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.TASK_STARTED)) {
+      // @ts-ignore
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.TASK_STARTED,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
+    }
+    return this;
+  }
+
+  private _taskDone(name: string, ...data: any[]) {
+    if (this.isMuted) return this;
+    if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
+      && !Helpers.contain(this.allowed, Level.TASK_DONE)) return this;
+
+    if (this.allowed.length === 0 || Helpers.contain(this.allowed, Level.TASK_DONE)) {
+      // @ts-ignore
+      Display.msg.apply(void 0, [
+        name,
+        ...data,
+        this.name,
+        this.color,
+        Level.TASK_DONE,
+        this.fixedWidth,
+        this.isProductionMode,
+      ]);
+    }
+    return this;
+  }
+
   private _warn(name: string, ...data: any[]) {
     if (this.isMuted) return this;
     if (this.allowed.length >= 1 && Helpers.contain(this.allowed, Level.__NOTHING)
@@ -164,6 +224,28 @@ export class Logger {
    * @param otherParams Additional parameters
    */
   info = (message: string, ...otherParams: any[]) => this._info(message, otherParams);
+
+  /**
+   * Logs message and data with the level=success
+   * @param message The message
+   * @param otherParams Additional parameters
+   */
+  success = (message: string, ...otherParams: any[]) => this._success(message, otherParams);
+
+
+  /**
+  * Logs message and data with the level=taskStarted
+  * @param message The message
+  * @param otherParams Additional parameters
+  */
+  taskStarted = (message: string, ...otherParams: any[]) => this._taskStarted(message, otherParams);
+
+  /**
+  * Logs message and data with the level=taskDone
+  * @param message The message
+  * @param otherParams Additional parameters
+  */
+   taskDone = (message?: string, ...otherParams: any[]) => this._taskDone(message, otherParams);
 
   /**
    * Logs message and data with the level=warn
