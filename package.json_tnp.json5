@@ -16,14 +16,14 @@
   },
 
   linkedProjects: [],
+  smartContainerBuildTarget: '',
   linkedRepos: [],
+
   libReleaseOptions: {
     nodts: false,
     obscure: false,
     ugly: false,
   },
-
-  smartContainerBuildTarget: '',
 
   smartContainerTarget: '',
   type: "isomorphic-lib",
