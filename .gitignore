@@ -39,6 +39,8 @@ Thumbs.db
 /.sass-cache
 /.sourcemaps
 /tsconfig.isomorphic.json
+/tsconfig.isomorphic-flat-dist.json
+/tsconfig.isomorphic-flat-bundle.json
 /tsconfig.browser.json
 /.vscode/launch.json
 /.vscode/tasks.json
@@ -55,13 +57,14 @@ Thumbs.db
 /webpack.backend-bundle-build.js
 /run.js
 /tsconfig.isomorphic.json.filetemplate
+/tsconfig.isomorphic-flat-dist.json.filetemplate
+/tsconfig.isomorphic-flat-bundle.json.filetemplate
 /tsconfig.browser.json.filetemplate
 /.vscode/launch.json.filetemplate
 /.vscode/tasks.json.filetemplate
 /tsconfig.json.filetemplate
 /tsconfig.backend.dist.json.filetemplate
 /tsconfig.backend.bundle.json.filetemplate
-/webpack.backend-dist-build.js
 /tsconfig.backend.dist.json
 /tsconfig.backend.bundle.json
 
