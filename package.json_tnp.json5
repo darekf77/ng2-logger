@@ -8,7 +8,7 @@
       "json-stringify-safe",
       "json5",
       "randomcolor",
-      "tnp-cli",
+      "tnp-config",
     ],
     dependencies: {},
     ignoreDepsPattern: [],

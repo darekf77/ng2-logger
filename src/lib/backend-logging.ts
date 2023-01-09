@@ -5,7 +5,7 @@ declare var process: any;
 import { Level } from './level';
 
 //#region @backend
-import { CLI } from 'tnp-cli';
+import { chalk } from 'tnp-core';
 import * as json5 from 'json5';
 import * as stringify from 'json-stringify-safe';
 import { Helpers } from 'tnp-core';
@@ -60,23 +60,23 @@ function handleObjectData(param: string, level: Level) {
     return;
   }
   let out = stringify(param, null, 4)
-  out = replace(out, /\".*"\:\ \"/g, /\"\: "/, CLI.chalk.green);
-  out = replace(out, /\".*"\:\ \{/g, /\"\: \{/, CLI.chalk.yellow);
-  out = replace(out, /\".*"\:\ \[/g, /\"\: \[/, CLI.chalk.red);
-  out = replace(out, /\".*"\:\ true/g, /\"\: true/, CLI.chalk.blue);
-  out = replace(out, /\".*"\:\ false/g, /\"\: false/, CLI.chalk.blue);
-  out = replace(out, /\".*"\:\ (\-|[0-9])/g, /\"\: (\-|[0-9])/, CLI.chalk.magenta);
+  out = replace(out, /\".*"\:\ \"/g, /\"\: "/, chalk.green);
+  out = replace(out, /\".*"\:\ \{/g, /\"\: \{/, chalk.yellow);
+  out = replace(out, /\".*"\:\ \[/g, /\"\: \[/, chalk.red);
+  out = replace(out, /\".*"\:\ true/g, /\"\: true/, chalk.blue);
+  out = replace(out, /\".*"\:\ false/g, /\"\: false/, chalk.blue);
+  out = replace(out, /\".*"\:\ (\-|[0-9])/g, /\"\: (\-|[0-9])/, chalk.magenta);
 
-  out = out.replace(/\"/g, CLI.chalk.dim('"'))
-    .replace(/\{/g, CLI.chalk.dim('{'))
-    .replace(/\}/g, CLI.chalk.dim('}'))
-    .replace(/\}/g, CLI.chalk.dim('}'))
+  out = out.replace(/\"/g, chalk.dim('"'))
+    .replace(/\{/g, chalk.dim('{'))
+    .replace(/\}/g, chalk.dim('}'))
+    .replace(/\}/g, chalk.dim('}'))
 
   if (process.stdout.columns && process.stdout.columns > 0) {
     out = out.split('\n').map(line => {
       return (line.length < process.stdout.columns ?
         line :
-        line.slice(0, process.stdout.columns - 6) + CLI.chalk.dim('...'));
+        line.slice(0, process.stdout.columns - 6) + chalk.dim('...'));
     }).join('\n');
   }
   consoleLog(out, level);
