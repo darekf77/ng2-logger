@@ -1,48 +1,34 @@
-## ng2-logger ##
+## firedev-logger (ng2-logger) ##
 
-
-
-Isomorphic Logger for TypeScript and JavaScript apps.
-
-  
+- Part of [firedev.io](https://github.com/darekf77/
+- Isomorphic Logger for TypeScript and JavaScript apps.
+- Purpose:
+  + usefull/elegant backend/frontend logger
 
 You can use this logger in your apps with **any**
-
 TS/JS framework.
  
-
 See what is going on in your app!
 
 Now chrome console logs are full of colors!
 
-  
-
 ![Modules marked](screen.png)
-
-  
 
 See nice server logs:
 
-  
-
 ![Modules marked](server.png)
 
-  
-  
 
 To install package run:
-
-  
-
+```
 npm install ng2-logger --save
-
-  
+```  
 
 First import proper version for your environment:
 
   
 
-Nodejs server:
+Nodejs server (or any firedev's lib/app):
 
   
 
