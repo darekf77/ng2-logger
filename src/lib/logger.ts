@@ -186,23 +186,23 @@ export class Logger {
   /** @deprecated Use data(...)
    * @see data
   */
-  d = (name: string, ...data: any[]) => this._data(name, data);
+  d = (name: string | any, ...data: any[]) => this._data(name, data);
 
   /** @deprecated Use error(...)
    * @see error
   */
 
-  er = (name: string, ...data: any[]) => this._error(name, data);
+  er = (name: string | any, ...data: any[]) => this._error(name, data);
 
   /** @deprecated Use info(...)
    * @see info
   */
-  i = (name: string, ...data: any[]) => this._info(name, data);
+  i = (name: string | any, ...data: any[]) => this._info(name, data);
 
   /** @deprecated Use warn(...)
    * @see warn
   */
-  w = (name: string, ...data: any[]) => this._warn(name, data);
+  w = (name: string | any, ...data: any[]) => this._warn(name, data);
 
   /**
    * Logs message and data with the level=data
@@ -245,7 +245,7 @@ export class Logger {
   * @param message The message
   * @param otherParams Additional parameters
   */
-   taskDone = (message?: string, ...otherParams: any[]) => this._taskDone(message, otherParams);
+  taskDone = (message?: string, ...otherParams: any[]) => this._taskDone(message, otherParams);
 
   /**
    * Logs message and data with the level=warn
