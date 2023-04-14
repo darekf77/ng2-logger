@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "13.1.11",
+  "version": "13.1.12",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -248,7 +248,7 @@
     "systeminformation": "3.45.7",
     "task.js": "0.1.5",
     "tnp-cli": "~13.1.46",
-    "tnp-core": "~13.2.2",
+    "tnp-core": "~13.2.3",
     "tnp-db": "~13.1.12",
     "tnp-helpers": "~13.1.21",
     "tnp-models": "~13.1.12",
