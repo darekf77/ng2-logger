@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "953942c0a7a22a5d3e83178c77bde11ed9b8d6d4",
+  "lastBuildTagHash": "9b2a772ddfe3ff864ae06873aa6ec178ae3d9a43",
   "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.9",
@@ -206,7 +206,7 @@
     "ng-packagr": "13.0.0",
     "ng-talkback": "~13.1.19",
     "ng2-file-upload": "1.3.0",
-    "ng2-logger": "~13.1.14",
+    "ng2-logger": "~13.1.15",
     "ng2-rest": "~13.1.13",
     "ng4-icons": "~13.1.21",
     "ng4-modal": "~13.1.23",
