@@ -183,23 +183,23 @@ export class Logger {
   }
 
 
-  /** @deprecated Use data(...)
+  /**
    * @see data
   */
   d = (name: string | any, ...data: any[]) => this._data(name, data);
 
-  /** @deprecated Use error(...)
+  /**
    * @see error
   */
 
   er = (name: string | any, ...data: any[]) => this._error(name, data);
 
-  /** @deprecated Use info(...)
+  /**
    * @see info
   */
   i = (name: string | any, ...data: any[]) => this._info(name, data);
 
-  /** @deprecated Use warn(...)
+  /**
    * @see warn
   */
   w = (name: string | any, ...data: any[]) => this._warn(name, data);
