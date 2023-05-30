@@ -3,6 +3,7 @@
 
   overrided: {
     includeAsDev: [],
+
     includeOnly: [
       "chalk",
       "json-stringify-safe",
@@ -10,9 +11,11 @@
       "randomcolor",
       "tnp-config",
     ],
+
     dependencies: {},
     ignoreDepsPattern: [],
     linkedFolders: [],
+    npmFixes: [],
   },
 
   linkedProjects: [],
