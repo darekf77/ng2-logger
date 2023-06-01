@@ -1,6 +1,7 @@
 {
   "files.exclude": {
     "**/*____ORIGINAL____.ts": true,
+    "_changelog": true,
     "tsconfig.backend.dist.json": true,
     "tsconfig.backend.bundle.json": true,
     "tsconfig.backend.dist.json.filetemplate": true,
