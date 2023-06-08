@@ -31,7 +31,7 @@
 
   smartContainerTarget: '',
   type: "isomorphic-lib",
-  version: 'v16',
+  version: 'v4',
   additionalNpmNames: ["firedev-logger"],
   description: "isomorphic logger for browser/server in typescript",
   license: "MIT",
