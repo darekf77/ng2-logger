@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "5af901f954f14bbd8987e812186639d519366b39",
+  "lastBuildTagHash": "ad010354a291e04dd5ea707fd3009a17a31431a0",
   "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "~16.0.5",
@@ -207,7 +207,7 @@
     "ng-in-viewport": "15.0.2",
     "ng-packagr": "16.0.1",
     "ng-talkback": "~13.1.19",
-    "ng2-logger": "~16.0.2",
+    "ng2-logger": "~16.0.3",
     "ng2-rest": "~16.0.10",
     "ngx-ace-wrapper": "14.0.0",
     "ngx-editor": "15.3.0",
