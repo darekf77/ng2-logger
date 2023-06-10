@@ -1,4 +1,55 @@
 {
+  "tnp": {
+    "resources": [
+      "README.md",
+      "screen.png",
+      "server.png"
+    ],
+    "overrided": {
+      "includeAsDev": [],
+      "includeOnly": [
+        "chalk",
+        "json-stringify-safe",
+        "json5",
+        "randomcolor",
+        "tnp-config"
+      ],
+      "dependencies": {},
+      "ignoreDepsPattern": [],
+      "linkedFolders": [],
+      "npmFixes": []
+    },
+    "linkedProjects": [],
+    "smartContainerBuildTarget": "",
+    "linkedRepos": [],
+    "libReleaseOptions": {
+      "nodts": false,
+      "obscure": false,
+      "ugly": false,
+      "includeNodeModules": false
+    },
+    "smartContainerTarget": "",
+    "type": "isomorphic-lib",
+    "version": "v4",
+    "additionalNpmNames": [
+      "firedev-logger"
+    ],
+    "description": "isomorphic logger for browser/server in typescript",
+    "license": "MIT",
+    "private": false,
+    "author": {
+      "name": "Dariusz Filipiak"
+    },
+    "homepage": "https://github.com/darekf77/ng2-logger#readme",
+    "keywords": [
+      "isomorphic",
+      "logger",
+      "logging",
+      "logowanie",
+      "log",
+      "typescript"
+    ]
+  },
   "name": "ng2-logger",
   "version": "16.0.3",
   "description": "isomorphic logger for browser/server in typescript",
