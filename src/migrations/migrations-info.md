@@ -1,7 +1,6 @@
 THIS FILE IS GENERATED. THIS FILE IS GENERATED. THIS FILE IS GENERATED.
 
-Assets from this folder are being shipped with this npm package (ng2-logger@16.0.4)
-created from this project.
+In folder is only for storing migration files with auto-generated name.
 
 THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
           
