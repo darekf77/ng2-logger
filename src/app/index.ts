@@ -1,4 +1,4 @@
-//#region #browser
+//#region @browser
 export * from './ng2-logger.module';
 export * from './ng2-logger.component';
 //#endregion
