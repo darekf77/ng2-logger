@@ -51,7 +51,7 @@
     ]
   },
   "name": "ng2-logger",
-  "version": "16.0.5",
+  "version": "16.0.6",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -81,7 +81,7 @@
     "json-stringify-safe": "5.0.1",
     "json5": "2.2.1",
     "randomcolor": "0.5.3",
-    "tnp-config": "~16.0.11"
+    "tnp-config": "~16.0.12"
   },
   "license": "MIT",
   "private": false,
@@ -322,7 +322,7 @@
     "task.js": "0.1.5",
     "threads": "1.7.0",
     "tnp-cli": "~16.0.5",
-    "tnp-core": "~16.0.13",
+    "tnp-core": "~16.0.14",
     "tnp-db": "~16.0.26",
     "tnp-helpers": "~16.0.7",
     "tnp-models": "~16.0.35",
