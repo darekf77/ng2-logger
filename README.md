@@ -1,6 +1,6 @@
 ## firedev-logger (ng2-logger) ##
 
-- Part of [firedev.io](https://github.com/darekf77/
+- Part of [firedev.io](https://github.com/darekf77/firedev)
 - Isomorphic Logger for TypeScript and JavaScript apps.
 - Purpose:
   + usefull/elegant backend/frontend logger
