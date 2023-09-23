@@ -1,6 +1,6 @@
 THIS FILE IS GENERATED. THIS FILE IS GENERATED. THIS FILE IS GENERATED.
 
-In folder is only for storing migration files with auto-generated name.
+In folder is only for storing migration files with auto-generated names.
 
 THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
           
