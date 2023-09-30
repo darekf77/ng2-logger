@@ -56,6 +56,7 @@ Thumbs.db
 /webpack.config.js
 /webpack.backend-bundle-build.js
 /run.js
+/run-org.js
 /tsconfig.isomorphic.json.filetemplate
 /tsconfig.isomorphic-flat-dist.json.filetemplate
 /tsconfig.isomorphic-flat-bundle.json.filetemplate
