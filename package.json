@@ -85,7 +85,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "29c370d4011431dadc631af9dadca0bf5bee1038",
+  "lastBuildTagHash": "ebe137a2c43b77c2daeb274b7e55973ed7f87e9f",
   "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "~16.0.5",
@@ -277,7 +277,7 @@
     "ng-lock": "16.0.1",
     "ng-packagr": "16.0.1",
     "ng-talkback": "~16.5.4",
-    "ng2-logger": "~16.5.4",
+    "ng2-logger": "~16.5.5",
     "ng2-rest": "~16.5.4",
     "ngx-ace-wrapper": "14.0.0",
     "ngx-editor": "15.3.0",
