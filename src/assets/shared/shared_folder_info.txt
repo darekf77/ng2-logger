@@ -1,6 +1,6 @@
 THIS FILE IS GENERATED. THIS FILE IS GENERATED. THIS FILE IS GENERATED.
 
-Assets from this folder are being shipped with this npm package (ng2-logger@16.5.7)
+Assets from this folder are being shipped with this npm package (ng2-logger@16.5.8)
 created from this project.
 
 THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
