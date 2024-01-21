@@ -50,7 +50,6 @@
     ".npmignore": true,
     ".babelrc": true,
     "package.json_devDependencies.json": true,
-    "docs": true,
     "logo.svg": true,
     "package.json_tnp.json": true
   },
@@ -62,5 +61,10 @@
     120
   ],
   "html.format.wrapAttributes": "force-aligned",
-  "workbench.colorTheme": "Default Light+"
+  "workbench.colorTheme": "Default Light+",
+  "search.exclude": {
+    "docs": true,
+    "projects": true,
+    "bin": true
+  }
 }
