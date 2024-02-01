@@ -1,6 +1,6 @@
 THIS FILE IS GENERATED. THIS FILE IS GENERATED. THIS FILE IS GENERATED.
 
-This folder is only for storing migration files with auto-generated names.
+This folder is an entry point for npm Angular/NodeJS library
 
 THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
           
