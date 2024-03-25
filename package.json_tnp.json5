@@ -27,6 +27,9 @@
     obscure: false,
     ugly: false,
     includeNodeModules: false,
+    cliBuildNoDts: false,
+    cliBuildObscure: false,
+    cliBuildIncludeNodeModules: false,
   },
 
   smartContainerTarget: '',
