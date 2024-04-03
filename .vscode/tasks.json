@@ -10,7 +10,7 @@
     {
       "label": "Ng Serve",
       "type": "shell",
-      "command": "tnp build",
+      "command": "firedev build",
       "isBackground": true,
       "presentation": {
         "reveal": "always"
