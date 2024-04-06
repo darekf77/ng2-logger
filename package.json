@@ -29,7 +29,8 @@
       "includeNodeModules": false,
       "cliBuildNoDts": false,
       "cliBuildObscure": false,
-      "cliBuildIncludeNodeModules": false
+      "cliBuildIncludeNodeModules": false,
+      "cliBuildUglify": false
     },
     "smartContainerTarget": "",
     "type": "isomorphic-lib",
@@ -362,5 +363,6 @@
     "watch": "1.0.2",
     "yup": "1.1.1",
     "zone.js": "~0.13.0"
-  }
+  },
+  "main": "dist/app.electron.js"
 }

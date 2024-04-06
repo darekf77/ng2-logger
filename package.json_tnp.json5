@@ -30,6 +30,7 @@
     cliBuildNoDts: false,
     cliBuildObscure: false,
     cliBuildIncludeNodeModules: false,
+    cliBuildUglify: false,
   },
 
   smartContainerTarget: '',
