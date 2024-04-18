@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Server standalone",
+      "name": "Debug/Start Server",
       "program": "${workspaceFolder}/run.js",
       "args": [
         "port=4404",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "Start electron app debug",
+      "name": "Debug/Start Electron",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
@@ -46,10 +46,10 @@
   ],
   "compounds": [
     {
-      "name": "Debug Server + Electron App",
+      "name": "Debug/Start (Server + Electron)",
       "configurations": [
-        "Launch Server standalone",
-        "Start electron app debug"
+        "Debug/Start Server",
+        "Debug/Start Electron"
       ]
     }
   ]
