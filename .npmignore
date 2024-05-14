@@ -1,6 +1,6 @@
 .vscode
-dist/
-src/
+/dist
+/src
 /docs
 /preview
 /tests
