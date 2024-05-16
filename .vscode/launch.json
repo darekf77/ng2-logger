@@ -15,8 +15,12 @@
         "!**/node_modules/**",
         "c:/Users/darek/projects/npm/cli-tools/cez-cli/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/firedev/projects/examples/electron-remote-service/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/firedev/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/cli-tools/navi-cli/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/cli-tools/p1-cli/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/typescript-class-helpers/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/cli-tools/vpn-cli/src/../dist/**/*.js"
       ],
       "runtimeArgs": [
