@@ -1,52 +1,43 @@
 {
-  resources: ["README.md", "screen.png", "server.png"],
-
-  overrided: {
-    includeAsDev: [],
-
-    includeOnly: [
+  "resources": ["README.md", "screen.png", "server.png"],
+  "overrided": {
+    "includeAsDev": [],
+    "includeOnly": [
       "chalk",
       "json-stringify-safe",
       "json5",
       "randomcolor",
       "tnp-config",
     ],
-
-    dependencies: {},
-    ignoreDepsPattern: [],
-    linkedFolders: [],
-    npmFixes: [],
+    "dependencies": {},
+    "ignoreDepsPattern": [],
+    "linkedFolders": [],
+    "npmFixes": [],
   },
-
-  smartContainerBuildTarget: '',
-  linkedRepos: [],
-
-  libReleaseOptions: {
-    nodts: false,
-    obscure: false,
-    ugly: false,
-    includeNodeModules: false,
-    cliBuildNoDts: false,
-    cliBuildObscure: false,
-    cliBuildIncludeNodeModules: false,
-    cliBuildUglify: false,
+  "smartContainerBuildTarget": '',
+  "linkedRepos": [],
+  "libReleaseOptions": {
+    "nodts": false,
+    "obscure": false,
+    "ugly": false,
+    "includeNodeModules": false,
+    "cliBuildNoDts": false,
+    "cliBuildObscure": false,
+    "cliBuildIncludeNodeModules": false,
+    "cliBuildUglify": false,
   },
-
-  smartContainerTarget: '',
-  type: "isomorphic-lib",
-  version: 'v4',
-  additionalNpmNames: ["firedev-logger"],
-  description: "isomorphic logger for browser/server in typescript",
-  license: "MIT",
-  private: false,
-
-  author: {
-    name: "Dariusz Filipiak",
+  "smartContainerTarget": '',
+  "type": "isomorphic-lib",
+  "version": 'v4',
+  "additionalNpmNames": ["firedev-logger"],
+  "description": "isomorphic logger for browser/server in typescript",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "Dariusz Filipiak",
   },
-
-  homepage: "https://github.com/darekf77/ng2-logger#readme",
-
-  keywords: [
+  "homepage": "https://github.com/darekf77/ng2-logger#readme",
+  "keywords": [
     "isomorphic",
     "logger",
     "logging",
