@@ -13,8 +13,7 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js",
         "!**/node_modules/**",
-        "/Users/dfilipiak/npm/firedev-io/tnp/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-helpers/src/../dist/**/*.js"
+        "/Users/dfilipiak/npm/firedev-io/tnp/src/../dist/**/*.js"
       ],
       "runtimeArgs": [
         "--nolazy",
