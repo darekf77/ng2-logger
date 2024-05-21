@@ -43,9 +43,9 @@
     ".gitignore": true,
     ".npmignore": true,
     ".babelrc": true,
-    "package.json_devDependencies.json": true,
-    "logo.svg": true,
-    "package.json_tnp.json": true
+    "devDependencies.json": true,
+    "package.json": true,
+    "logo.svg": true
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#c2d137"

@@ -65,6 +65,7 @@ Thumbs.db
 /tsconfig.backend.dist.json.filetemplate
 /tsconfig.backend.dist.json
 # =====================
+!firedev.json
 *.filetemplate
 
 
