@@ -14,15 +14,10 @@
         "${workspaceFolder}/dist/**/*.js",
         "!**/node_modules/**",
         "c:/Users/darek/projects/npm/cli-tools/cez-cli/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/firedev/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/firedev-ui/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/cli-tools/navi-cli/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/static-columns/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/typescript-class-helpers/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/cli-tools/vpn-cli/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/vpn-split/src/../dist/**/*.js"
+        "c:/Users/darek/projects/npm/firedev-io/typescript-class-helpers/src/../dist/**/*.js"
       ],
       "runtimeArgs": [
         "--nolazy",
