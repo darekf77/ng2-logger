@@ -13,17 +13,9 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js",
         "!**/node_modules/**",
-        "/Users/dfilipiak/npm/firedev-io/firedev/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/static-columns/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-config/tmp-dist-release/dist/project/tnp-config/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-core/tmp-dist-release/dist/project/tnp-core/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-helpers/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/main/src/lib/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/second/src/lib/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/third/src/lib/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-projects/application-quiz/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/cli-tools/navi-cli/src/../dist/**/*.js"
+        "c:/Users/darek/projects/npm/firedev-io/tnp-config/tmp-dist-release/dist/project/tnp-config/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/tnp-core/tmp-dist-release/dist/project/tnp-core/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/src/../dist/**/*.js"
       ],
       "runtimeArgs": [
         "--nolazy",

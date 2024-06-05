@@ -17,10 +17,6 @@
     "backup": true,
     "module": true,
     "www": true,
-    ".eslintrc.json": true,
-    ".prettierignore": true,
-    ".prettierrc": true,
-    ".editorconfig": true,
     "Thumbs.db": true,
     ".DS_Store": true,
     "**/.DS_Store": true,
@@ -45,6 +41,10 @@
     ".npmignore": true,
     ".babelrc": true,
     ".npmrc": true,
+    ".eslintrc.json": true,
+    ".prettierignore": true,
+    ".prettierrc": true,
+    ".editorconfig": true,
     "devDependencies.json": true,
     "package.json": true,
     "logo.svg": true
@@ -102,5 +102,6 @@
   "editor.inlineSuggest.enabled": true,
   "tslint.autoFixOnSave": false,
   "tslint.enable": false,
-  "tslint.alwaysShowRuleFailuresAsWarnings": false
+  "tslint.alwaysShowRuleFailuresAsWarnings": false,
+  "prettier.endOfLine": "auto"
 }

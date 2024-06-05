@@ -37,10 +37,6 @@ Thumbs.db
 /backup
 /module
 /www
-/.eslintrc.json
-/.prettierignore
-/.prettierrc
-/.editorconfig
 /Thumbs.db
 /.DS_Store
 /**/.DS_Store
