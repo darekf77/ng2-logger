@@ -13,9 +13,13 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js",
         "!**/node_modules/**",
+        "c:/Users/darek/projects/npm/firedev-io/json10-writer/tmp-dist-release/dist/project/json10-writer/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/ng2-logger/tmp-dist-release/dist/project/ng2-logger/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp-config/tmp-dist-release/dist/project/tnp-config/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp-core/tmp-dist-release/dist/project/tnp-core/src/../dist/**/*.js",
-        "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/src/../dist/**/*.js"
+        "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/tmp-dist-release/dist/project/tnp-helpers/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/tnp-models/tmp-dist-release/dist/project/tnp-models/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/typescript-class-helpers/tmp-dist-release/dist/project/typescript-class-helpers/src/../dist/**/*.js"
       ],
       "runtimeArgs": [
         "--nolazy",
