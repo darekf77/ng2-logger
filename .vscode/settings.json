@@ -103,5 +103,6 @@
   "tslint.autoFixOnSave": false,
   "tslint.enable": false,
   "tslint.alwaysShowRuleFailuresAsWarnings": false,
-  "prettier.endOfLine": "auto"
+  "prettier.endOfLine": "auto",
+  "prettier.prettierPath": "./node_modules/prettier"
 }

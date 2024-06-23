@@ -9,8 +9,6 @@
 **/*.md
 tmp-*
 **/tmp-*
-.vscode/**/*.*
-**/.vscode/**/*.*
 **/src/assets/**/*.*
 /.build
 /projects
