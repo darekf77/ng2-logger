@@ -45,11 +45,6 @@ Thumbs.db
 /npm-debug.log*
 /.sass-cache
 /.sourcemaps
-/tsconfig.isomorphic.json
-/tsconfig.isomorphic-flat-dist.json
-/tsconfig.browser.json
-/tsconfig.json
-/tsconfig.backend.dist.json
 /index.js
 /index.d.ts
 /index.js.map
@@ -57,12 +52,6 @@ Thumbs.db
 /webpack.backend-dist-build.js
 /run.js
 /run-org.js
-/tsconfig.isomorphic.json.filetemplate
-/tsconfig.isomorphic-flat-dist.json.filetemplate
-/tsconfig.browser.json.filetemplate
-/tsconfig.json.filetemplate
-/tsconfig.backend.dist.json.filetemplate
-/tsconfig.backend.dist.json
 # =====================
 !firedev.json
 !firedev.jsonc
