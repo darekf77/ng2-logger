@@ -61,7 +61,10 @@
   "search.exclude": {
     "docs": true,
     "projects": true,
-    "bin": true
+    "bin": true,
+    "local_release": true,
+    "**/package-lock.json": true,
+    "package-lock.json": true
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
