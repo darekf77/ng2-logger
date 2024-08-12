@@ -54,7 +54,7 @@
     ]
   },
   "name": "ng2-logger",
-  "version": "18.0.1",
+  "version": "18.0.2",
   "description": "isomorphic logger for browser/server in typescript",
   "repository": {
     "type": "git",
@@ -88,7 +88,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "994a92cb538d649689f5fe4281c80d9e3264b636",
+  "lastBuildTagHash": "b7d60b8a49506f1822e0adedac7c8f1b092f096c",
   "peerDependencies": {},
   "devDependencies": {
     "@angular-builders/custom-webpack": "~18.0.0",
@@ -360,7 +360,7 @@
     "tnp-core": "~18.0.3",
     "tnp-db": "~16.444.14",
     "tnp-helpers": "~16.444.25",
-    "tnp-models": "~16.444.15",
+    "tnp-models": "~18.0.1",
     "ts-debug": "1.3.0",
     "ts-json-schema-generator": "2.3.0-next.5",
     "ts-loader": "2.3.1",
