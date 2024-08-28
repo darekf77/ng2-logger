@@ -1,6 +1,6 @@
-## firedev-logger (ng2-logger) ##
+## taon-logger (ng2-logger) ##
 
-- Part of [firedev.io](https://github.com/darekf77/firedev)
+- Part of [taon.io](https://github.com/darekf77/taon)
 - Isomorphic Logger for TypeScript and JavaScript apps.
 - Purpose:
   + usefull/elegant backend/frontend logger
@@ -28,7 +28,7 @@ First import proper version for your environment:
 
   
 
-Nodejs server (or any firedev's lib/app):
+Nodejs server (or any taon's lib/app):
 
   
 

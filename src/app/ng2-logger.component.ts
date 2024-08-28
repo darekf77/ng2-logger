@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { config } from 'tnp-config';
+import { config } from 'tnp-config/src';
 import { Log } from '../lib';
 
 const log = Log.create('my logger!')

@@ -15,18 +15,18 @@ folder inside project.
 
 1. By using console select menu:
 ```
-firedev test                   # single run
-firedev test:watch             # watch mode
-firedev test:debug             # and start "attach" VSCode debugger
-firedev test:watch:debug       # and start "attach" VSCode debugger
+taon test                   # single run
+taon test:watch             # watch mode
+taon test:debug             # and start "attach" VSCode debugger
+taon test:watch:debug       # and start "attach" VSCode debugger
 ```
 
 2. Directly:
 ```
-firedev mocha                        # single run
-firedev mocha:watch                  # watch mode
-firedev mocha:debug                  # and start "attach" VSCode debugger
-firedev mocha:watch:debug            # and start "attach" VSCode debugger
+taon mocha                        # single run
+taon mocha:watch                  # watch mode
+taon mocha:debug                  # and start "attach" VSCode debugger
+taon mocha:watch:debug            # and start "attach" VSCode debugger
 ```
 
 # Example

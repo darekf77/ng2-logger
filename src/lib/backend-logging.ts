@@ -5,10 +5,10 @@ declare var process: any;
 import { Level } from './level';
 
 //#region @backend
-import { chalk } from 'tnp-core';
+import { chalk } from 'tnp-core/src';
 import * as json5 from 'json5';
 import * as stringify from 'json-stringify-safe';
-import { Helpers } from 'tnp-core';
+import { Helpers } from 'tnp-core/src';
 //#endregion
 
 export function consoleLog(data: string, level: Level) {

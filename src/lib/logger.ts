@@ -1,6 +1,6 @@
 import { Level } from './level';
 import { Display } from './display';
-import { Helpers } from 'tnp-core';
+import { Helpers } from 'tnp-core/src';
 
 export class Logger {
 

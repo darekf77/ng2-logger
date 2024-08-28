@@ -1,4 +1,5 @@
-import { Firedev } from 'firedev';
+// @ts-nocheck
+import { Taon } from 'taon/src';
 import { Observable, map } from 'rxjs';
 //#region @notForNpm
 import { HOST_BACKEND_PORT } from './app.hosts';
@@ -35,18 +36,18 @@ export class Ng2LoggerComponent implements OnInit {
 export class Ng2LoggerModule { }
 //#endregion
 
-@Firedev.Entity({ className: 'User' })
-class User extends Firedev.Base.Entity {
+@Taon.Entity({ className: 'User' })
+class User extends Taon.Base.Entity {
   public static ctrl?: UserController;
   //#region @websql
-  @Firedev.Orm.Column.Generated()
+  @Taon.Orm.Column.Generated()
   //#endregion
   id?: string | number;
 
 }
 
-@Firedev.Controller({ className: 'UserController', entity: User })
-class UserController extends Firedev.Base.Controller<User> {
+@Taon.Controller({ className: 'UserController', entity: User })
+class UserController extends Taon.Base.Controller<User> {
 
   //#region @websql
   async initExampleDbData(): Promise<void> {
@@ -60,7 +61,7 @@ async function start() {
   console.log('Your server will start on port '+ HOST_BACKEND_PORT);
   const host = 'http://localhost:' + HOST_BACKEND_PORT;
 
-  const context = await Firedev.init({
+  const context = await Taon.init({
     host,
     controllers: [
       UserController,
@@ -79,7 +80,7 @@ async function start() {
     //#endregion
   });
 
-  if (Firedev.isBrowser) {
+  if (Taon.isBrowser) {
     const users = (await User.ctrl.getAll().received).body.json;
     console.log({
       'users from backend': users
