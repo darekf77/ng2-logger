@@ -13,6 +13,14 @@ yarn-error.log
 testem.log
 /typings
 app.hosts.ts
+/.firedev
+/.taon
+/.tnp
+/.
+  .map(c => '/' + c)
+  .join('
+')}
+/docs-config.schema.json
 /**/*._auto-generated_.ts
 /**/BUILD-INFO.md
 /linked-repos
