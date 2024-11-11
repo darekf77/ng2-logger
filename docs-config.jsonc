@@ -1,0 +1,14 @@
+{
+  "site_name": "ng2-logger",
+  "externalDocs": {
+    "mdfiles": [],
+    "projects": []
+  },
+  "omitFilesPatters": [],
+  "priorityOrder": [],
+  "mapTitlesNames": {
+    "README.md": "Introduction"
+  },
+  "customCssPath": "custom.css",
+  "customJsPath": "custom.js"
+}
