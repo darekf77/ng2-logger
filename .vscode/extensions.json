@@ -69,6 +69,7 @@
     "ms-vscode-remote.remote-ssh",
     "tomoki1207.pdf",
     "hediet.vscode-drawio",
-    "antfu.file-nesting"
+    "antfu.file-nesting",
+    "thebearingedge.vscode-sql-lit"
   ]
 }
