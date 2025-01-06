@@ -70,8 +70,6 @@
     "tomoki1207.pdf",
     "hediet.vscode-drawio",
     "christian-kohler.path-intellisense",
-    "thebearingedge.vscode-sql-lit",
-    "ms-vscode-remote.remote-wsl",
-    "kgrzywocz.wsl-path"
+    "thebearingedge.vscode-sql-lit"
   ]
 }

@@ -12,21 +12,7 @@
       ],
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js",
-        "!**/node_modules/**",
-        "/Users/dfilipiak/npm/firedev-io/incremental-compiler/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/isomorphic-region-loader/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/json10/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/json10-writer/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/lodash-walk-object/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/magic-renamer/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/static-columns/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-config/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-core/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-helpers/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/firedev-io/tnp-models/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/cli-tools/navi-cli/src/../dist/**/*.js",
-        "/Users/dfilipiak/npm/cli-tools/p1-cli/src/../dist/**/*.js"
+        "!**/node_modules/**"
       ],
       "runtimeArgs": [
         "--nolazy",
