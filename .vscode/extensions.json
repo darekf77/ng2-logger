@@ -47,6 +47,7 @@
     "stepanog.angular1-inline",
     "taddison.gitlazy",
     "unifiedjs.vscode-mdx",
+    "tommasov.hosts",
     "firsttris.vscode-jest-runner",
     "waderyan.gitblame",
     "wenfangdu.snippet-generator",
@@ -67,8 +68,6 @@
     "hediet.vscode-drawio",
     "humao.rest-client",
     "christian-kohler.path-intellisense",
-    "thebearingedge.vscode-sql-lit",
-    "ms-vscode-remote.remote-wsl",
-    "kgrzywocz.wsl-path"
+    "thebearingedge.vscode-sql-lit"
   ]
 }

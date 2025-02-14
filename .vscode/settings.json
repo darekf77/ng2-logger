@@ -2,6 +2,9 @@
   "files.exclude": {
     "**/*____ORIGINAL____.ts": true,
     "_changelog": true,
+    "*.sh": true,
+    "*.xlsx": true,
+    "scripts": true,
     "webpack.backend-dist-build.js": true,
     "**/node_modules": true,
     "**/tmp*": true,
@@ -27,6 +30,7 @@
     "**/index.js": true,
     "**/index.d.ts": true,
     "**/index.js.map": true,
+    "**/taon-config.schema.json": true,
     "**/webpack.config.js": true,
     "**/webpack.backend-dist-build.js": true,
     "**/run.js": true,
@@ -36,6 +40,7 @@
     "**/tsconfig.browser.json.filetemplate": true,
     "**/tsconfig.json.filetemplate": true,
     "**/tsconfig.backend.dist.json.filetemplate": true,
+    "**/projects/tmp*": true,
     "**/.gitignore": true,
     "**/.npmignore": true,
     "**/.babelrc": true,
@@ -141,12 +146,13 @@
   "search.include": [
     "**/src/**"
   ],
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "/docs-config.jsonc"
-      ],
-      "url": "./docs-config.schema.json"
-    }
-  ]
+  "json.schemas": [{
+    "fileMatch": [
+      "/docs-config.jsonc"
+    ],
+    "url": "./docs-config.schema.json"
+  }, {
+    "fileMatch": ["/taon.jsonc"],
+    "url": "./taon-config.schema.json"
+  }]
 }

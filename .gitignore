@@ -17,6 +17,7 @@ app.hosts.ts
 /.taon
 /.tnp
 /docs-config.schema.json
+/taon-config.schema.json
 /**/*._auto-generated_.ts
 /**/BUILD-INFO.md
 /linked-repos
@@ -53,10 +54,15 @@ Thumbs.db
 /index.js
 /index.d.ts
 /index.js.map
+/taon-config.schema.json
 /webpack.config.js
 /webpack.backend-dist-build.js
 /run.js
 /run-org.js
+/projects/tmp*
+!tsconfig*
+!webpack.*
+
 # =====================
 !taon.jsonc
 *.filetemplate
