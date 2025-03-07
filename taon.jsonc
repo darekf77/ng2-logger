@@ -43,6 +43,7 @@
   },
 
   "homepage": "https://github.com/darekf77/ng2-logger#readme",
+
   "keywords": [
     "isomorphic",
     "logger",
@@ -51,4 +52,6 @@
     "log",
     "typescript",
   ],
+
+  "packageJsonOverride": {}
 }

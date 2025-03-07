@@ -51,7 +51,8 @@
       "logowanie",
       "log",
       "typescript"
-    ]
+    ],
+    "packageJsonOverride": {}
   },
   "name": "ng2-logger",
   "version": "18.0.22",
