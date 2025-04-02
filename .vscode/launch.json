@@ -47,6 +47,24 @@
       "skipFiles": [
         "<node_internals>/**"
       ]
+    },
+    {
+      "name": "Debug/Start Vscode Plugin",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/tmp-vscode-proj/development/ng2-logger"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/tmp-vscode-proj/development/ng2-logger/out/**/*.js"
+      ],
+      "preLaunchTask": "Update package.json vscode metadata"
     }
   ],
   "compounds": [

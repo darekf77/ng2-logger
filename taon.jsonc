@@ -1,57 +1,28 @@
 {
-  "resources": ["README.md", "screen.png", "server.png"],
-
-  "overrided": {
-    "includeAsDev": [],
-    "includeOnly": [
-      "chalk",
-      "json-stringify-safe",
-      "json5",
-      "randomcolor",
-      "tnp-config",
-    ],
-    "dependencies": {},
-    "ignoreDepsPattern": [],
-    "linkedFolders": [],
-    "npmFixes": [],
-  },
-
-  "smartContainerBuildTarget": "",
-  "linkedRepos": [],
-
-  "libReleaseOptions": {
-    "nodts": false,
-    "obscure": false,
-    "ugly": false,
-    "includeNodeModules": false,
-    "cliBuildNoDts": false,
-    "cliBuildObscure": false,
-    "cliBuildIncludeNodeModules": false,
-    "cliBuildUglify": false,
-  },
-
-  "smartContainerTarget": "",
   "type": "isomorphic-lib",
   "version": "v18",
+  "dependenciesNamesForNpmLib": ["chalk", "json-stringify-safe", "json5", "randomcolor", "tnp-config"],
   "additionalNpmNames": ["taon-logger"],
-  "description": "isomorphic logger for browser/server in typescript",
-  "license": "MIT",
-  "private": false,
+  "resources": ["README.md", "screen.png", "server.png"],
 
-  "author": {
-    "name": "Dariusz Filipiak",
-  },
+  "packageJsonOverride": {
+    "author": {
+      "name": "Dariusz Filipiak"
+    },
 
-  "homepage": "https://github.com/darekf77/ng2-logger#readme",
+    "bugs": {
+      "url": "https://github.com/darekf77/ng2-logger/issues"
+    },
 
-  "keywords": [
-    "isomorphic",
-    "logger",
-    "logging",
-    "logowanie",
-    "log",
-    "typescript",
-  ],
+    "description": "isomorphic logger for browser/server in typescript",
+    "homepage": "https://github.com/darekf77/ng2-logger#readme",
+    "keywords": ["isomorphic", "logger", "logging", "logowanie", "log", "typescript"],
+    "license": "MIT",
+    "private": false,
 
-  "packageJsonOverride": {}
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/darekf77/ng2-logger.git"
+    }
+  }
 }
