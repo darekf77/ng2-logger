@@ -3,19 +3,16 @@
   "compilerOptions": {
     "declaration": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "importHelpers": true,
     "moduleResolution": "node",
     "module": "commonjs",
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "es2017",
-    "downlevelIteration": true,
+    "target": "es2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2017",
+      "es2022",
       "dom"
     ],
     "types": [

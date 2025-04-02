@@ -66,6 +66,8 @@
     "hediet.vscode-drawio",
     "humao.rest-client",
     "christian-kohler.path-intellisense",
-    "thebearingedge.vscode-sql-lit"
+    "thebearingedge.vscode-sql-lit",
+    "ms-vscode-remote.remote-wsl",
+    "kgrzywocz.wsl-path"
   ]
 }
