@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "18.0.22",
+  "version": "18.0.23",
   "license": "MIT",
   "author": {
     "name": "Dariusz Filipiak"
@@ -154,6 +154,7 @@
     "express": "~4.19.2",
     "express-fileupload": "~1.4.0",
     "express-session": "~1.18.0",
+    "fast-glob": "~3.3.2",
     "file-loader": "~1.1.11",
     "file-saver": "2.0.5",
     "file-type": "~19.1.1",
@@ -335,5 +336,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
-  }
+  },
+  "bin": {}
 }

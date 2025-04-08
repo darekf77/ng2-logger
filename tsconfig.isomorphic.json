@@ -36,7 +36,6 @@
     "examples",
     "browser",
     "module",
-    "tmp-src",
     "src/tests",
     "src/assets",
     "src/**/*.spec.ts",
