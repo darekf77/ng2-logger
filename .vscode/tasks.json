@@ -2,50 +2,36 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "terminateall",
-      "command": "echo ${input:terminate}",
+      "label": "Update package.json vscode metadata",
       "type": "shell",
-      "problemMatcher": []
-    },
-    {
-      "label": "Ng Serve",
-      "type": "shell",
-      "command": "taon build",
-      "isBackground": true,
+      "command": "cd tmp-vscode-proj/development/ng2-logger && node --no-deprecation update-vscode-package-json.js app.vscode",
       "presentation": {
-        "reveal": "always"
+        "reveal": "always",
+        "panel": "shared"
       },
+      "problemMatcher": [
+        {
+          "owner": "custom",
+          "pattern": [
+            {
+              "regexp": "^(.*)$",
+              "file": 1,
+              "line": 1,
+              "column": 1,
+              "message": 1
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "Update package.json vscode plugin metadata...",
+            "endsPattern": "Done update package.json"
+          }
+        }
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "problemMatcher": {
-        "owner": "typescript",
-        "source": "ts",
-        "applyTo": "closedDocuments",
-        "fileLocation": [
-          "relative",
-          "${cwd}"
-        ],
-        "pattern": "$tsc",
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": {
-            "regexp": "(.*?)"
-          },
-          "endsPattern": {
-            "regexp": "Compiled |Failed to compile."
-          }
-        }
       }
-    }
-  ],
-  "inputs": [
-    {
-      "id": "terminate",
-      "type": "command",
-      "command": "workbench.action.tasks.terminate",
-      "args": "terminateAll"
     }
   ]
 }
