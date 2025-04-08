@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "strictNullChecks": false,
     "rootDir": "./src",
     "paths": {
