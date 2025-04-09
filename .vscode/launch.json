@@ -15,11 +15,7 @@
         "!**/node_modules/**"
       ],
       "runtimeArgs": [
-        "--nolazy",
-        "-r",
-        "ts-node/register",
-        "--preserve-symlinks",
-        "--experimental-worker"
+        "--preserve-symlinks"
       ]
     },
     {
@@ -43,6 +39,7 @@
       "type": "node",
       "request": "attach",
       "name": "Attach to global cli tool",
+      "autoAttachChildProcesses": false,
       "port": 9229,
       "skipFiles": [
         "<node_internals>/**"
