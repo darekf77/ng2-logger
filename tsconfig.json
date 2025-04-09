@@ -1,10 +1,16 @@
 {
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
     "strictNullChecks": false,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "paths": {
+      "ng2-logger": [
+        "./src/lib"
+      ],
+      "ng2-logger/*": [
+        "./src/lib/*"
+      ]
+    }
   },
   "include": [
     "src/**/*"
