@@ -1,6 +1,6 @@
 {
   "type": "isomorphic-lib",
-  "version": "v18",
+  "version": "v19",
   "dependenciesNamesForNpmLib": ["chalk", "json-stringify-safe", "json5", "randomcolor", "tnp-config"],
   "additionalNpmNames": ["taon-logger"],
 

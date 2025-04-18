@@ -16,8 +16,7 @@
       "dom"
     ],
     "types": [
-      "node",
-      "jest"
+      "node"
     ],
     "rootDir": "./tmp-src",
     "outDir": "dist"
