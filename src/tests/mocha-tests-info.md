@@ -1,4 +1,4 @@
-THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
+THIS FILE IS GENERATED - DO NOT MODIFY
 
 # Purpose of this folder
 Put your backend **mocha** tests (with *.test.ts extension) in this folder or any other *tests*
@@ -43,6 +43,6 @@ describe('Set name for function or class', () => {
 });
 ```
 
-THIS FILE IS GENERATED.THIS FILE IS GENERATED. THIS FILE IS GENERATED.
+THIS FILE IS GENERATED - DO NOT MODIFY
 
           

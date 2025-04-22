@@ -17,7 +17,6 @@ app.hosts.ts
 /.taon
 /.tnp
 /docs-config.schema.json
-/**/*._auto-generated_.ts
 /**/BUILD-INFO.md
 /tests-environments
 /src/lib/lib-info.md
@@ -53,7 +52,6 @@ Thumbs.db
 /taon-config-standalone.schema.json
 /taon-config-container.schema.json
 /webpack.config.js
-/webpack.backend-dist-build.js
 /run.js
 /run-org.js
 /update-vscode-package-json.js
