@@ -152,9 +152,9 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "/docs-config.jsonc"
+        "/taon.jsonc"
       ],
-      "url": "./docs-config.schema.json"
+      "url": "./taon-config-standalone.schema.json"
     },
     {
       "fileMatch": [

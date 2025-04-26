@@ -5379,8 +5379,11 @@
         "v3",
         "v4",
         "v16",
+        "v18",
         "v19",
-        "v20"
+        "v20",
+        "v21",
+        "v22"
       ]
     },
     "JsonValue": {
@@ -6287,12 +6290,24 @@
         "skip": {
           "type": "boolean",
           "description": "skip release of this artifact"
+        },
+        "releaseType": {
+          "$ref": "#/definitions/ReleaseType"
         }
       },
       "required": [
         "artifactName"
       ],
       "additionalProperties": false
+    },
+    "ReleaseType": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "local",
+        "cloud",
+        "static-pages"
+      ]
     }
   }
 }
