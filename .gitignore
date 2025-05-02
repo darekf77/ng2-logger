@@ -46,16 +46,6 @@ Thumbs.db
 /npm-debug.log*
 /.sass-cache
 /.sourcemaps
-/index.js
-/index.d.ts
-/index.js.map
-/taon-config-standalone.schema.json
-/taon-config-container.schema.json
-/webpack.config.js
-/run.js
-/run-org.js
-/update-vscode-package-json.js
-/eslint.config.js
 /projects/tmp*
 !tsconfig*
 !webpack.*

@@ -4,10 +4,16 @@
     "strictNullChecks": false,
     "rootDir": "./src",
     "paths": {
-      "ng2-logger": [
+      "@lib": [
         "./src/lib"
       ],
-      "ng2-logger/*": [
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "ng2-logger/src": [
+        "./src/lib"
+      ],
+      "ng2-logger/src/*": [
         "./src/lib/*"
       ]
     }
