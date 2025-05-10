@@ -24,6 +24,7 @@ app.hosts.ts
 /src/tests/mocha-tests-info.md
 /src/assets/shared/shared_folder_info.txt
 .vscode/launch.json
+/BUILD_INFO.md
 
 # System Files
 .DS_Store
