@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.7",
+  "version": "19.0.8",
   "license": "MIT",
   "author": {
     "name": "Dariusz Filipiak"
@@ -43,6 +43,7 @@
     "@iconify/icons-mdi": "~1.2.48",
     "@inquirer/prompts": "~5.3.8",
     "@mdi/js": "~7.4.47",
+    "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@ng-matero/extensions": "~19.3.2",
     "@ngneat/falso": "~7.3.0",
     "@ngneat/hot-toast": "~7.0.0",
@@ -217,7 +218,6 @@
     "mkdirp": "^0.5.1",
     "mocha": "~10.8.2",
     "moment": "~2.30.1",
-    "ng-bootstrap": "^18.0.0",
     "ng-for-track-by-property": "~19.0.1",
     "ng-in-viewport": "~16.1.0",
     "ng-lock": "~19.0.1",
