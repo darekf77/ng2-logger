@@ -1,0 +1,44 @@
+@use './vars.scss' as vars;
+@use 'primeflex/primeflex.scss';
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+// @import "primeng/resources/themes/lara-light-blue/theme.css"; // not needed anymore
+// @import "primeng/resources/primeng.css"; // not needed anymore
+@import 'primeicons/primeicons.css';
+@import 'animate.css/animate.min.css';
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{ vars.$basename }assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2")
+    format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.ng-scroll-content {
+  // TODO QUICK_FIX for modal mode
+  display: block !important;
+}
+
+// TODO QUICK FIX for weird chrome padding
+body {
+  margin: 0px !important;
+  overflow: hidden;
+}
