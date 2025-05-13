@@ -5282,6 +5282,13 @@
           },
           "additionalProperties": false
         },
+        "removeAfterPullingFromGit": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Folders to remove after pulling from git. Usefull when you have some folders that are not needed in git but there just waiting to be deleted after pulling from git. This may be useful after refactor/moving huge folders around."
+        },
         "overrided": {
           "type": "object",
           "properties": {
@@ -6278,6 +6285,8 @@
             "uat",
             "preprod",
             "demo",
+            "docs",
+            "static-pages",
             "ci",
             "training"
           ],
@@ -6292,7 +6301,8 @@
           "description": "skip release of this artifact"
         },
         "releaseType": {
-          "$ref": "#/definitions/ReleaseType"
+          "$ref": "#/definitions/ReleaseType",
+          "description": "select release type for automatic release"
         }
       },
       "required": [
