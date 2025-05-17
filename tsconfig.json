@@ -2,7 +2,7 @@
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
     "strictNullChecks": false,
-    "rootDir": "./src",
+    "rootDir": "./",
     "paths": {
       "@lib": [
         "./src/lib"
@@ -16,10 +16,15 @@
       "ng2-logger/src/*": [
         "./src/lib/*"
       ]
-    }
+    },
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "environments/**/*.ts",
+    "env.ts"
   ],
   "exclude": [
     "src/assets"
