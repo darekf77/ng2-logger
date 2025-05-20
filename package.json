@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.14",
+  "version": "19.0.15",
   "license": "MIT",
   "author": {
     "name": "Dariusz Filipiak"
@@ -341,6 +341,7 @@
     "log",
     "typescript"
   ],
+  "main": "dist/app.electron.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
