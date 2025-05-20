@@ -1,6 +1,6 @@
 // THIS FILE IS GENERATED - DO NOT MODIFY
 export const BUILD_FRAMEWORK_CLI_NAME = 'tnp';
 export const PROJECT_NPM_NAME = 'ng2-logger';
-export const CURRENT_PACKAGE_VERSION = '19.0.15';
+export const CURRENT_PACKAGE_VERSION = '19.0.17';
 // THIS FILE IS GENERATED - DO NOT MODIFY
       
