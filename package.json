@@ -1,6 +1,25 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.15",
+  "version": "19.0.16",
+  "scripts": {
+    "taon init": "taon init",
+    "taon start": "taon start",
+    "taon build:lib": "taon build:lib",
+    "taon build:watch:lib": "taon build:watch:lib",
+    "taon build:watch:app": "taon build:watch:app",
+    "taon build:watch:electron": "taon build:watch:electron",
+    "taon docs": "taon docs",
+    "taon docs:watch": "taon docs:watch",
+    "taon clear": "taon clear",
+    "taon release": "taon release",
+    "taon release:auto": "taon release:auto",
+    "taon release:install:locally": "taon release:install:locally",
+    "taon migration:create": "taon migration:create",
+    "taon migration:run": "taon migration:run",
+    "taon migration:revert": "taon migration:revert",
+    "taon vscode:temp:show": "taon vscode:temp:show",
+    "taon vscode:temp:hide": "taon vscode:temp:hide"
+  },
   "license": "MIT",
   "author": {
     "name": "Dariusz Filipiak"
