@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.18",
+  "version": "19.0.19",
   "scripts": {
     "taon build:lib": "taon build:lib",
     "taon build:watch:app": "taon build:watch:app",
@@ -166,7 +166,6 @@
     "electron": "30.0.1",
     "electron-builder": "24.13.3",
     "electron-debug": "3.2.0",
-    "electron-reloader": "1.2.3",
     "element-resize-detector": "~1.2.4",
     "enquirer": "2.4.1",
     "enum-values": "1.2.1",
