@@ -62,7 +62,9 @@
     "**/index.js.map": true
   },
   "workbench.colorCustomizations": {
-    "activityBar.background": "#c2d137"
+    "activityBar.background": "#c2d137",
+    "statusBar.background": "#dfc24e",
+    "statusBar.debuggingBackground": "#15d8ff"
   },
   "editor.rulers": [
     80,

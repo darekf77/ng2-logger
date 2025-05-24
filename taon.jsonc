@@ -30,24 +30,6 @@
       "url": "git+https://github.com/darekf77/ng2-logger.git"
     },
 
-    "scripts": {
-      "taon build:lib": "taon build:lib",
-      "taon build:watch:app": "taon build:watch:app",
-      "taon build:watch:electron": "taon build:watch:electron",
-      "taon build:watch:lib": "taon build:watch:lib",
-      "taon clear": "taon clear",
-      "taon docs": "taon docs",
-      "taon docs:watch": "taon docs:watch",
-      "taon init": "taon init",
-      "taon migration:create": "taon migration:create",
-      "taon migration:revert": "taon migration:revert",
-      "taon migration:run": "taon migration:run",
-      "taon release": "taon release",
-      "taon release:auto": "taon release:auto",
-      "taon release:install:locally": "taon release:install:locally",
-      "taon start": "taon start",
-      "taon vscode:temp:hide": "taon vscode:temp:hide",
-      "taon vscode:temp:show": "taon vscode:temp:show"
-    }
+    "scripts": {}
   }
 }
