@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.21",
+  "version": "19.0.22",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -366,10 +366,5 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
-  "bin": {},
-  "exports": {
-    ".": {
-      "style": "./scss/index.scss"
-    }
-  }
+  "bin": {}
 }
