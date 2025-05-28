@@ -1,24 +1,24 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.20",
+  "version": "19.0.21",
   "scripts": {
+    "taon init": "taon init",
+    "taon start": "taon start",
     "taon build:lib": "taon build:lib",
+    "taon build:watch:lib": "taon build:watch:lib",
     "taon build:watch:app": "taon build:watch:app",
     "taon build:watch:electron": "taon build:watch:electron",
-    "taon build:watch:lib": "taon build:watch:lib",
-    "taon clear": "taon clear",
     "taon docs": "taon docs",
     "taon docs:watch": "taon docs:watch",
-    "taon init": "taon init",
-    "taon migration:create": "taon migration:create",
-    "taon migration:revert": "taon migration:revert",
-    "taon migration:run": "taon migration:run",
+    "taon clear": "taon clear",
     "taon release": "taon release",
     "taon release:auto": "taon release:auto",
     "taon release:install:locally": "taon release:install:locally",
-    "taon start": "taon start",
-    "taon vscode:temp:hide": "taon vscode:temp:hide",
-    "taon vscode:temp:show": "taon vscode:temp:show"
+    "taon migration:create": "taon migration:create",
+    "taon migration:run": "taon migration:run",
+    "taon migration:revert": "taon migration:revert",
+    "taon vscode:temp:show": "taon vscode:temp:show",
+    "taon vscode:temp:hide": "taon vscode:temp:hide"
   },
   "license": "MIT",
   "author": {
@@ -164,7 +164,7 @@
     "diff": "~4.0.2",
     "dockerode": "~4.0.5",
     "electron": "30.0.1",
-    "electron-builder": "24.13.3",
+    "electron-builder": "~26.0.12",
     "electron-debug": "3.2.0",
     "element-resize-detector": "~1.2.4",
     "enquirer": "2.4.1",
@@ -316,6 +316,7 @@
     "taon-storage": "~19.0.0",
     "taon-type-sql": "~19.0.0",
     "taon-typeorm": "~19.0.0",
+    "taon-ui": "~19.0.2",
     "task.js": "^0.1.5",
     "threads": "1.7.0",
     "tnp": "~19.0.1",
@@ -365,5 +366,10 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
-  "bin": {}
+  "bin": {},
+  "exports": {
+    ".": {
+      "style": "./scss/index.scss"
+    }
+  }
 }
