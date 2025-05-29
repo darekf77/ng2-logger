@@ -5307,6 +5307,10 @@
           "type": "string",
           "description": "override npm name for build/relese"
         },
+        "numberOfContexts": {
+          "type": "number",
+          "description": "Number of contexts for this project. (default 2) Number can't be less than 2. This property tells taon how many ports/variables needs to be assigned inside app.hosts.ts"
+        },
         "overrideNameWhenInsideOrganization": {
           "type": "string",
           "description": "it override name of project when is inside container that is organization.\n\nProperty \"overrideNpmName\" can override this name."
