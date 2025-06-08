@@ -5307,6 +5307,10 @@
           "type": "string",
           "description": "override npm name for build/relese"
         },
+        "appId": {
+          "type": "string",
+          "description": "Application ID for standalone project. This is used to identify the application inside application stores,"
+        },
         "numberOfContexts": {
           "type": "number",
           "description": "Number of contexts for this project. (default 2) Number can't be less than 2. This property tells taon how many ports/variables needs to be assigned inside app.hosts.ts"

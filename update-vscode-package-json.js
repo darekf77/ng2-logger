@@ -3,16 +3,14 @@ const fs = require('fs');
 const path = require('path');
 const dateformat = require('dateformat');
 const outFolder = path.join(process.cwd(), 'out');
-const fileName =  process.argv[2] || 'extension';
+const fileName = process.argv[2] || 'extension';
 
-console.log('Update package.json vscode plugin metadata...')
+console.log('Update package.json vscode plugin metadata...');
 
 const params = require('minimist')(process.argv);
 
 if (params.watch) {
   const chokidar = require('chokidar');
-
-  // One-liner for current directory
   chokidar.watch([`${outFolder}/**/*.js`]).on('all', (event, path) => {
     console.log(`${dateformat(new Date(), 'HH:MM:ss')} updating package.json`);
     updatePackageJson();
@@ -21,37 +19,62 @@ if (params.watch) {
   updatePackageJson();
 }
 
-
 function updatePackageJson() {
-  const pathToConfig = path.join(process.cwd(), 'out/'+ fileName);
-  // console.log(fs.readFileSync(pathToConfig + '.js', { encoding: 'utf8' }))
+  const pathToConfig = path.join(process.cwd(), 'out', fileName);
   const extModule = require(pathToConfig).default;
-  // console.log({extModule})
-  const  commands  = extModule.commands || [];
-  console.log(commands.map(t => t.title))
+  const commands = extModule.commands || [];
+
+  console.log('Commands:', commands.map(t => t.title));
+
   const pkgjsonpath = path.join(process.cwd(), 'package.json');
-  const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, { encoding: 'utf8' }));
+  const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, 'utf8'));
 
   pkgjson.contributes = pkgjson.contributes || {};
-  pkgjson.contributes.commands = pkgjson.contributes.commands || [];
+  pkgjson.contributes.commands = [];
+  pkgjson.contributes.submenus = [];
+  pkgjson.contributes.menus = pkgjson.contributes.menus || {};
+  pkgjson.contributes.menus["explorer/context"] = [];
+  pkgjson.contributes.menus["editor/title/context"] = [];
   pkgjson.contributes.menus = pkgjson.contributes.menus || {};
 
-  pkgjson.contributes.commands = commands.map(c => {
-    return { command: c.command, title: c.title };
-  });
+  const visibleCommands = commands.filter(c => !c.hideContextMenu);
+  const groups = _.uniq(visibleCommands.map(c => c.group).filter(Boolean));
 
-  pkgjson.contributes.menus["explorer/context"] = commands
-    .filter(c => !c.hideContextMenu)
-    .map(c => {
-      return { command: c.command };
+  // Define submenus
+  pkgjson.contributes.submenus = groups.map(group => ({
+    id: `${_.kebabCase(group)}.submenu`,
+    label: group
+  }));
+
+  // Define all commands
+  pkgjson.contributes.commands = commands.map(c => ({
+    command: c.command,
+    title: c.title
+  }));
+
+  // Attach submenu triggers to context menus
+  for (const group of groups) {
+    const submenuId = `${_.kebabCase(group)}.submenu`;
+    pkgjson.contributes.menus["explorer/context"].push({
+      submenu: submenuId,
+      group: "navigation"
     });
-
-  pkgjson.contributes.menus["editor/title/context"] = commands
-    .filter(c => !c.hideContextMenu)
-    .map(c => {
-      return { command: c.command, group: c.group };
+    pkgjson.contributes.menus["editor/title/context"].push({
+      submenu: submenuId,
+      group: "navigation"
     });
+  }
 
-  fs.writeFileSync(pkgjsonpath, JSON.stringify(pkgjson, null, 2), { encoding: 'utf8' });
+  // Place each command into its corresponding submenu
+  for (const group of groups) {
+    const submenuId = `${_.kebabCase(group)}.submenu`;
+    const groupCommands = visibleCommands.filter(c => c.group === group);
+
+    pkgjson.contributes.menus[submenuId] = groupCommands.map(c => ({
+      command: c.command
+    }));
+  }
+
+  fs.writeFileSync(pkgjsonpath, JSON.stringify(pkgjson, null, 2), 'utf8');
   console.log('Done update package.json');
 }
