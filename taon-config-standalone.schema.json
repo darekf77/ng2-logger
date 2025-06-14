@@ -5348,6 +5348,13 @@
           },
           "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
         },
+        "electronNativeDependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Electron native dependencies that can be bundled into single index.js backend file with esbuild/ncc - BUT can be installed inside node_modules and later shipped with whole node_modules folder into electron app."
+        },
         "additionalNpmNames": {
           "type": "array",
           "items": {
@@ -5378,6 +5385,7 @@
       },
       "required": [
         "dependenciesNamesForNpmLib",
+        "electronNativeDependencies",
         "isCoreProject",
         "packageJsonOverride",
         "peerDependenciesNamesForNpmLib",

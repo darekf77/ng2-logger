@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.28",
+  "version": "19.0.29",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -30,6 +30,7 @@
     "url": "https://github.com/darekf77/ng2-logger/issues"
   },
   "dependencies": {
+    "7zip-bin": "~5.2.0",
     "@angular-builders/custom-webpack": "~19.0.1",
     "@angular-devkit/build-angular": "~19.2.8",
     "@angular-devkit/core": "~19.2.8",
@@ -271,6 +272,7 @@
     "ngx-scrolltop": "~19.0.2",
     "ngx-store": "3.1.1",
     "ngx-typed-js": "2.1.1",
+    "node-7z": "~3.0.0",
     "node-cli-tester": "~19.0.0",
     "node-localstorage": "2.1.6",
     "node-notifier": "~10.0.1",

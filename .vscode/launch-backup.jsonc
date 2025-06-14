@@ -7,10 +7,7 @@
       "request": "launch",
       "name": "Debug/Start Server",
       "program": "${workspaceFolder}/run.js",
-      "args": [
-        "port=4504",
-        "--ENVoverride=%7B%0A%20%20%20%20%22clientProjectName%22%3A%20%22ng2-logger%22%0A%7D "
-      ],
+      "args": [],
       "runtimeArgs": [
         "--preserve-symlinks"
       ]
@@ -26,7 +23,7 @@
       "runtimeArgs": [
         "--serve",
         ".",
-        "--remote-debugging-port=9880"
+        "--remote-debugging-port=3017"
       ],
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
@@ -58,14 +55,6 @@
       "preLaunchTask": "Update package.json vscode metadata"
     }
   ],
-  "compounds": [
-    {
-      "name": "Debug/Start (Server + Electron)",
-      "configurations": [
-        "Debug/Start Server",
-        "Debug/Start Electron"
-      ]
-    }
-  ]
+  "compounds": []
 }
 // THIS FILE IS GENERATED - DO NOT MODIFY

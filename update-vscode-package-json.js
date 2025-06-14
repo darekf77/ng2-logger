@@ -24,7 +24,7 @@ function updatePackageJson() {
   const extModule = require(pathToConfig).default;
   const commands = extModule.commands || [];
 
-  console.log('Commands:', commands.map(t => t.title));
+  console.log('Commands:', commands.map(t => `${t.group}: ${t.title}`).sort( (a,b) => a.localeCompare(b) ) );
 
   const pkgjsonpath = path.join(process.cwd(), 'package.json');
   const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, 'utf8'));
