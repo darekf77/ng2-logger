@@ -5355,6 +5355,43 @@
           },
           "description": "Electron native dependencies that can be bundled into single index.js backend file with esbuild/ncc - BUT can be installed inside node_modules and later shipped with whole node_modules folder into electron app."
         },
+        "singleFileBundlingExternals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Description of external package\n- why it is external\n- what is it used for etc."
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "replaceWithNothing": {
+                "type": "boolean",
+                "description": "replace with nothing require('packageName') - if still is somewhere is final code"
+              },
+              "artifactName": {
+                "type": "string",
+                "enum": [
+                  "npm-lib-and-cli-tool",
+                  "angular-node-app",
+                  "electron-app",
+                  "mobile-app",
+                  "vscode-plugin",
+                  "docs-webapp"
+                ],
+                "description": "Without artifact name - all artifacts will use this pacakge as external"
+              }
+            },
+            "required": [
+              "description",
+              "packageName"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Provide externals for bundling ts code into single .js file (external packages that are not going to be bundled)"
+        },
         "additionalNpmNames": {
           "type": "array",
           "items": {
@@ -5390,6 +5427,7 @@
         "packageJsonOverride",
         "peerDependenciesNamesForNpmLib",
         "shouldGenerateAutogenIndexFile",
+        "singleFileBundlingExternals",
         "type"
       ],
       "additionalProperties": false
