@@ -5278,6 +5278,15 @@
                   ]
                 }
               ]
+            },
+            "lastBuildTagHash": {
+              "type": "string"
+            },
+            "publisher": {
+              "type": "string"
+            },
+            "displayName": {
+              "type": "string"
             }
           },
           "additionalProperties": false
