@@ -23,7 +23,7 @@
       "runtimeArgs": [
         "--serve",
         ".",
-        "--remote-debugging-port=9882"
+        "--remote-debugging-port=9888"
       ],
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
@@ -34,10 +34,10 @@
       "request": "attach",
       "name": "Attach to global cli tool",
       "autoAttachChildProcesses": false,
-      "port": 9229,
       "skipFiles": [
         "<node_internals>/**"
-      ]
+      ],
+      "port": 9222
     },
     {
       "name": "Debug/Start Vscode Plugin",

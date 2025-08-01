@@ -5278,6 +5278,15 @@
                   ]
                 }
               ]
+            },
+            "lastBuildTagHash": {
+              "type": "string"
+            },
+            "publisher": {
+              "type": "string"
+            },
+            "displayName": {
+              "type": "string"
             }
           },
           "additionalProperties": false
@@ -5348,14 +5357,7 @@
           },
           "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
         },
-        "electronNativeDependencies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Electron native dependencies that can be bundled into single index.js backend file with esbuild/ncc - BUT can be installed inside node_modules and later shipped with whole node_modules folder into electron app."
-        },
-        "singleFileBundlingExternals": {
+        "singleFileBundlingPackages": {
           "type": "array",
           "items": {
             "type": "object",
@@ -5365,23 +5367,20 @@
                 "description": "Description of external package\n- why it is external\n- what is it used for etc."
               },
               "packageName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of package that is external"
+              },
+              "isExternalFor": {
+                "$ref": "#/definitions/Models.TaonArtifactInclude",
+                "description": "Specify for which artifacts this package is external"
               },
               "replaceWithNothing": {
-                "type": "boolean",
+                "$ref": "#/definitions/Models.TaonArtifactInclude",
                 "description": "replace with nothing require('packageName') - if still is somewhere is final code"
               },
-              "artifactName": {
-                "type": "string",
-                "enum": [
-                  "npm-lib-and-cli-tool",
-                  "angular-node-app",
-                  "electron-app",
-                  "mobile-app",
-                  "vscode-plugin",
-                  "docs-webapp"
-                ],
-                "description": "Without artifact name - all artifacts will use this pacakge as external"
+              "includeInBundleNodeModules": {
+                "$ref": "#/definitions/Models.TaonArtifactInclude",
+                "description": "only for native stuff that can't be minified and needs to be included in bundle. Taon will perform npm install for all packages marked with this"
               }
             },
             "required": [
@@ -5390,7 +5389,7 @@
             ],
             "additionalProperties": false
           },
-          "description": "Provide externals for bundling ts code into single .js file (external packages that are not going to be bundled)"
+          "description": "Provide information about external packages for single file bundling process"
         },
         "additionalNpmNames": {
           "type": "array",
@@ -5403,10 +5402,6 @@
         "isUsingOwnNodeModulesInsteadCoreContainer": {
           "type": "boolean",
           "description": "Project is using own node_modules instead of core container"
-        },
-        "usesItsOwnNodeModules": {
-          "type": "boolean",
-          "deprecated": "use isUsingOwnNodeModulesInsteadCoreContainer"
         },
         "shouldGenerateAutogenIndexFile": {
           "type": "boolean",
@@ -5422,12 +5417,11 @@
       },
       "required": [
         "dependenciesNamesForNpmLib",
-        "electronNativeDependencies",
         "isCoreProject",
         "packageJsonOverride",
         "peerDependenciesNamesForNpmLib",
         "shouldGenerateAutogenIndexFile",
-        "singleFileBundlingExternals",
+        "singleFileBundlingPackages",
         "type"
       ],
       "additionalProperties": false
@@ -6311,6 +6305,28 @@
       },
       "additionalProperties": false,
       "description": "An alternative configuration for workspaces."
+    },
+    "Models.TaonArtifactInclude": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "npm-lib-and-cli-tool",
+              "angular-node-app",
+              "electron-app",
+              "mobile-app",
+              "vscode-plugin",
+              "docs-webapp"
+            ]
+          }
+        },
+        {
+          "type": "string",
+          "const": "*"
+        }
+      ]
     },
     "Models.TaonAutoReleaseItem": {
       "type": "object",

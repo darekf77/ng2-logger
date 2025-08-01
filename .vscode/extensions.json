@@ -47,6 +47,7 @@
     "taddison.gitlazy",
     "unifiedjs.vscode-mdx",
     "tommasov.hosts",
+    "franklinteixeira205.primeflex",
     "firsttris.vscode-jest-runner",
     "wenfangdu.snippet-generator",
     "xabikos.javascriptsnippets",
@@ -68,6 +69,7 @@
     "christian-kohler.path-intellisense",
     "thebearingedge.vscode-sql-lit",
     "ms-vscode-remote.remote-wsl",
-    "kgrzywocz.wsl-path"
+    "kgrzywocz.wsl-path",
+    "imgildev.vscode-angular-generator"
   ]
 }
