@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.33",
+  "version": "19.0.34",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -265,6 +265,7 @@
     "ngx-progressbar": "~14.0.0",
     "ngx-scrollbar": "~18.0.0",
     "ngx-scrolltop": "~19.0.2",
+    "ngx-spinner ": "~19.0.0",
     "ngx-store": "3.1.1",
     "ngx-typed-js": "2.1.1",
     "node-7z": "~3.0.0",
