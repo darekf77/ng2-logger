@@ -5,7 +5,7 @@ path,
 //#region @backend
 fse
 //#endregion
-} from 'tnp-core';
+} from 'tnp-core/src';
 //#region @backend
 import { app, BrowserWindow, screen } from 'electron';
 

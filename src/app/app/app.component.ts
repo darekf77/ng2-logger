@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Log, Level } from 'ng2-logger';
+import { Log, Level } from 'ng2-logger/src';
 
 const log = Log.create('app component');
 
