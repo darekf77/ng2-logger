@@ -4,6 +4,9 @@ const path = require('path');
 const dateformat = require('dateformat');
 const outFolder = path.join(process.cwd(), 'out');
 const fileName = process.argv[2] || 'extension';
+const { crossPlatformPath } = require('tnp-core/lib');
+const { Project } =  require('tnp/lib');
+const { Helpers } = require('tnp-helpers/lib');
 
 console.log('Update package.json vscode plugin metadata...');
 
@@ -21,26 +24,48 @@ if (params.watch) {
 
 function updatePackageJson() {
   const pathToConfig = path.join(process.cwd(), 'out', fileName);
+  const proj = Project.ins.nearestTo(crossPlatformPath([pathToConfig,'..']));
+  proj.taonJson.saveToDisk('update vscode package.json');
+  proj.taonJson.resources.forEach(r => {
+    const pathToFileOrFolder = proj.pathFor(r);
+    const dest = crossPlatformPath([process.cwd(), r]);
+    if(!Helpers.exists(pathToFileOrFolder)){
+      throw `Resource ${r} not found at ${pathToFileOrFolder}`;
+    }
+    if(Helpers.isFolder(pathToFileOrFolder)){
+      Helpers.copy(pathToFileOrFolder, dest);
+    } else {
+      Helpers.copyFile(pathToFileOrFolder, dest);
+    }
+  } );
+  console.log(`Using project: ${proj?.name} at ${proj?.location}`);
+  delete require.cache[require.resolve(pathToConfig)]; // clear cache in watch mode
   const extModule = require(pathToConfig).default;
   const commands = extModule.commands || [];
 
-  console.log('Commands:', commands.map(t => `${t.group}: ${t.title}`).sort( (a,b) => a.localeCompare(b) ) );
+  console.log(
+    'Commands:',
+    commands.map(t => `${t.group}: ${t.title}`).sort((a, b) => a.localeCompare(b))
+  );
 
   const pkgjsonpath = path.join(process.cwd(), 'package.json');
   const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, 'utf8'));
 
-  pkgjson.contributes = pkgjson.contributes || {};
+  pkgjson.contributes = proj.packageJson.contributes || {};
   pkgjson.contributes.commands = [];
   pkgjson.contributes.submenus = [];
-  pkgjson.contributes.menus = pkgjson.contributes.menus || {};
+  pkgjson.contributes.menus = {};
   pkgjson.contributes.menus["explorer/context"] = [];
   pkgjson.contributes.menus["editor/title/context"] = [];
-  pkgjson.contributes.menus = pkgjson.contributes.menus || {};
 
   const visibleCommands = commands.filter(c => !c.hideContextMenu);
-  const groups = _.uniq(visibleCommands.map(c => c.group).filter(Boolean));
 
-  // Define submenus
+  // split standalone vs grouped
+  const standalone = visibleCommands.filter(c => !c.group);
+  const grouped = visibleCommands.filter(c => c.group);
+  const groups = _.uniq(grouped.map(c => c.group));
+
+  // Define submenus for grouped commands
   pkgjson.contributes.submenus = groups.map(group => ({
     id: `${_.kebabCase(group)}.submenu`,
     label: group
@@ -52,7 +77,19 @@ function updatePackageJson() {
     title: c.title
   }));
 
-  // Attach submenu triggers to context menus
+  // Add standalone commands directly (no submenu)
+  for (const c of standalone) {
+    pkgjson.contributes.menus["explorer/context"].push({
+      command: c.command,
+      group: "navigation"
+    });
+    pkgjson.contributes.menus["editor/title/context"].push({
+      command: c.command,
+      group: "navigation"
+    });
+  }
+
+  // Attach submenu triggers for grouped commands
   for (const group of groups) {
     const submenuId = `${_.kebabCase(group)}.submenu`;
     pkgjson.contributes.menus["explorer/context"].push({
@@ -63,17 +100,16 @@ function updatePackageJson() {
       submenu: submenuId,
       group: "navigation"
     });
+
+    // Put group commands inside submenu
+    pkgjson.contributes.menus[submenuId] = grouped
+      .filter(c => c.group === group)
+      .map(c => ({
+        command: c.command
+      }));
   }
 
-  // Place each command into its corresponding submenu
-  for (const group of groups) {
-    const submenuId = `${_.kebabCase(group)}.submenu`;
-    const groupCommands = visibleCommands.filter(c => c.group === group);
 
-    pkgjson.contributes.menus[submenuId] = groupCommands.map(c => ({
-      command: c.command
-    }));
-  }
 
   fs.writeFileSync(pkgjsonpath, JSON.stringify(pkgjson, null, 2), 'utf8');
   console.log('Done update package.json');

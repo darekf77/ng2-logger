@@ -15,7 +15,7 @@ import {
 //#endregion
 
 console.log('hello world');
-console.log('Your server will start on port '+ HOST_BACKEND_PORT);
+console.log('Your server will start on port ' + HOST_BACKEND_PORT);
 const host = 'http://localhost:' + HOST_BACKEND_PORT;
 const frontendHost =
   'http://localhost:' +
@@ -25,15 +25,20 @@ const frontendHost =
 //#region @browser
 @Component({
   selector: 'app-ng2-logger',
-  template: `hello from ng2-logger<br>
-    Angular version: {{ angularVersion }}<br>
-    <br>
+  template: `hello from ng2-logger<br />
+    Angular version: {{ angularVersion }}<br />
+    <br />
     users from backend
     <ul>
-      <li *ngFor="let user of (users$ | async)"> {{ user | json }} </li>
-    </ul>
-  `,
-  styles: [` body { margin: 0px !important; } `],
+      <li *ngFor="let user of users$ | async">{{ user | json }}</li>
+    </ul> `,
+  styles: [
+    `
+      body {
+        margin: 0px !important;
+      }
+    `,
+  ],
 })
 export class Ng2LoggerComponent {
   angularVersion = VERSION.full;
@@ -46,15 +51,14 @@ export class Ng2LoggerComponent {
 //#region  ng2-logger api service
 //#region @browser
 @Injectable({
-  providedIn:'root'
+  providedIn: 'root',
 })
 export class UserApiService {
-  userController = Taon.inject(()=> MainContext.getClass(UserController))
+  userController = Taon.inject(() => MainContext.getClass(UserController));
   getAll() {
-    return this.userController.getAll()
-      .received
-      .observable
-      .pipe(map(r => r.body.json));
+    return this.userController
+      .getAll()
+      .received.observable.pipe(map(r => r.body.json));
   }
 }
 //#endregion
@@ -67,7 +71,7 @@ export class UserApiService {
   imports: [CommonModule],
   declarations: [Ng2LoggerComponent],
 })
-export class Ng2LoggerModule { }
+export class Ng2LoggerModule {}
 //#endregion
 //#endregion
 
@@ -84,7 +88,7 @@ class User extends Taon.Base.AbstractEntity {
 //#region  ng2-logger controller
 @Taon.Controller({ className: 'UserController' })
 class UserController extends Taon.Base.CrudController<User> {
-  entityClassResolveFn = ()=> User;
+  entityClassResolveFn = () => User;
   //#region @websql
   async initExampleDbData(): Promise<void> {
     const superAdmin = new User();
@@ -96,11 +100,11 @@ class UserController extends Taon.Base.CrudController<User> {
 //#endregion
 
 //#region  ng2-logger context
-var MainContext = Taon.createContext(()=>({
+var MainContext = Taon.createContext(() => ({
   host,
   frontendHost,
   contextName: 'MainContext',
-  contexts:{ BaseContext },
+  contexts: { BaseContext },
   controllers: {
     UserController,
     // PUT TAON CONTROLLERS HERE
@@ -115,12 +119,12 @@ var MainContext = Taon.createContext(()=>({
 //#endregion
 
 async function start() {
-
   await MainContext.initialize();
 
   if (Taon.isBrowser) {
-    const users = (await MainContext.getClassInstance(UserController).getAll().received)
-      .body?.json;
+    const users = (
+      await MainContext.getClassInstance(UserController).getAll().received
+    ).body?.json;
     console.log({
       'users from backend': users,
     });
