@@ -151,9 +151,9 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "/undefined"
+        "/docs-config.jsonc"
       ],
-      "url": "./undefined"
+      "url": "./docs-config.schema.json"
     },
     {
       "fileMatch": [

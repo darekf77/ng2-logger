@@ -26,6 +26,7 @@
 /package-lock.json
 /speed-measure-plugin*.json
 /src/app.hosts.ts
+/src/assets/generated
 /src/assets/shared/shared_folder_info.txt
 /src/lib/env/**/*.*
 /src/lib/lib-info.md
