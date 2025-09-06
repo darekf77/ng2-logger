@@ -24,7 +24,7 @@ if (params.watch) {
 
 function updatePackageJson() {
   const pathToConfig = path.join(process.cwd(), 'out', fileName);
-  const proj = Project.ins.nearestTo(crossPlatformPath([pathToConfig,'..']));
+  const proj = Project.ins.nearestTo(crossPlatformPath([process.cwd(),'..']));
   proj.taonJson.saveToDisk('update vscode package.json');
   proj.taonJson.resources.forEach(r => {
     const pathToFileOrFolder = proj.pathFor(r);

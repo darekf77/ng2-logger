@@ -1,4 +1,4 @@
-.vscode
+/.vscode
 /dist
 /src
 /app
@@ -6,5 +6,5 @@
 /docs
 /preview
 /tests
-tsconfig.json
-npm-debug.log*
+/tsconfig.json
+/npm-debug.log*
