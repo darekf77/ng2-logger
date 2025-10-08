@@ -5343,6 +5343,18 @@
           },
           "description": "Static resurces for standalone project, that are going to be included in release dist"
         },
+        "baseContentUrl": {
+          "type": "string",
+          "description": "Base url for content (docs, md files etc.) Required if README.md has relative pathes to links"
+        },
+        "baseImagesUrl": {
+          "type": "string",
+          "description": "Base url for content (docs, md files etc.) Required if README.md has relative pathes to images"
+        },
+        "storeGeneratedAssetsInRepository": {
+          "type": "boolean",
+          "default": "false\nBy default generated assets from logo.png are not stored\nin repository"
+        },
         "dependenciesNamesForNpmLib": {
           "type": "array",
           "items": {

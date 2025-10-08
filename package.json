@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.41",
+  "version": "19.0.42",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -366,7 +366,7 @@
     "uuid": "~11.1.0",
     "validator": "~13.1.17",
     "video.js": "~8.3.0",
-    "vpn-split": "~18.0.20",
+    "vpn-split": "~19.0.40",
     "vscode": "1.1.37",
     "wait-on": "~8.0.3",
     "webpack": "~5.80",
