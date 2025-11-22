@@ -20,6 +20,7 @@
 /dist-nocutsrc
 /docs-config.schema.json
 /libpeerconnection.log
+/local_release
 /node_modules
 /npm-debug.log
 /npm-debug.log*
