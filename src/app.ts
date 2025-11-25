@@ -4,7 +4,7 @@ import { NgModule, inject, Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { VERSION } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { Taon, BaseContext } from 'taon/src';
+import { Taon, TaonBaseContext } from 'taon/src';
 import { Helpers } from 'tnp-core/src';
 
 import {
@@ -104,7 +104,7 @@ var MainContext = Taon.createContext(() => ({
   host,
   frontendHost,
   contextName: 'MainContext',
-  contexts: { BaseContext },
+  contexts: { TaonBaseContext },
   controllers: {
     UserController,
     // PUT TAON CONTROLLERS HERE
