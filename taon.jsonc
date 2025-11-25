@@ -1,7 +1,7 @@
 {
   "type": "isomorphic-lib",
   "version": "v19",
-  "dependenciesNamesForNpmLib": ["chalk", "json-stringify-safe", "json5", "randomcolor", "tnp-config"],
+  "dependenciesNamesForNpmLib": ["chalk", "json-stringify-safe", "json5", "randomcolor"],
   "additionalNpmNames": ["taon-logger"],
   "appId": "com.domain.example.ng2-logger",
 

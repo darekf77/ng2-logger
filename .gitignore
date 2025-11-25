@@ -16,6 +16,7 @@
 /chrome-profiler-events*.json
 /connect.lock
 /coverage
+/databases/*.sqlite
 /dist
 /dist-nocutsrc
 /docs-config.schema.json
@@ -25,6 +26,7 @@
 /npm-debug.log
 /npm-debug.log*
 /package-lock.json
+/routes/*.rest
 /speed-measure-plugin*.json
 /src/app.hosts.ts
 /src/assets/generated

@@ -17,7 +17,7 @@ export class Ng2LoggerComponent {
   }
 
   constructor() {
-    console.log('tnp-config', config)
+    console.log('tnp-core', config)
   }
 
 }

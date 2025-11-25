@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "19.0.47",
+  "version": "19.0.48",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -204,7 +204,7 @@
     "fkill": "6.1.0",
     "font-awesome": "4.7.0",
     "form-data": "~4.0.2",
-    "fs-extra": "~10",
+    "fs-extra": "~10.1.0",
     "fuzzy": "0.1.3",
     "glob": "^7.1.2",
     "google-libphonenumber": "~3.2.40",
@@ -348,7 +348,6 @@
     "task.js": "^0.1.5",
     "threads": "1.7.0",
     "tnp": "~19.0.1",
-    "tnp-config": "~19.0.0",
     "tnp-core": "~19.0.0",
     "tnp-helpers": "~19.0.0",
     "tnp-models": "~19.0.0",
