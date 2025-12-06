@@ -5353,18 +5353,25 @@
         },
         "storeGeneratedAssetsInRepository": {
           "type": "boolean",
-          "default": "false\r\nBy default generated assets from logo.png are not stored\r\nin repository"
+          "default": "false\nBy default generated assets from logo.png are not stored\nin repository"
         },
         "storeLocalReleaseFilesInRepository": {
           "type": "boolean",
-          "default": "true\r\nBy default local release files are stored in repository"
+          "default": "true\nBy default local release files are stored in repository"
         },
         "dependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this dependencies are going to be included in released npm lib as dependencies."
+          "description": "Non-isomorphic dependencies for npm lib.\n\nAt beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this dependencies are going to be included in released npm lib as dependencies."
+        },
+        "isomorphicDependenciesForNpmLib": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Same as dependenciesNamesForNpmLib but these dependencies are isomorphic (can be used in browser and node)"
         },
         "peerDependenciesNamesForNpmLib": {
           "type": "array",
@@ -5441,6 +5448,7 @@
       "required": [
         "dependenciesNamesForNpmLib",
         "isCoreProject",
+        "isomorphicDependenciesForNpmLib",
         "optionalDependenciesNamesForNpmLib",
         "packageJsonOverride",
         "peerDependenciesNamesForNpmLib",
@@ -6397,10 +6405,19 @@
         "releaseType": {
           "$ref": "#/definitions/ReleaseType",
           "description": "select release type for automatic release"
+        },
+        "taonInstanceIp": {
+          "type": "string",
+          "description": "IP address of taon instance where to release"
+        },
+        "itemFriendlyName": {
+          "type": "string",
+          "description": "friendly name of item in auto release list configuration"
         }
       },
       "required": [
-        "artifactName"
+        "artifactName",
+        "itemFriendlyName"
       ],
       "additionalProperties": false
     },
