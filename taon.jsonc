@@ -6,7 +6,8 @@
   "appId": "com.domain.example.ng2-logger",
 
   "autoReleaseConfigAllowedItems": [{
-    "artifactName": "npm-lib-and-cli-tool"
+    "artifactName": "npm-lib-and-cli-tool",
+    "taskName": "npm"
   }],
 
   "resources": ["README.md", "screen.png", "server.png"],

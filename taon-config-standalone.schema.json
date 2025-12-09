@@ -6410,14 +6410,14 @@
           "type": "string",
           "description": "IP address of taon instance where to release"
         },
-        "itemFriendlyName": {
+        "taskName": {
           "type": "string",
           "description": "friendly name of item in auto release list configuration"
         }
       },
       "required": [
         "artifactName",
-        "itemFriendlyName"
+        "taskName"
       ],
       "additionalProperties": false
     },
