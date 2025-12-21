@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "editorconfig.editorconfig",
-    "github.copilot",
+    "github.copilot-chat",
     "ibm.output-colorizer",
     "mikael.angular-beastcode",
     "simonsiefke.svg-preview",
