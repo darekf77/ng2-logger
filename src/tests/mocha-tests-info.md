@@ -10,7 +10,6 @@ folder inside project.
 /src/lib/my-feature/nested-feature/tests/features.test.ts     # -> OK
 ```
 
-
 # How to test your isomorphic backend ?
 
 1. By using console select menu:

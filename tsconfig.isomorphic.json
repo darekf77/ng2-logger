@@ -3,6 +3,7 @@
   "compilerOptions": {
     "declaration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "module": "commonjs",
