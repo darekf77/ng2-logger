@@ -43,14 +43,15 @@ module.exports = [
       ...angularTemplateProcessInlineTemplates.rules,
       ...prettierConfig.rules,
       '@angular-eslint/prefer-standalone': 'off',
+      '@angular-eslint/prefer-inject': 'warn',
       "@angular-eslint/no-empty-lifecycle-method": "off",
-      '@angular-eslint/component-class-suffix': [
-        'warn',
-        {
-          suffixes: ['Page', 'Component','Container'],
-        },
-      ],
-
+      // '@angular-eslint/component-class-suffix': [
+      //   'warn',
+      //   {
+      //     suffixes: ['Page', 'Component','Container'],
+      //   },
+      // ],
+      "@typescript-eslint/no-implicit-any-catch": "error",
       "lines-between-class-members": [
         "warn",
         "always",
