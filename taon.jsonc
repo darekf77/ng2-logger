@@ -1,37 +1,53 @@
 {
   "type": "isomorphic-lib",
   "version": "v21",
-  "dependenciesNamesForNpmLib": ["chalk", "json-stringify-safe", "json5", "randomcolor"],
+  "dependenciesNamesForNpmLib": [
+    "chalk",
+    "json-stringify-safe",
+    "json5",
+    "randomcolor",
+  ],
   "additionalNpmNames": ["taon-logger"],
   "appId": "com.domain.example.ng2-logger",
 
-  "autoReleaseConfigAllowedItems": [{
-    "artifactName": "npm-lib-and-cli-tool",
-    "taskName": "npm"
-  }],
+  "autoReleaseConfigAllowedItems": [
+    {
+      "artifactName": "npm-lib-and-cli-tool",
+      "taskName": "npm",
+    },
+  ],
 
+  "isomorphicDependenciesForNpmLib": ["tnp-core"],
+  "peerDependenciesNamesForNpmLib": [],
   "resources": ["README.md", "screen.png", "server.png"],
 
   "packageJsonOverride": {
     "author": {
-      "name": "Dariusz Filipiak"
+      "name": "Dariusz Filipiak",
     },
 
     "bugs": {
-      "url": "https://github.com/darekf77/ng2-logger/issues"
+      "url": "https://github.com/darekf77/ng2-logger/issues",
     },
 
     "description": "isomorphic logger for browser/server in typescript",
     "homepage": "https://github.com/darekf77/ng2-logger#readme",
-    "keywords": ["isomorphic", "logger", "logging", "logowanie", "log", "typescript"],
+    "keywords": [
+      "isomorphic",
+      "logger",
+      "logging",
+      "logowanie",
+      "log",
+      "typescript",
+    ],
     "license": "MIT",
     "private": false,
 
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/darekf77/ng2-logger.git"
+      "url": "git+https://github.com/darekf77/ng2-logger.git",
     },
 
-    "scripts": {}
-  }
+    "scripts": {},
+  },
 }
