@@ -51,7 +51,7 @@ module.exports = [
       //     suffixes: ['Page', 'Component','Container'],
       //   },
       // ],
-      "@typescript-eslint/no-implicit-any-catch": "error",
+      // "@typescript-eslint/no-implicit-any-catch": "error", tsconfig json does it right now
       "lines-between-class-members": [
         "warn",
         "always",
