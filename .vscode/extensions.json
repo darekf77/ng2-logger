@@ -12,6 +12,7 @@
     "alexdima.copy-relative-path",
     "amodio.toggle-excluded-files",
     "cg-cnu.vscode-path-tools",
+    "chrisdias.vscode-opennewinstance",
     "ctcuff.font-preview",
     "dbaeumer.vscode-eslint",
     "dnicolson.binary-plist",
@@ -67,6 +68,7 @@
     "thebearingedge.vscode-sql-lit",
     "ms-vscode-remote.remote-wsl",
     "kgrzywocz.wsl-path",
-    "imgildev.vscode-angular-generator"
+    "imgildev.vscode-angular-generator",
+    "bierner.color-info"
   ]
 }
