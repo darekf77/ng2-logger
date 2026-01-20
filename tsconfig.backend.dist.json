@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
-    "rootDir": "./tmp-source-dist"
+    "rootDir": "./tmp-source-dist",
+    "outDir": "dist"
   },
   "include": [
     "tmp-source-dist/**/*"

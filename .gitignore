@@ -19,6 +19,8 @@
 /databases/*.sqlite
 /dist
 /dist-nocutsrc
+/dist-nocutsrc-prod
+/dist-prod
 /docs-config.schema.json
 /libpeerconnection.log
 /local_release
