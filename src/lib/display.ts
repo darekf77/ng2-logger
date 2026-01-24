@@ -2,7 +2,7 @@
 declare const global: any;
 //#endregion
 import { Level } from './level';
-import { Helpers } from 'tnp-core/src';
+import { Helpers, UtilsOs } from 'tnp-core/src';
 import { consoleLog, displayParams } from './backend-logging';
 
 //#region @backend
@@ -38,7 +38,7 @@ export class Display {
     }
 
     //#region @browser
-    if (Helpers.isBrowser
+    if (UtilsOs.isBrowser
       //#region @backend
       && !global
       //#endregion
@@ -88,7 +88,7 @@ export class Display {
     //#endregion
 
     //#region @backend
-    if (Helpers.isNode) {
+    if (UtilsOs.isNode) {
 
       let a1 = chalk.bgHex(moduleColor)(global.hideLog ? '' : `${chalk.black(moduleName)}`);
       let p = params;

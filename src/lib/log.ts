@@ -1,6 +1,6 @@
 import { Logger } from './logger';
 import { Level, LevelOrder, LevelKey } from './level';
-import { Helpers } from 'tnp-core/src';
+import { Helpers, UtilsOs } from 'tnp-core/src';
 //#region @backend
 import { path } from 'tnp-core/src';
 declare var require: any;
@@ -35,7 +35,7 @@ export class Log {
   private static readonly consolelogfn = {};
   static disableLogs(level = Level.__NOTHING) {
     //#region @backend
-    // if (Helpers.isNode && (level === Level.__NOTHING)) {
+    // if (UtilsOs.isNode && (level === Level.__NOTHING)) {
     //   if (!this.consolelogfn[PROCESS_STDOUT_WRITE]) {
     //     this.consolelogfn[PROCESS_STDOUT_WRITE] = process.stdout.write; // TOOD not working
     //   }
@@ -59,7 +59,7 @@ export class Log {
 
   static enableLogs() {
     //#region @backend
-    // if (Helpers.isNode) {
+    // if (UtilsOs.isNode) {
     //   process.stdout.write = this.consolelogfn[PROCESS_STDOUT_WRITE];
     // }
     //#endregion
@@ -175,7 +175,7 @@ export class Log {
 
 function getRandomColor(): string {
   //#region @backend
-  if (Helpers.isNode) {
+  if (UtilsOs.isNode) {
     return randomcolor({ luminosity: 'light', count: 10 });
   }
   //#endregion

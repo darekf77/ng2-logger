@@ -20,7 +20,7 @@
 // const host = 'http://localhost:' + HOST_BACKEND_PORT;
 // const frontendHost =
 //   'http://localhost:' +
-//   (Helpers.isWebSQL ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT);
+//   (UtilsOs.isWebSQL ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT);
 
 // //#region ng2-logger component
 // //#region @browser
