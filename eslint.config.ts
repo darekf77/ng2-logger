@@ -3,6 +3,8 @@ const angularEslintRecommended = require('@angular-eslint/eslint-plugin').config
 const angularTemplateProcessInlineTemplates = require('@angular-eslint/eslint-plugin-template').configs['process-inline-templates'];
 const prettierConfig = require('eslint-config-prettier');
 const tsRecommended = require("@typescript-eslint/eslint-plugin").configs.recommended;
+const noNamespaceReexport =
+  require('./eslint-rules/no-namespace-reexport').default;
 
 // eslint.config.js
 module.exports = [
@@ -35,6 +37,12 @@ module.exports = [
       "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
       "import": require("eslint-plugin-import"),
       "@angular-eslint": require("@angular-eslint/eslint-plugin"),
+      my: {
+        rules: {
+          'no-namespace-reexport': noNamespaceReexport,
+        },
+      },
+
     },
     rules: {
       // @UNCOMMENT LINE BELOW TO ENABLE TYPESCRIPT RECOMMENDED RULES (STRICT)
@@ -42,6 +50,7 @@ module.exports = [
       ...angularEslintRecommended.rules,
       ...angularTemplateProcessInlineTemplates.rules,
       ...prettierConfig.rules,
+      'my/no-namespace-reexport': 'error',
       '@angular-eslint/prefer-standalone': 'off',
       '@angular-eslint/prefer-inject': 'warn',
       "@angular-eslint/no-empty-lifecycle-method": "off",

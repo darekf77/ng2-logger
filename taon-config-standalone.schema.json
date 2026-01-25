@@ -5353,11 +5353,11 @@
         },
         "storeGeneratedAssetsInRepository": {
           "type": "boolean",
-          "default": "false\nBy default generated assets from logo.png are not stored\nin repository"
+          "default": "false\r\nBy default generated assets from logo.png are not stored\r\nin repository"
         },
         "storeLocalReleaseFilesInRepository": {
           "type": "boolean",
-          "default": "true\nBy default local release files are stored in repository"
+          "default": "true\r\nBy default local release files are stored in repository"
         },
         "dependenciesNamesForNpmLib": {
           "type": "array",
@@ -5374,6 +5374,13 @@
           "description": "Same as dependenciesNamesForNpmLib but these dependencies are isomorphic (can be used in browser and node)"
         },
         "peerDependenciesNamesForNpmLib": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
+        },
+        "devDependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
@@ -5451,6 +5458,7 @@
       },
       "required": [
         "dependenciesNamesForNpmLib",
+        "devDependenciesNamesForNpmLib",
         "isCoreProject",
         "isomorphicDependenciesForNpmLib",
         "optionalDependenciesNamesForNpmLib",

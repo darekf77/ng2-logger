@@ -4,9 +4,9 @@ const path = require('path');
 const dateformat = require('dateformat');
 const outFolder = path.join(process.cwd(), 'out');
 const fileName = process.argv[2] || 'extension';
-const { crossPlatformPath } = require('tnp-core/lib');
+const { crossPlatformPath, Helpers } = require('tnp-core/lib');
 const { Project } =  require('tnp/lib');
-const { Helpers } = require('tnp-helpers/lib');
+const { HelpersTaon } = require('tnp-helpers/lib');
 
 console.log('Update package.json vscode plugin metadata...');
 
@@ -33,9 +33,9 @@ function updatePackageJson() {
       throw `Resource ${r} not found at ${pathToFileOrFolder}`;
     }
     if(Helpers.isFolder(pathToFileOrFolder)){
-      Helpers.copy(pathToFileOrFolder, dest);
+      HelpersTaon.copy(pathToFileOrFolder, dest);
     } else {
-      Helpers.copyFile(pathToFileOrFolder, dest);
+      HelpersTaon.copyFile(pathToFileOrFolder, dest);
     }
   } );
   console.log(`Using project: ${proj?.name} at ${proj?.location}`);

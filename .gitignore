@@ -22,6 +22,7 @@
 /dist-nocutsrc-prod
 /dist-prod
 /docs-config.schema.json
+/eslint-rules
 /libpeerconnection.log
 /local_release
 /node_modules

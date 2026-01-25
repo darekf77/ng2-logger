@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.22",
+  "version": "21.0.23",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -165,6 +165,7 @@
     "@types/json5": "0.0.29",
     "@types/lockfile": "~1.0.4",
     "@types/lodash": "4.14.92",
+    "@types/lodash-es": "~4.17.12",
     "@types/mocha": "~10.0.10",
     "@types/multer": "~2.0.0",
     "@types/node": "^22.19.1",
