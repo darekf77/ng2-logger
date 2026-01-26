@@ -3,8 +3,7 @@
   "compilerOptions": {
     "rootDir": "./tmp-source-dist-prod",
     "outDir": "dist-prod",
-    "module": "ES2022",
-    "moduleResolution": "bundler"
+    "noEmit": true
   },
   "include": [
     "tmp-source-dist-prod/**/*"
