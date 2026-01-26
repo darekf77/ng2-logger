@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.25",
+  "version": "21.0.26",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
