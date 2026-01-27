@@ -6,15 +6,13 @@ import { path } from 'tnp-core/src';
 declare var require: any;
 //#endregion
 
-
 //#region @backend
-import * as randomcolor from 'randomcolor';
+const randomcolor = require('randomcolor').default ?? require('randomcolor');
 //#endregion
-
 
 export class Log {
   //#region singleton
-  private constructor() { }
+  private constructor() {}
   // @ts-ignore
   private static get instance(): any {
     // @ts-ignore
@@ -27,7 +25,7 @@ export class Log {
   }
   //#endregion
 
-  static Logger: (typeof Logger) = Logger;
+  static Logger: typeof Logger = Logger;
   static create(name: string, ...level: Level[]): Logger {
     return Log.instance.create(name, ...level);
   }
@@ -49,7 +47,7 @@ export class Log {
         this.consolelogfn[a] = console[a];
       }
       // @ts-ignore
-      console[a] = () => { };
+      console[a] = () => {};
       if (a === LevelKey[level]) {
         return true;
       }
@@ -65,7 +63,7 @@ export class Log {
     //#endregion
     LevelOrder.forEach(a => {
       // @ts-ignore
-      console[a] = this.consolelogfn[a]
+      console[a] = this.consolelogfn[a];
     });
   }
 
@@ -81,19 +79,17 @@ export class Log {
   //#region public api
   public setProductionMode() {
     if (this.modeIsSet) {
-      this.modeIsSet = false
+      this.modeIsSet = false;
       throw '[ng2-logger] Production mode is already set';
     } else {
       this.modeIsSet = true;
       setTimeout(() => {
-
         if (this.modeIsSet && console !== void 0 && console.clear !== void 0) {
-
           console.clear();
-          console.log = () => { };
-          console.error = () => { };
-          console.warn = () => { };
-          console.info = () => { };
+          console.log = () => {};
+          console.error = () => {};
+          console.warn = () => {};
+          console.info = () => {};
         }
       });
 
@@ -114,7 +110,6 @@ export class Log {
     this.muteAllOtherModules();
   }
 
-
   public onlyLevel(...level: Level[]) {
     if (this._logOnly) {
       throw '[ng2-logger] You should use funcion onlyLevel only once';
@@ -124,7 +119,6 @@ export class Log {
     }
 
     this.levels = Array.isArray(level) ? level : [level];
-
 
     for (const logName in this.instances) {
       if (this.instances.hasOwnProperty(logName)) {
@@ -142,7 +136,7 @@ export class Log {
       level = this.levels;
     }
     if (this.instances[name] === void 0) {
-      i = new (Log.Logger)(
+      i = new Log.Logger(
         name,
         getRandomColor(),
         this.isDevelopmentMode,
@@ -166,12 +160,10 @@ export class Log {
   private muteAllOtherModules() {
     for (var moduleName in this.instances) {
       if (!Helpers.contain(this.modules, moduleName))
-        this.instances[moduleName].mute()
+        this.instances[moduleName].mute();
     }
   }
-
 }
-
 
 function getRandomColor(): string {
   //#region @backend
@@ -188,7 +180,7 @@ function getRandomColor(): string {
     color += letters[Math.round(Math.random() * 15)];
   }
   if (color === void 0) {
-    return getRandomColor()
-  };
+    return getRandomColor();
+  }
   return color;
 }

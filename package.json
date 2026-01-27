@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.29",
+  "version": "21.0.30",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -460,5 +460,9 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/ng2-logger.git"
   },
-  "bin": {}
+  "bin": {
+    "ng2-logger": "bin/ng2-logger",
+    "ng2-logger-debug": "bin/ng2-logger-debug",
+    "ng2-logger-debug-brk": "bin/ng2-logger-debug-brk"
+  }
 }
