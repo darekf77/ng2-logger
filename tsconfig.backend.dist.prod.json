@@ -2,7 +2,11 @@
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
     "rootDir": "./tmp-source-dist-prod",
-    "outDir": "dist-prod"
+    "outDir": "dist-prod",
+    "module": "ESNext",
+    "target": "ESNext",
+    "importsNotUsedAsValues": "remove",
+    "noEmitHelpers": true
   },
   "include": [
     "tmp-source-dist-prod/**/*"
