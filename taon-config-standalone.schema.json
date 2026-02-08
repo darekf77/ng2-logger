@@ -1,10 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/Models.TaonJsonStandalone",
+  "$ref": "#/definitions/Models.TaonJsonCombined",
   "definitions": {
-    "Models.TaonJsonStandalone": {
+    "Models.TaonJsonCombined": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
+        "type": {
+          "$ref": "#/definitions/LibTypeEnum"
+        },
         "version": {
           "$ref": "#/definitions/CoreModels.FrameworkVersion",
           "description": "version of taon framework for project"
@@ -5312,87 +5316,112 @@
           "additionalProperties": false,
           "deprecated": true
         },
-        "overrideNpmName": {
-          "type": "string",
-          "description": "override npm name for build/relese"
-        },
-        "appId": {
-          "type": "string",
-          "description": "Application ID for standalone project. This is used to identify the application inside application stores,"
-        },
-        "numberOfContexts": {
-          "type": "number",
-          "description": "Number of contexts for this project. (default 2) Number can't be less than 2. This property tells taon how many ports/variables needs to be assigned inside app.hosts.ts"
-        },
-        "overrideNameWhenInsideOrganization": {
-          "type": "string",
-          "description": "it override name of project when is inside container that is organization.\n\nProperty \"overrideNpmName\" can override this name."
-        },
-        "overrideNameForCli": {
-          "type": "string",
-          "description": "override name of cli tool created from project"
-        },
-        "type": {
-          "type": "string",
-          "const": "isomorphic-lib"
-        },
         "resources": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Static resurces for standalone project, that are going to be included in release dist"
+          "description": "(STANDALONE) Static resurces for standalone project, that are going to be included in release dist"
+        },
+        "linkNodeModulesFromCoreContainer": {
+          "type": "boolean",
+          "description": "(CONTAINER) Force linking node_modules from core container"
+        },
+        "overridePackagesOrder": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "(CONTAINER) override order of packages during release or buildq so dependencies are released first"
+        },
+        "createOnlyTagWhenRelease": {
+          "type": "boolean",
+          "description": "(CONTAINER) Don't release inside children -> only tag the version"
+        },
+        "monorepo": {
+          "type": "boolean",
+          "description": "(CONTAINER) Project is monorepo"
+        },
+        "organization": {
+          "type": "boolean",
+          "description": "(CONTAINER) Project is organization/scope (like"
+        },
+        "microFrontendMainProjectName": {
+          "type": "string",
+          "description": "(CONTAINER) Container projects can be used as micro frontends with router:  <site-path>/  (microFrontendMainProjectName)  <site-path>/_/other-project-name"
+        },
+        "overrideNpmName": {
+          "type": "string",
+          "description": "(STANDALONE) override npm name for build/relese"
+        },
+        "appId": {
+          "type": "string",
+          "description": "(STANDALONE) Application ID for standalone project. This is used to identify the application inside application stores,"
+        },
+        "numberOfContexts": {
+          "type": "number",
+          "description": "(STANDALONE) Number of contexts for this project. (default 2) Number can't be less than 2. This property tells taon how many ports/variables needs to be assigned inside app.hosts.ts"
+        },
+        "overrideNameWhenInsideOrganization": {
+          "type": "string",
+          "description": "(STANDALONE) it override name of project when is inside container that is organization.\n\nProperty \"overrideNpmName\" can override this name."
+        },
+        "overrideNameForCli": {
+          "type": "string",
+          "description": "(STANDALONE) override name of cli tool created from project"
         },
         "baseContentUrl": {
           "type": "string",
-          "description": "Base url for content (docs, md files etc.) Required if README.md has relative pathes to links"
+          "description": "(STANDALONE) Base url for content (docs, md files etc.) Required if README.md has relative pathes to links"
         },
         "baseImagesUrl": {
           "type": "string",
-          "description": "Base url for content (docs, md files etc.) Required if README.md has relative pathes to images"
+          "description": "(STANDALONE) Base url for content (docs, md files etc.) Required if README.md has relative pathes to images"
         },
         "storeGeneratedAssetsInRepository": {
           "type": "boolean",
-          "default": "false\r\nBy default generated assets from logo.png are not stored\r\nin repository"
+          "description": "(STANDALONE) By default generated assets from logo.png are not stored in repository",
+          "default": false
         },
         "storeLocalReleaseFilesInRepository": {
           "type": "boolean",
-          "default": "true\r\nBy default local release files are stored in repository"
+          "description": "(STANDALONE) By default local release files are stored in repository",
+          "default": true
         },
         "dependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Non-isomorphic dependencies for npm lib.\n\nAt beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this dependencies are going to be included in released npm lib as dependencies."
+          "description": "(STANDALONE) Non-isomorphic dependencies for npm lib.\n\nAt beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this dependencies are going to be included in released npm lib as dependencies."
         },
         "isomorphicDependenciesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Same as dependenciesNamesForNpmLib but these dependencies are isomorphic (can be used in browser and node)"
+          "description": "(STANDALONE) Same as dependenciesNamesForNpmLib but these dependencies are isomorphic (can be used in browser and node)"
         },
         "peerDependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
+          "description": "(STANDALONE) At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
         },
         "devDependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
+          "description": "(STANDALONE) At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this peerDependencies are going to be included in released npm lib as peerDependencies."
         },
         "optionalDependenciesNamesForNpmLib": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this optionalDependencies are going to be included in released npm lib as optionalDependencies."
+          "description": "(STANDALONE) At beginning after node_modules installation taon is checking is packages are installed - if not it will throw error. Also.. this optionalDependencies are going to be included in released npm lib as optionalDependencies."
         },
         "singleFileBundlingPackages": {
           "type": "array",
@@ -5426,34 +5455,34 @@
             ],
             "additionalProperties": false
           },
-          "description": "Provide information about external packages for single file bundling process"
+          "description": "(STANDALONE) Provide information about external packages for single file bundling process"
         },
         "additionalNpmNames": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "so I can release same npm lib with different name",
+          "description": "(STANDALONE) so I can release same npm lib with different name",
           "deprecated": "does not make sense"
         },
         "isUsingOwnNodeModulesInsteadCoreContainer": {
           "type": "boolean",
-          "description": "Project is using own node_modules instead of core container"
+          "description": "(STANDALONE)  Project is using own node_modules instead of core container"
         },
         "shouldGenerateAutogenIndexFile": {
           "type": "boolean",
-          "description": "generate src/lib/index._auto-generated_.ts with all exports from lib ts files"
+          "description": "(STANDALONE) generate src/lib/index._auto-generated_.ts with all exports from lib ts files"
         },
         "shouldGenerateAutogenAppRoutesFile": {
           "type": "boolean",
-          "description": "generate src/app.ts routes, imports and context initializations from ./src/app/*.routes.ts (recursive)"
+          "description": "(STANDALONE) generate src/app.ts routes, imports and context initializations from ./src/app/*.routes.ts (recursive)"
         },
         "autoReleaseConfigAllowedItems": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Models.TaonAutoReleaseItem"
           },
-          "description": "Auto release helps with releasing multiple projects from a local machine. This is useful when we don't have Taon Cloud set up and want to release all projects with a single command."
+          "description": "(STANDALONE) Auto release helps with releasing multiple projects from a local machine. This is useful when we don't have Taon Cloud set up and want to release all projects with a single command."
         }
       },
       "required": [
@@ -5462,14 +5491,23 @@
         "isCoreProject",
         "isomorphicDependenciesForNpmLib",
         "optionalDependenciesNamesForNpmLib",
+        "overridePackagesOrder",
         "packageJsonOverride",
         "peerDependenciesNamesForNpmLib",
         "shouldGenerateAutogenAppRoutesFile",
         "shouldGenerateAutogenIndexFile",
         "singleFileBundlingPackages",
         "type"
-      ],
-      "additionalProperties": false
+      ]
+    },
+    "LibTypeEnum": {
+      "type": "string",
+      "enum": [
+        "isomorphic-lib",
+        "container",
+        "unknown-npm-project",
+        "unknown"
+      ]
     },
     "CoreModels.FrameworkVersion": {
       "type": "string",
@@ -6406,6 +6444,10 @@
         "description": {
           "type": "string",
           "description": "Short description of auto release item"
+        },
+        "askUserBeforeFinalAction": {
+          "type": "boolean",
+          "description": "Ask for confirmation before deployement to taon cloud"
         }
       },
       "required": [
