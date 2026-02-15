@@ -16,11 +16,26 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "es2022",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "types": [
-      "node"
+      "body-parser",
+      "cors",
+      "dateformat",
+      "diff",
+      "express",
+      "express-fileupload",
+      "fs-extra",
+      "glob",
+      "http-proxy",
+      "http-proxy-middleware",
+      "json5",
+      "lodash",
+      "lodash-es",
+      "minimatch",
+      "multer",
+      "node",
+      "progress",
+      "semver",
+      "vitest/globals"
     ]
   },
   "exclude": [
