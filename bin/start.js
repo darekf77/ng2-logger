@@ -4,6 +4,24 @@ global.i0 = {
 }
 const process= require('process');
 process.removeAllListeners('warning');
+var argv = process.argv;
+
+global.hideLog = true;
+global.verboseLevel = 0;
+var verboseLevel = argv.find(a => a.startsWith('-verbose='));
+if (typeof verboseLevel !== 'undefined') {
+  global.hideLog = false;
+  verboseLevel = Number(verboseLevel.replace('-verbose=', ''));
+  if (!isNaN(verboseLevel)) {
+    global.verboseLevel = verboseLevel;
+  }
+  argv = argv.filter(a => !a.startsWith('-verbose='));
+}
+
+if (argv.includes('-verbose')) {
+  global.hideLog = false;
+  argv = argv.filter(a => a !== '-verbose');
+}
 
 const fs = require('fs');
 const path = require('path');
@@ -13,5 +31,5 @@ var pathToCliJS = {
 }
 var p = fs.existsSync(pathToCliJS.distDev) ? pathToCliJS.distDev : pathToCliJS.localOrNPm;
 global.globalSystemToolMode = true;
-var run = require(p).start;
-run(process.argv.slice(2));
+var run = require(p).startCli;
+run(argv,__filename);

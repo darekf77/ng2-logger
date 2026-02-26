@@ -1,4 +1,12 @@
-//#region imports
+App **ng2-logger**
+
+isomorphic logger for browser/server in typescript:
+
+
+<details>
+<summary>imports</summary>
+
+```ts
 import * as os from 'os'; // @backend
 
 import { AsyncPipe, JsonPipe, NgFor } from '@angular/common'; // @browser
@@ -62,19 +70,30 @@ import {
 import { Helpers, Utils, UtilsOs } from 'tnp-core/src';
 
 import { HOST_CONFIG } from './app.hosts';
-import { demoTs } from './lib/demo';
-import { demoSimpleTs } from './lib/demo-simple';
 import { ENV_ANGULAR_NODE_APP_BUILD_PWA_DISABLE_SERVICE_WORKER } from './lib/env/env.angular-node-app';
+import { demoTs } from './lib/demo';
 // @placeholder-for-imports
-//#endregion
+```
 
-//#region constants
+</details>
+
+
+<details>
+<summary>constants</summary>
+
+```ts
 const firstHostConfig = (Object.values(HOST_CONFIG) || [])[0];
 console.log('Your backend host ' + firstHostConfig?.host);
 console.log('Your frontend host ' + firstHostConfig?.frontendHost);
-//#endregion
+```
 
-//#region ng-2-logger component
+</details>
+
+
+<details>
+<summary>ng-2-logger component</summary>
+
+```ts
 
 //#region @browser
 @Component({
@@ -257,9 +276,15 @@ export class Ng2LoggerApp implements OnInit {
 }
 //#endregion
 
-//#endregion
+```
 
-//#region  ng-2-logger api service
+</details>
+
+
+<details>
+<summary>ng-2-logger api service</summary>
+
+```ts
 
 //#region @browser
 @Injectable({
@@ -277,9 +302,15 @@ export class UserApiService extends TaonBaseAngularService {
 }
 //#endregion
 
-//#endregion
+```
 
-//#region  ng-2-logger routes
+</details>
+
+
+<details>
+<summary>ng-2-logger routes</summary>
+
+```ts
 //#region @browser
 export const Ng2LoggerServerRoutes: ServerRoute[] = [
   {
@@ -302,9 +333,15 @@ export const Ng2LoggerClientRoutes: Routes = [
   // @placeholder-for-routes
 ];
 //#endregion
-//#endregion
+```
 
-//#region  ng-2-logger app configs
+</details>
+
+
+<details>
+<summary>ng-2-logger app configs</summary>
+
+```ts
 //#region @browser
 export const Ng2LoggerAppConfig: ApplicationConfig = {
   providers: [
@@ -344,9 +381,15 @@ export const Ng2LoggerConfig = mergeApplicationConfig(
   Ng2LoggerServerConfig,
 );
 //#endregion
-//#endregion
+```
 
-//#region  ng-2-logger entity
+</details>
+
+
+<details>
+<summary>ng-2-logger entity</summary>
+
+```ts
 @TaonEntity({ className: 'User' })
 class User extends TaonBaseAbstractEntity {
   //#region @websql
@@ -358,9 +401,15 @@ class User extends TaonBaseAbstractEntity {
     return `hello ${this.name}`;
   }
 }
-//#endregion
+```
 
-//#region  ng-2-logger controller
+</details>
+
+
+<details>
+<summary>ng-2-logger controller</summary>
+
+```ts
 @TaonController({ className: 'UserController' })
 class UserController extends TaonBaseCrudController<User> {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
@@ -386,9 +435,15 @@ class UserController extends TaonBaseCrudController<User> {
     //#endregion
   }
 }
-//#endregion
+```
 
-//#region  ng-2-logger migration
+</details>
+
+
+<details>
+<summary>ng-2-logger migration</summary>
+
+```ts
 
 //#region @websql
 @TaonMigration({
@@ -405,9 +460,15 @@ class UserMigration extends TaonBaseMigration {
 }
 //#endregion
 
-//#endregion
+```
 
-//#region  ng-2-logger context
+</details>
+
+
+<details>
+<summary>ng-2-logger context</summary>
+
+```ts
 var Ng2LoggerContext = Taon.createContext(() => ({
   ...HOST_CONFIG['Ng2LoggerContext'],
   contexts: { TaonBaseContext },
@@ -431,14 +492,19 @@ var Ng2LoggerContext = Taon.createContext(() => ({
   database: true,
   // disabledRealtime: true,
 }));
-//#endregion
+```
 
-//#region  ng-2-logger start function
+</details>
+
+
+<details>
+<summary>ng-2-logger start function</summary>
+
+```ts
 export const Ng2LoggerStartFunction = async (
   startParams?: Taon.StartParams,
 ): Promise<void> => {
-  demoTs();
-  demoSimpleTs();
+  demoTs()
 
   await Ng2LoggerContext.initialize();
 
@@ -476,8 +542,19 @@ export const Ng2LoggerStartFunction = async (
   console.log(`Hello in NodeJs backend! os=${os.platform()}`);
   //#endregion
 };
-//#endregion
+```
 
-//#region default export
+</details>
+
+
+<details>
+<summary>default export</summary>
+
+```ts
 export default Ng2LoggerStartFunction;
-//#endregion
+```
+
+</details>
+
+
+
