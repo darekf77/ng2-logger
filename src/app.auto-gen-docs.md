@@ -70,8 +70,9 @@ import {
 import { Helpers, Utils, UtilsOs } from 'tnp-core/src';
 
 import { HOST_CONFIG } from './app.hosts';
-import { ENV_ANGULAR_NODE_APP_BUILD_PWA_DISABLE_SERVICE_WORKER } from './lib/env/env.angular-node-app';
 import { demoTs } from './lib/demo';
+import { demoSimpleTs } from './lib/demo-simple';
+import { ENV_ANGULAR_NODE_APP_BUILD_PWA_DISABLE_SERVICE_WORKER } from './lib/env/env.angular-node-app';
 // @placeholder-for-imports
 ```
 
@@ -504,7 +505,8 @@ var Ng2LoggerContext = Taon.createContext(() => ({
 export const Ng2LoggerStartFunction = async (
   startParams?: Taon.StartParams,
 ): Promise<void> => {
-  demoTs()
+  demoTs();
+  demoSimpleTs();
 
   await Ng2LoggerContext.initialize();
 
