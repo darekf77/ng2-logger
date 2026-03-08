@@ -5354,6 +5354,10 @@
           "type": "string",
           "description": "(STANDALONE) override npm name for build/relese"
         },
+        "cloudFlareAccountSubdomain": {
+          "type": "string",
+          "description": "For taon-stripe-cloudflare-worker project types.\n\nExmaple: form this \"https://hamsterki-b4176.accountName.workers.dev\" cloudFlareAccountSubdomain === \"accountName\""
+        },
         "appId": {
           "type": "string",
           "description": "(STANDALONE) Application ID for standalone project. This is used to identify the application inside application stores,"
