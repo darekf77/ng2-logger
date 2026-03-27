@@ -6452,6 +6452,10 @@
         "askUserBeforeFinalAction": {
           "type": "boolean",
           "description": "Ask for confirmation before deployement to taon cloud"
+        },
+        "staticPagesCustomRepoUrl": {
+          "type": "string",
+          "description": "Custom url for static pages repo release"
         }
       },
       "required": [

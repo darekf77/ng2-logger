@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.43",
+  "version": "21.0.44",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -229,6 +229,7 @@
     "cross-spawn": "~7.0.6",
     "date-fns": "^4.1.0",
     "dateformat": "^3.0.3",
+    "dbus-next": "0.10.2",
     "detect-mocha": "0.1.0",
     "diff": "~4.0.2",
     "dockerode": "~4.0.9",
