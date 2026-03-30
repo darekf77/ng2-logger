@@ -41,27 +41,39 @@ function updatePackageJson() {
   console.log(`Using project: ${proj?.name} at ${proj?.location}`);
   delete require.cache[require.resolve(pathToConfig)]; // clear cache in watch mode
   const extModule = require(pathToConfig).default;
-  const commands = extModule.commands || [];
+  // const commandsList = extModule.commands || [];
 
-  console.log(
-    'Commands:',
-    commands.map(t => `${t.group}: ${t.title}`).sort((a, b) => a.localeCompare(b))
-  );
+
 
   const pkgjsonpath = path.join(process.cwd(), 'package.json');
   const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, 'utf8'));
 
-  pkgjson.contributes = proj.packageJson.contributes || {};
-  pkgjson.contributes.commands = [];
-  pkgjson.contributes.submenus = [];
-  pkgjson.contributes.menus = {};
-  pkgjson.contributes.menus["explorer/context"] = [];
-  pkgjson.contributes.menus["editor/title/context"] = [];
+  pkgjson.contributes = proj.taonJson.overridePackageJsonManager.contributes || {};
+  pkgjson.contributes.commands = (pkgjson.contributes.commands || []).concat(extModule.commands || []).map( (c) => {
 
-  const visibleCommands = commands.filter(c => !c.hideContextMenu);
+    return {
+      title: c.title,
+      command: c.command,
+      icon: c.icon,
+      group: c.group,
+    }
+  } );
+  pkgjson.contributes.submenus = pkgjson.contributes.submenus || [];
+  pkgjson.contributes.menus = pkgjson.contributes.menus || {};
+  pkgjson.contributes.menus["explorer/context"] = pkgjson.contributes.menus["explorer/context"] || [];
+  pkgjson.contributes.menus["editor/title/context"] = pkgjson.contributes.menus["editor/title/context"] || [];
+
+  const commandsList = pkgjson.contributes.commands
+
+  console.log(
+    'Commands:',
+    commandsList.map(t => `${t.group}: ${t.title}`).sort((a, b) => a.localeCompare(b))
+  );
+
+  const visibleCommands = commandsList.filter(c => !c.hideContextMenu);
 
   // split standalone vs grouped
-  const standalone = visibleCommands.filter(c => !c.group);
+  const standalone = visibleCommands.filter(c => c.group === null);
   const grouped = visibleCommands.filter(c => c.group);
   const groups = _.uniq(grouped.map(c => c.group));
 
@@ -71,11 +83,7 @@ function updatePackageJson() {
     label: group
   }));
 
-  // Define all commands
-  pkgjson.contributes.commands = commands.map(c => ({
-    command: c.command,
-    title: c.title
-  }));
+
 
   // Add standalone commands directly (no submenu)
   for (const c of standalone) {
