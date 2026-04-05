@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.46",
+  "version": "21.0.47",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -193,7 +193,7 @@
     "angular-resize-event": "~3.2.0",
     "animate.css": "~4.1.1",
     "app-root-path": "~3.1.0",
-    "axios": "~1.13.2",
+    "axios": "1.13.6",
     "axios-cookiejar-support": "~6.0.4",
     "base32": "~0.0.7",
     "bcryptjs": "~2.4.3",

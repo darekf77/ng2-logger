@@ -50,9 +50,12 @@ if (messageWasShown) {
 }
 
 const PROJECT_NPM_NAME = require('./dist/lib/build-info._auto-generated_.js').PROJECT_NPM_NAME;
+const entrypointarg = (process.argv.find( arg => arg.startsWith('additionalEntrypointId=')));
+
 console.log({PROJECT_NPM_NAME});
 
-var app = require('./dist/app').default;
+var app = require(`./dist/app${entrypointarg ? `.server${entrypointarg.split('=')[1]}`:''}`).default;
+
 var ContextsEndpointStorageInstance = globalThis['$$$ContextsEndpointStorage$$$'];
 
 app({

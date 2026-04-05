@@ -5350,6 +5350,19 @@
           "type": "string",
           "description": "(CONTAINER) Container projects can be used as micro frontends with router:  <site-path>/  (microFrontendMainProjectName)  <site-path>/_/other-project-name"
         },
+        "numOfAdditionalEntrypoints": {
+          "type": "object",
+          "properties": {
+            "app.ts": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "app.ts"
+          ],
+          "additionalProperties": false,
+          "description": "Additional development entrypoints for app.ts\n- it will create new vscode launch task"
+        },
         "overrideNpmName": {
           "type": "string",
           "description": "(STANDALONE) override npm name for build/relese"
@@ -6455,7 +6468,7 @@
         },
         "staticPagesCustomRepoUrl": {
           "type": "string",
-          "description": "Custom url for static pages repo release"
+          "description": "Custom url for static pages repo release (or custom prefix) example:\n- FULL LINK: 'https://githublink-env-stage'\n- PREFIX LINK:  '-env-test'  I wil be change to https://current-origin-env-test"
         }
       },
       "required": [

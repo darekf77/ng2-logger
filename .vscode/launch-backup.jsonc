@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Vitest Debug (all *.test.ts files)",
+      "name": "Run Vitest (all *.test.ts files)",
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
@@ -21,7 +21,7 @@
       "smartStep": true
     },
     {
-      "name": "Vitest Debug (editor active test file)",
+      "name": "Run Vitest (editor active test file)",
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
@@ -42,7 +42,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug/Start Server",
+      "name": "Run Server for app.ts",
       "program": "${workspaceFolder}/run.js",
       "args": [],
       "runtimeArgs": [
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "name": "Debug/Start Electron",
+      "name": "Run Electron",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
@@ -77,7 +77,7 @@
       "port": 9222
     },
     {
-      "name": "Debug/Start Vscode Plugin",
+      "name": "Run Vscode Plugin",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -92,6 +92,19 @@
       "preLaunchTask": "Update package.json vscode metadata"
     }
   ],
-  "compounds": []
+  "compounds": [
+    {
+      "name": "Run All Server",
+      "stopAll": true,
+      "configurations": [
+        "Run Server for app.ts"
+      ]
+    },
+    {
+      "name": "Run All Additional Server",
+      "stopAll": true,
+      "configurations": []
+    }
+  ]
 }
 // THIS FILE IS GENERATED - DO NOT MODIFY

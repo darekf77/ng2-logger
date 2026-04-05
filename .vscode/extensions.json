@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "Alexanderius.language-hosts",
+    "jellydn.toggle-excluded-files",
     "taon-dev.taon",
     "EditorConfig.EditorConfig",
     "IBM.output-colorizer",
