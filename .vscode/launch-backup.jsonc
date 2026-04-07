@@ -92,19 +92,6 @@
       "preLaunchTask": "Update package.json vscode metadata"
     }
   ],
-  "compounds": [
-    {
-      "name": "Run All Server",
-      "stopAll": true,
-      "configurations": [
-        "Run Server for app.ts"
-      ]
-    },
-    {
-      "name": "Run All Additional Server",
-      "stopAll": true,
-      "configurations": []
-    }
-  ]
+  "compounds": []
 }
 // THIS FILE IS GENERATED - DO NOT MODIFY
