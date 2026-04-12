@@ -47,7 +47,8 @@
 /chrome-profiler-events*.json
 /connect.lock
 /coverage
-/databases/*.sqlite
+/databases/**/*.json
+/databases/**/*.sqlite
 /dist
 /dist-nocutsrc
 /dist-nocutsrc-prod

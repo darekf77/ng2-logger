@@ -49,7 +49,7 @@ function updatePackageJson() {
   const pkgjson = JSON.parse(fs.readFileSync(pkgjsonpath, 'utf8'));
 
   pkgjson.contributes = proj.taonJson.overridePackageJsonManager.contributes || {};
-  pkgjson.contributes.commands = (pkgjson.contributes.commands || []).concat(extModule.commands || []).map( (c) => {
+  pkgjson.contributes.commands = (pkgjson.contributes.commands || []).concat(extModule?.commands || []).map( (c) => {
 
     return {
       title: c.title,
