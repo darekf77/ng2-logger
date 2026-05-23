@@ -5332,7 +5332,7 @@
           "items": {
             "type": "string"
           },
-          "description": "(CONTAINER) override order of packages during release or buildq so dependencies are released first"
+          "description": "(CONTAINER) override order of packages during release or build so dependencies are released first. Use projects names (or basename) and not npm names."
         },
         "createOnlyTagWhenRelease": {
           "type": "boolean",
@@ -5418,6 +5418,13 @@
             "type": "string"
           },
           "description": "(STANDALONE) Same as dependenciesNamesForNpmLib but these dependencies are isomorphic (can be used in browser and node)"
+        },
+        "devModeDependenciesForNpmLib": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "(STANDALONE) If not defined: devModeDependenciesForNpmLib === isomorphicDependenciesForNpmLib if defined -> this array is begin used for dev mode isomorphic dependencies when building locally projects in watch mode `taon build:lib:watch` or normal mode `taon build:lib`"
         },
         "peerDependenciesNamesForNpmLib": {
           "type": "array",
@@ -5505,6 +5512,7 @@
       "required": [
         "dependenciesNamesForNpmLib",
         "devDependenciesNamesForNpmLib",
+        "devModeDependenciesForNpmLib",
         "isCoreProject",
         "isomorphicDependenciesForNpmLib",
         "optionalDependenciesNamesForNpmLib",

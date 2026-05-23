@@ -133,7 +133,9 @@
     "dist-*": true,
     "**/dist-*": true,
     "*.rest": true,
-    "**/*.rest": true
+    "**/*.rest": true,
+    "src/app.auto-gen-docs.md": true,
+    "src/app.auto-gen-ver.js": true
   },
 
   "[typescriptreact]": {
