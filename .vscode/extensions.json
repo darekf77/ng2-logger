@@ -36,6 +36,9 @@
     "DavidAnson.vscode-markdownlint",
     "wmaurer.change-case",
     "earshinov.permute-lines",
-    "xabikos.javascriptsnippets"
+    "xabikos.javascriptsnippets",
+    "esdete.tailwind-rainbow",
+    "bradlc.vscode-tailwindcss",
+    "imgildev.vscode-tailwindcss-snippets"
   ]
 }
