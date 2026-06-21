@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.51",
+  "version": "21.0.52",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -100,6 +100,7 @@
     "@cloudflare/vitest-pool-workers": "^0.12.4",
     "@compodoc/compodoc": "~1.1.32",
     "@electron/fuses": "^1.8.0",
+    "@fancyapps/ui": "~6.1.14",
     "@iconify/icons-fa-solid": "~1.2.4",
     "@iconify/icons-mdi": "~1.2.48",
     "@inquirer/prompts": "~5.3.8",
@@ -308,6 +309,7 @@
     "jsonwebtoken": "~9.0.2",
     "jszip": "3.10.1",
     "karma-cli": "~1.0.1",
+    "lightgallery": "~2.9.0",
     "lnk": "~1.0.1",
     "localforage": "1.10.0",
     "lockfile": "^1.0.4",
@@ -365,6 +367,7 @@
     "passport": "~0.7.0",
     "passport-http-bearer": "1.0.1",
     "path-to-regexp": "~6.2.2",
+    "photoswipe": "~5.4.4",
     "pica": "9.0.1",
     "playwright": "~1.57.0",
     "pm2": "~6.0.14",
