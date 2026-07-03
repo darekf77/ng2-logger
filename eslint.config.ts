@@ -1,8 +1,13 @@
 // eslint.config.js
-const angularEslintRecommended = require('@angular-eslint/eslint-plugin').configs.recommended;
-const angularTemplateProcessInlineTemplates = require('@angular-eslint/eslint-plugin-template').configs['process-inline-templates'];
+const angularEslintRecommended = require('@angular-eslint/eslint-plugin')
+  .configs.recommended;
+const angularTemplateProcessInlineTemplates =
+  require('@angular-eslint/eslint-plugin-template').configs[
+    'process-inline-templates'
+  ];
 const prettierConfig = require('eslint-config-prettier');
-const tsRecommended = require("@typescript-eslint/eslint-plugin").configs.recommended;
+const tsRecommended = require('@typescript-eslint/eslint-plugin').configs
+  .recommended;
 const noNamespaceReexport =
   require('./eslint-rules/no-namespace-reexport').default;
 
@@ -10,23 +15,23 @@ const noNamespaceReexport =
 module.exports = [
   {
     ignores: [
-      "projects/**/*",
-      "dist/**/*",
-      "dist-nocutsrc/**/*",
-      "node_modules/**/*",
-      "tmp-*/**/*",
-      "taon.json",
-      "tsconfig*",
-      ".vscode/**/*",
-      "taon-config-standalone.schema.json",
-      "taon-config-container.schema.json",
-      "run.js",
+      'projects/**/*',
+      'dist/**/*',
+      'dist-nocutsrc/**/*',
+      'node_modules/**/*',
+      'tmp-*/**/*',
+      'taon.json',
+      'tsconfig*',
+      '.vscode/**/*',
+      'taon-config-standalone.schema.json',
+      'taon-config-container.schema.json',
+      'run.js',
     ], // Optional: ignore specific folders
   },
   {
-    files: ["src/**/*.ts"], // Specify the source folder explicitly
+    files: ['src/**/*.ts'], // Specify the source folder explicitly
     languageOptions: {
-      parser: require("@typescript-eslint/parser"), // Correct parser import
+      parser: require('@typescript-eslint/parser'), // Correct parser import
       parserOptions: {
         project: ['tsconfig.json'],
         tsconfigRootDir: __dirname,
@@ -34,15 +39,14 @@ module.exports = [
       },
     },
     plugins: {
-      "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
-      "import": require("eslint-plugin-import"),
-      "@angular-eslint": require("@angular-eslint/eslint-plugin"),
+      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
+      import: require('eslint-plugin-import'),
+      '@angular-eslint': require('@angular-eslint/eslint-plugin'),
       my: {
         rules: {
           'no-namespace-reexport': noNamespaceReexport,
         },
       },
-
     },
     rules: {
       // @UNCOMMENT LINE BELOW TO ENABLE TYPESCRIPT RECOMMENDED RULES (STRICT)
@@ -53,7 +57,7 @@ module.exports = [
       'my/no-namespace-reexport': 'error',
       '@angular-eslint/prefer-standalone': 'off',
       '@angular-eslint/prefer-inject': 'warn',
-      "@angular-eslint/no-empty-lifecycle-method": "off",
+      '@angular-eslint/no-empty-lifecycle-method': 'off',
       // '@angular-eslint/component-class-suffix': [
       //   'warn',
       //   {
@@ -61,10 +65,10 @@ module.exports = [
       //   },
       // ],
       // "@typescript-eslint/no-implicit-any-catch": "error", tsconfig json does it right now
-      "lines-between-class-members": [
-        "warn",
-        "always",
-        { exceptAfterSingleLine: false }
+      'lines-between-class-members': [
+        'warn',
+        'always',
+        { exceptAfterSingleLine: false },
       ],
 
       // "padding-line-between-statements": [
@@ -88,7 +92,7 @@ module.exports = [
       //     style: 'camelCase',
       //   },
       // ],
-       // TO EXPENSIVE
+      // TO EXPENSIVE
       // '@typescript-eslint/member-ordering': [
       //   'warn',
       //   {
@@ -169,36 +173,37 @@ module.exports = [
       // 'no-void': 'error',
       // "no-unused-vars": "warn",
       // TODO modify in future for TAON use case
-      "import/order": [
-        "warn",
+      'import/order': [
+        'warn',
         {
-          "newlines-between": "always",
-          "alphabetize": {
-            "order": "asc",
-            "caseInsensitive": true
-          }
-        }
-      ],
-      '@typescript-eslint/explicit-function-return-type': [
-          'warn',
-          {
-            allowExpressions: true, // Allow function expressions (like anonymous functions) without return type
-            allowTypedFunctionExpressions: true, // Allow functions in type declarations (like in interfaces)
-            allowDirectConstAssertionInArrowFunctions: true, // Allow direct assertions
-            allowHigherOrderFunctions: true, // Allow higher-order functions without explicit return type
-            allowedNames: [], // List of getter names that are allowed to not have a return type
-            // enforceForGetters: true, // Enforce return type for getters
-            // enforceForSetters: false, // No need to enforce return type for setters (setters don't have return types)
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
           },
-        ],
-        // '@typescript-eslint/typedef': [
-        //   'warn',
-        //   {
-        //     memberVariableDeclaration: true,
-        //     parameter: true,
-        //     propertyDeclaration: true,
-        //   },
-        // ],
+        },
+      ],
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/explicit-function-return-type': [
+        'warn',
+        {
+          allowExpressions: true, // Allow function expressions (like anonymous functions) without return type
+          allowTypedFunctionExpressions: true, // Allow functions in type declarations (like in interfaces)
+          allowDirectConstAssertionInArrowFunctions: true, // Allow direct assertions
+          allowHigherOrderFunctions: true, // Allow higher-order functions without explicit return type
+          allowedNames: [], // List of getter names that are allowed to not have a return type
+          // enforceForGetters: true, // Enforce return type for getters
+          // enforceForSetters: false, // No need to enforce return type for setters (setters don't have return types)
+        },
+      ],
+      // '@typescript-eslint/typedef': [
+      //   'warn',
+      //   {
+      //     memberVariableDeclaration: true,
+      //     parameter: true,
+      //     propertyDeclaration: true,
+      //   },
+      // ],
     },
   },
   // NOTE: WE ARE NOT APPLYING PRETTIER IN THIS OVERRIDE, ONLY @ANGULAR-ESLINT/TEMPLATE

@@ -2,7 +2,6 @@
 /.DS_Store
 /.editorconfig
 /.firedev
-/.gitignore
 /.npmignore
 /.npmrc
 /.prettierignore
@@ -13,12 +12,12 @@
 /.tnp
 /.vscode/launch.json
 /*.filetemplate
+/*.i18n.data.ts
 /*.rest
 /*.schema.json
 /*.sqlite
 /**/.DS_Store
 /**/.editorconfig
-/**/.gitignore
 /**/.npmignore
 /**/.npmrc
 /**/.prettierignore
@@ -26,6 +25,7 @@
 /**/.taon
 /**/.tnp
 /**/*.filetemplate
+/**/*.i18n.data.ts
 /**/*.schema.json
 /**/browser
 /**/dist*

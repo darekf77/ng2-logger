@@ -5489,6 +5489,13 @@
           "description": "(STANDALONE) so I can release same npm lib with different name",
           "deprecated": "does not make sense"
         },
+        "generateTranslationsFor": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UtilsI18n.CommonLocaleCode"
+          },
+          "description": "list of languages"
+        },
         "isUsingOwnNodeModulesInsteadCoreContainer": {
           "type": "boolean",
           "description": "(STANDALONE)  Project is using own node_modules instead of core container"
@@ -5500,6 +5507,10 @@
         "shouldGenerateAutogenAppRoutesFile": {
           "type": "boolean",
           "description": "(STANDALONE) generate src/app.ts routes, imports and context initializations from ./src/app/*.routes.ts (recursive)"
+        },
+        "shouldGenerateTranslationFiles": {
+          "type": "boolean",
+          "description": "Should be generated translations files for i18n"
         },
         "autoReleaseConfigAllowedItems": {
           "type": "array",
@@ -5521,6 +5532,7 @@
         "peerDependenciesNamesForNpmLib",
         "shouldGenerateAutogenAppRoutesFile",
         "shouldGenerateAutogenIndexFile",
+        "shouldGenerateTranslationFiles",
         "singleFileBundlingPackages",
         "type"
       ]
@@ -6439,6 +6451,17 @@
         "docs-webapp"
       ],
       "description": "All possible release types for taon for MANUAL/CLOUD release"
+    },
+    "UtilsI18n.CommonLocaleCode": {
+      "type": "string",
+      "enum": [
+        "en-US",
+        "en-GB",
+        "pl-PL",
+        "de-DE",
+        "fr-FR",
+        "pt-BR"
+      ]
     },
     "Models.TaonAutoReleaseItem": {
       "type": "object",
