@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.52",
+  "version": "21.0.50",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -155,6 +155,7 @@
     "@tailwindcss/postcss": "~4.3.0",
     "@taon-dev/api-workers": "~21.0.0",
     "@taon-dev/cloud": "~21.0.0",
+    "@taon-dev/i18n": "~21.0.0",
     "@taon-dev/session": "~21.0.0",
     "@testdeck/jest": "~0.3.3",
     "@testdeck/mocha": "~0.3.3",
