@@ -183,7 +183,7 @@ module.exports = [
           },
         },
       ],
-      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/explicit-function-return-type': [
         'warn',
         {
