@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.53",
+  "version": "21.0.48",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -103,6 +103,7 @@
     "@fancyapps/ui": "~6.1.14",
     "@iconify/icons-fa-solid": "~1.2.4",
     "@iconify/icons-mdi": "~1.2.48",
+    "@imgly/background-removal-node": "~1.4.5",
     "@inquirer/prompts": "~5.3.8",
     "@ionic/pwa-elements": "^3.3.0",
     "@mdi/js": "~7.4.47",
