@@ -1,10 +1,12 @@
 //#region imports
-import chalk from 'chalk'; // @backend
 import * as stringify from 'json-stringify-safe';
+import { chalk } from 'tnp-core/src'; // @backend
 import { Helpers, json5, UtilsOs } from 'tnp-core/src';
 
 //#region @backend
+//#region @esmRemove
 const randomcolor = require('randomcolor').default ?? require('randomcolor');
+//#endregion
 //#endregion
 //#endregion
 
@@ -270,7 +272,9 @@ export namespace Log {
 const getRandomColor = (): string => {
   //#region @backend
   if (UtilsOs.isNode) {
+    //#region @esmRemove
     return randomcolor({ luminosity: 'light' });
+    //#endregion
   }
   //#endregion
 

@@ -100,7 +100,6 @@
   ],
 
   "html.format.wrapAttributes": "force-aligned",
-  "workbench.colorTheme": "Default Light+",
 
   "search.exclude": {
     "bin": true,
@@ -232,7 +231,9 @@
   "javascript.suggest.autoImports": false,
 
   "files.associations": {
-    "tsconfig.json": "json"
+    "tsconfig.json": "plaintext",
+    "**/tsconfig.json": "plaintext",
+    "**/tsconfig.*.json": "plaintext"
   },
 
   "search.followSymlinks": false
