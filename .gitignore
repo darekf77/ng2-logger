@@ -76,6 +76,7 @@
 /src/app.hosts.ts
 /src/assets/generated
 /src/assets/shared/shared_folder_info.txt
+/src/build-info._auto-generated_.ts
 /src/lib/env/**/*.*
 /src/lib/lib-info.md
 /src/lib/migrations/migrations-info.md

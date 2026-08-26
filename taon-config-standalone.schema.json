@@ -6,6 +6,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "overrideShortName": {
+          "type": "string"
+        },
         "type": {
           "$ref": "#/definitions/LibTypeEnum"
         },
@@ -5395,6 +5398,16 @@
           "type": "string",
           "description": "(STANDALONE) Base url for content (docs, md files etc.) Required if README.md has relative pathes to images"
         },
+        "genTsDocsInclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "what projects should be included for genrated docs"
+        },
+        "gitignoreGenDocsFiles": {
+          "type": "boolean"
+        },
         "storeGeneratedAssetsInRepository": {
           "type": "boolean",
           "description": "(STANDALONE) By default generated assets from logo.png are not stored in repository",
@@ -5470,7 +5483,7 @@
               },
               "includeInBundleNodeModules": {
                 "$ref": "#/definitions/Models.TaonArtifactInclude",
-                "description": "! FOR NOW ONLY FOR: 'electron-app' and 'angular-node-app'\n\nNative stuff that can't be minified and needs to be included in bundle. Taon will perform npm install for all packages marked with this"
+                "description": "! FOR NOW ONLY FOR:  - 'electron-app'  - 'angular-node-app'  - 'vscode-plugin'\n\nNative stuff that can't be minified and needs to be included in bundle. Taon will perform npm install for all packages marked with this"
               }
             },
             "required": [
@@ -5500,6 +5513,10 @@
           "type": "boolean",
           "description": "(STANDALONE)  Project is using own node_modules instead of core container"
         },
+        "shouldGenerateDocsComponents": {
+          "type": "boolean",
+          "description": "(STANDALONE) generate src/lib/generated-docs for all .md fiels"
+        },
         "shouldGenerateAutogenIndexFile": {
           "type": "boolean",
           "description": "(STANDALONE) generate src/lib/index._auto-generated_.ts with all exports from lib ts files"
@@ -5521,19 +5538,6 @@
         }
       },
       "required": [
-        "dependenciesNamesForNpmLib",
-        "devDependenciesNamesForNpmLib",
-        "devModeDependenciesForNpmLib",
-        "isCoreProject",
-        "isomorphicDependenciesForNpmLib",
-        "optionalDependenciesNamesForNpmLib",
-        "overridePackagesOrder",
-        "packageJsonOverride",
-        "peerDependenciesNamesForNpmLib",
-        "shouldGenerateAutogenAppRoutesFile",
-        "shouldGenerateAutogenIndexFile",
-        "shouldGenerateTranslationFiles",
-        "singleFileBundlingPackages",
         "type"
       ]
     },
@@ -6455,12 +6459,13 @@
     "UtilsI18n.CommonLocaleCode": {
       "type": "string",
       "enum": [
+        "pl-PL",
         "en-US",
         "en-GB",
-        "pl-PL",
         "de-DE",
         "fr-FR",
-        "pt-BR"
+        "es-ES",
+        "zh-CN"
       ]
     },
     "Models.TaonAutoReleaseItem": {
@@ -6493,6 +6498,10 @@
           "type": "string",
           "description": "Short description of auto release item"
         },
+        "workerName": {
+          "type": "string",
+          "description": "Cloudflare worker name"
+        },
         "askUserBeforeFinalAction": {
           "type": "boolean",
           "description": "Ask for confirmation before deployement to taon cloud"
@@ -6516,6 +6525,8 @@
         "dev",
         "stage",
         "prod",
+        "cloudflare",
+        "cloud",
         "test",
         "qa",
         "sandbox",
@@ -6532,10 +6543,13 @@
     "ReleaseType": {
       "type": "string",
       "enum": [
-        "manual",
+        "manual-taon",
         "local",
-        "cloud",
-        "static-pages"
+        "cloud-ci-taon",
+        "manual-static-pages",
+        "cloud-ci-static-pages",
+        "manual-cloudflare",
+        "cloud-ci-cloudflare"
       ]
     }
   }
