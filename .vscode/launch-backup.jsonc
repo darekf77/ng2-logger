@@ -55,7 +55,6 @@
       "request": "launch",
       "protocol": "inspector",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
       "trace": "verbose",
       "runtimeArgs": [
         "--serve",
@@ -80,7 +79,6 @@
       "name": "Run Vscode Plugin",
       "type": "extensionHost",
       "request": "launch",
-      "runtimeExecutable": "${execPath}",
       "sourceMaps": true,
       "resolveSourceMapLocations": [
         "${workspaceFolder}/**",
