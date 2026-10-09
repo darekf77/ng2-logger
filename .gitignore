@@ -1,7 +1,10 @@
 /_changelog
+/.ai
+/.ai/examples
 /.DS_Store
 /.editorconfig
 /.firedev
+/.github/copilot-instructions.md
 /.npmignore
 /.npmrc
 /.prettierignore
@@ -16,8 +19,11 @@
 /*.rest
 /*.schema.json
 /*.sqlite
+/**/.ai
+/**/.ai/examples
 /**/.DS_Store
 /**/.editorconfig
+/**/.github/copilot-instructions.md
 /**/.npmignore
 /**/.npmrc
 /**/.prettierignore
@@ -27,6 +33,7 @@
 /**/*.filetemplate
 /**/*.i18n.data.ts
 /**/*.schema.json
+/**/AGENTS.md
 /**/browser
 /**/dist*
 /**/eslint*
@@ -42,6 +49,7 @@
 /**/vitest.config.ts
 /**/webpack*
 /**/websql
+/AGENTS.md
 /browser
 /BUILD-INFO.md
 /BUILD-STATUS.md
