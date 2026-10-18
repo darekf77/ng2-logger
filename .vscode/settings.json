@@ -134,7 +134,11 @@
     "*.rest": true,
     "**/*.rest": true,
     "src/app.auto-gen-docs.md": true,
-    "src/app.auto-gen-ver.js": true
+    "src/app.auto-gen-ver.js": true,
+    ".ai": true,
+    "databases": true,
+    "**/.ai": true,
+    "**/databases": true
   },
 
   "[typescriptreact]": {
