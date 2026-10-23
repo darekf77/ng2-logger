@@ -51,8 +51,14 @@ if (messageWasShown) {
 
 const PROJECT_NPM_NAME = require('./dist/lib/build-info._auto-generated_.js').PROJECT_NPM_NAME;
 const entrypointarg = (process.argv.find( arg => arg.startsWith('additionalEntrypointId=')));
+const TAON_LOCAL_DEV = (process.argv.find( arg => arg === 'TAON_LOCAL_DEV'));
 
-console.log({PROJECT_NPM_NAME});
+if(TAON_LOCAL_DEV) {
+  const GlobalStorage = require('tnp-core').GlobalStorage;
+  GlobalStorage.set('TAON_LOCAL_DEV',true)
+}
+
+console.log(`(mode=${TAON_LOCAL_DEV ? 'dev':'prod'})${PROJECT_NPM_NAME}`);
 
 var app = require(`./dist/app${entrypointarg ? `.server${entrypointarg.split('=')[1]}`:''}`).default;
 
