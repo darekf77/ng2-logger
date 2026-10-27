@@ -44,7 +44,9 @@
       "request": "launch",
       "name": "Run Server for app.ts",
       "program": "${workspaceFolder}/run.js",
-      "args": [],
+      "args": [
+        "TAON_LOCAL_DEV"
+      ],
       "runtimeArgs": [
         "--preserve-symlinks"
       ]
