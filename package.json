@@ -1,6 +1,6 @@
 {
   "name": "ng2-logger",
-  "version": "21.0.71",
+  "version": "21.0.72",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -375,6 +375,7 @@
     "ngx-spinner": "~19.0.0",
     "ngx-typed-js": "2.1.1",
     "node-7z": "~3.0.0",
+    "node-cli-tester": "~21.0.0",
     "node-localstorage": "2.1.6",
     "node-notifier": "~10.0.1",
     "node-polyfill-webpack-plugin": "2.0.1",
@@ -467,6 +468,7 @@
     "vconsole": "^3.15.1",
     "video.js": "~8.3.0",
     "vitest": "4.0.15",
+    "vpn-split": "~21.0.0",
     "wait-on": "~9.0.3",
     "webdriver-manager": "13.0.2",
     "webpack": "~5.80",
