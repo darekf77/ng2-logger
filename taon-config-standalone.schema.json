@@ -6502,6 +6502,10 @@
           "type": "string",
           "description": "Cloudflare worker name"
         },
+        "clearDb": {
+          "type": "boolean",
+          "description": "Clear database during deploy"
+        },
         "askUserBeforeFinalAction": {
           "type": "boolean",
           "description": "Ask for confirmation before deployement to taon cloud"
