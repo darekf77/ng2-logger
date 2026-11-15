@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Vitest (all *.test.ts files)",
+      "name": "Run Vitest Browser (all *.spec.ts files)",
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
@@ -12,7 +12,9 @@
         "--environment",
         "node",
         "--testTimeout",
-        "60000"
+        "60000",
+        "--config",
+        "vitest.config-browser.ts"
       ],
       "console": "integratedTerminal",
       "skipFiles": [
@@ -21,7 +23,7 @@
       "smartStep": true
     },
     {
-      "name": "Run Vitest (editor active test file)",
+      "name": "Run Vitest Browser (editor active spec file)",
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
@@ -31,7 +33,50 @@
         "--environment",
         "node",
         "--testTimeout",
-        "60000"
+        "60000",
+        "--config",
+        "vitest.config-browser.ts"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "smartStep": true
+    },
+    {
+      "name": "Run Vitest Backend (all *.test.ts files)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": [
+        "run",
+        "--environment",
+        "node",
+        "--testTimeout",
+        "60000",
+        "--config",
+        "vitest.config-backend.ts"
+      ],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "smartStep": true
+    },
+    {
+      "name": "Run Vitest Backend (editor active test file)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": [
+        "run",
+        "${fileBasenameNoExtension}",
+        "--environment",
+        "node",
+        "--testTimeout",
+        "60000",
+        "--config",
+        "vitest.config-backend.ts"
       ],
       "console": "integratedTerminal",
       "skipFiles": [

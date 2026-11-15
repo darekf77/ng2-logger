@@ -210,6 +210,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260522.1",
     "@vitest/browser-playwright": "4.0.15",
     "@vitest/coverage-v8": "4.0.15",
+    "@vitest/runner": "4.0.17",
     "@vitest/ui": "4.0.15",
     "@viz-js/viz": "~3.30.0",
     "@zip.js/zip.js": "~2.24.0",
